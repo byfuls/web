@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Promise App</title>
+
+    <script>
+        function buyAsync(mymoney) {
+            return new Promise(function(resolve, reject) {
+                setTimeout(()=>{
+                    var payment = parseInt(prompt("지불하고자 하는 금액을 입력하시오"))
+                    var balance = mymoney - payment;
+                    if(balance >= 0) {
+                        console.log(`${payment} 원을 지불하였습니다.`);
+                        resolve(balance);
+                    } else {
+                        reject(`잔액은 ${mymoney} 원 입니다. 구매할 수 없습니다`);
+                    }
+                }, 1000)
+            })
+        }
+        buyAsync(500)
+        .then((balance)=>{
+            console.log(`1. 잔액은 ${balance} 원 입니다.`);
+            return buyAsync(balance)
+        })
+        .then((balance)=>{
+            console.log(`2. 잔액은 ${balance} 원 입니다.`);
+            return buyAsync(balance)
+        })
+        .then((balance)=>{
+            console.log(`3. 잔액은 ${balance} 원 입니다.`);
+        })
+        .catch((error)=>{
+            console.log(error);
+        });
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

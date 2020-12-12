@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>scroll taste</title>
+
+    <style>
+        .box {
+            display: inline-block;
+            padding: 100px;
+            margin: 100px;
+            margin-left: 0;
+            background-color: green;
+        }
+    </style>
+
+    <script>
+        window.onload = () => {
+            // 크롬을 비롯한 일부 브라우저에서는 스크롤 복원 기능을 꺼야 합니다
+            if('scrollRestoration' in history) {
+                history.scrollRestoration = 'manual';
+            }
+
+            var element = document.getElementById("sec3");
+            element.scrollIntoView(true);
+            // true : 표시 영역의 위쪽 끝까지 오도록 스크롤
+            // false : 표시 영역의 아래쪽 끝까지 오도록 스크롤
+        }
+    </script>
+</head>
+
+<body>
+    <div class="box" id="sec1">#sec1</div>
+    <br />
+    <div class="box" id="sec2">#sec2</div>
+    <br />
+    <div class="box" id="sec3">#sec3</div>
+
+</body>
+
+</html>

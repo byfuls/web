@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html charset=utf-8">
+    <title>make select node by javascript</title>
+
+    <script src="./elt.js"></script>
+    <script>
+        window.onload = () => {
+            var bloodtypes = ["A형", "B형", "O형", "AB형"]
+            var form = elt("form", {id: "menu"})
+            var select = elt("select", {name: "bloodtype", id: "bloodtype"});
+            bloodtypes.forEach((type) => {
+                select.appendChild(elt("option", null, type));
+            });
+            form.appendChild(select);
+            document.body.appendChild(form);
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
