@@ -1,0 +1,474 @@
+<!DOCTYPE html>     <!-- 현재 문서가 html5 언어로 작성된 웹 문서라는 뜻 -->
+<html lang="ko">    <!-- 웹 문서의 시작과 끝을 나타내는 태그 -->
+<head>              <!-- 웹 브라우저가 웹 문서를 해석하기 위해 필요한 정보들을 입력하는 부분, <style> <script> ... -->
+    <!-- meta : 문서 정보 -->
+    <meta charset="UTF-8">  <!-- 화면에 글자를 표시할 때 어떤 인코딩 방법을 사용할지 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- 모바일 기기 고려 -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">   <!-- 검색 엔진 고려 -->
+    <meta name="basic html" content="html 기본 구조">   <!-- 해당 문서의 키워드 -->
+    <meta name="description" content="html5를 통해 웹 표준 공부하기"> <!-- 해당 문서의 설명 -->
+    <meta name="author" content="byfuls"> <!-- 해당 문서의 소유자 또는 제작자 -->
+    
+    <title>웹 브라우저의 제목 표시줄 (1)</title>
+
+    <style>
+        #subject {
+            padding: 20px;
+            margin: 30px;
+
+            font-size:60px;
+            color:white;
+            background-color: black;
+        }
+        #chap1 {
+            border: 3px solid red;
+            padding: 20px;
+            margin: 30px;
+        }
+        #chap2 {
+            border: 3px solid green;
+            padding: 20px;
+            margin: 30px;
+        }
+        #chap3 {
+            border: 3px solid orange;
+            padding: 20px;
+            margin: 30px;
+        }
+        #chap4 {
+            border: 3px solid blue;
+            padding: 20px;
+            margin: 30px;
+        }
+
+        table, td, th {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>              <!-- 실제로 웹 브라우저 화면에 나타날 내용 -->
+    <div>
+        <div id="subject">
+            1. 텍스트 관련 태그들
+        </div>
+        <div id="chap1">
+            <h1><strong><mark>텍스트를 덩어리로 묶어 주는 태그</mark></strong></h1>
+
+            <!-- hn tag -->
+            <div>
+                <p><mark><b>&lt;hn&gt; 제목 표시하기</b></mark></p>
+                <p> h1 ~ h6</p>
+                <h1> h1 제목 </h1>
+                <h2> h2 제목 </h2>
+                <h3> h3 제목 </h3>
+                <h4> h4 제목 </h4>
+                <h5> h5 제목 </h5>
+                <h6> h6 제목 </h6>
+            </div>
+            <hr>
+
+            <!-- p tag -->
+            <div>
+                <p><mark><b>&lt;p&gt; 단락 만들기</b></mark></p>
+                <p>태그 끝날때까지 줄바꿈 없이 텍스트를 한 줄로 표시, 텍스트 줄이 브라우저 창보다 길어질 경우, 자동 줄바꿈</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <hr>
+
+            <!-- br tag -->
+            <div>
+                <p><mark><b>&lt;br&gt; 줄 바꾸기</b></mark></p>
+                <p> html 텍스트 단락에서 줄바꿈 하더라도 브라우저 창에서는 줄 바꿈 없이 한 줄로 표기, 브라우저에서 줄 바꿈 하려면 &lt;br&gt; tag 사용 </p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br>
+                   Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, <br>
+                   when an unknown printer took a galley of type and scrambled it to make a type specimen book. <br>
+                   It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. <br>
+                   It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, <br>
+                   and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <hr>
+
+            <!-- blockquote tag -->
+            <div>
+                <p><mark><b>&lt;blockquote&gt; 인용문 넣기</b></mark></p>
+                <p>인용한 문장은 다른 텍스트보다 안으로 들여 써지므로 다른 텍스트와 구별됨</p>
+                <h4>What is Lorem Ipsum?</h4>
+                <blockquote>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                </blockquote>
+            </div>
+            <hr>
+
+            <!-- pre tag -->
+            <div>
+                <p><mark><b>&lt;pre&gt; 입력하는 그대로 화면에 표시하기</b></mark></p>
+                <p>html에서는 아무리 많은 공백을 넣더라도 브라우저에서는 하나의 공백만 표시, 하지만 &lt;pre&gt;를 사용하면 소스에 표시한 공백이 브라우저에 그대로 표시</p>
+                <pre>
+                    function saveTheLocal() {
+                        var second = document.getElementById("second");
+                        var thevalue = second.value;
+                        localStorage.setItem(1, thevalue);
+                        getthelocal();
+                    }
+                </pre>
+            </div>
+            <hr>
+        </div>
+
+        <div id="chap2">
+            <h1><strong><mark>텍스트를 한 줄로 표시하는 태그</mark></strong></h1>
+
+            <!-- strong, b tag -->
+            <div>
+                <p><mark><b>&lt;strong&gt; vs &lt;b&gt; - 굵게 표시하기 </b></mark></p>
+                <p> 경고, 주의 사항처럼 중요한 내용을 강조할 때, <strong>&lt;strong&gt;</strong> 태그 (화면 낭독기가 강조되었다고 말해줌)</p>
+                <p> 단순히 굵게 표시할 때 <b>&lt;b&gt;</b> 태그 </p>
+            </div>
+            <hr>
+
+            <!-- em, i tag -->
+            <div>
+                <p><mark><b>&lt;em(emphasis)&gt; vs &lt;i(italic)&gt; - 이탤릭체로 표시하기 </b></mark></p>
+                <p> 문장에서 흐람상 특정 부분을 강조하고 싶을 때 <em>&lt;em&gt;</em> 태그 (중요한 내용을 담고 있는 것을 표시)</p>
+                <p> 마음 속의 생각이나 꿈, 기술적인 용어, 다른 언어의 관용구 등에는 <i>&lt;i&gt;</i> 태그 </p>
+            </div>
+            <hr>
+
+            <!-- q tag -->
+            <div>
+                <p><mark><b>&lt;q&gt; - 인용 내용 표시하기 </b></mark></p>
+                <p> 인용한 내용을 표기하기 위한 quote 줄임말 </p>
+                <p> &lt;blockquote&gt; 는 블록 레벨 태그이기에 줄이 바뀌어 나타나고 구별되도록 안으로 들여 써지지만,</p>
+                <p> &lt;quote&gt; 태그는 인라인 레벨 태그이기에 줄바꿈 없이, 다른 내용과 한줄로 표시, 구별할 수 있도록 인용 내용에 따옴표 표시</p>
+                <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. <q>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</q> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <hr>
+
+            <!-- mark tag -->
+            <div>
+                <p><mark><b>&lt;mark&gt; - 형광펜 효과 </b></mark></p>
+                <p> 선택부분의 배경색이 노란색이 되며 형광펜 효과를 낸다 </p>
+                <p> Lorem Ipsum is simply dummy text of <mark>the printing and typesetting industry.</mark> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+            </div>
+            <hr>
+
+            <!-- span tag -->
+            <div>
+                <p><mark><b>&lt;span&gt; - 줄바꿈 없이 영역 묶기 </b></mark></p>
+                <p> 태그 자체로는 아무 의미가 없지만, 텍스트단란 안에서 줄바꿈 없이 일부 텍스트만 묶어 스타일을 적용하고자 할 때 주로 사용</p>
+            </div>
+            <hr>
+        </div>
+
+        <div id="chap3">
+            <h1><strong><mark>목록을 만드는 태그 </mark></strong></h1>
+
+            <!-- ul, li tag -->
+            <div>
+                <p><mark><b>&lt;ul&gt; vs &lt;li&gt; - 순서 없는 목록 만들기</b></mark></p>
+                <p>순서가 필요치 않는 목록(unordered list)만들 때는 &lt;ul&gt; 태그 사용,</p>
+                <p>&lt;ul&gt; 태그 안에 &lt;li&gt; (list item) 을 사용해 각 항목 표시</p>
+                <small>(각 항목 앞에 작은 원이나 사각형 같은 불릿이 붙음)</small>
+
+                <ul>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                    <li>Maecenas finibus velit vitae risus ullamcorper, id aliquet leo malesuada.</li>
+                    <li>Pellentesque a ipsum vitae nisl ultrices faucibus eget sit amet tortor.</li>
+                </ul>
+            </div>
+            <hr>
+
+            <!-- ol, li tag -->
+            <div>
+                <p><mark><b>&lt;ol&gt; vs &lt;li&gt; - 순서 있는 목록 만들기</b></mark></p>
+                <p>순서가 필요한 목록(ordered list)만들 때는 &lt;ol&gt; 태그 사용,</p>
+                <p>&lt;ol&gt; 태그 안에 &lt;li&gt; (list item) 을 사용해 각 항목 표시</p>
+                <small>각 항목 앞에 순서 의미하는 숫자 등의 표기가 붙혀지고, 이는 바꿀 수 있음</small>
+
+                <ol>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                    <li>Maecenas finibus velit vitae risus ullamcorper, id aliquet leo malesuada.</li>
+                    <li>Pellentesque a ipsum vitae nisl ultrices faucibus eget sit amet tortor.</li>
+                </ol>
+
+                <ol type="a">
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    <li>Maecenas finibus velit vitae risus ullamcorper, id aliquet leo malesuada.
+                    <li>Pellentesque a ipsum vitae nisl ultrices faucibus eget sit amet tortor.
+                </ol>
+
+                <ol type="I" start="3">
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    <li>Maecenas finibus velit vitae risus ullamcorper, id aliquet leo malesuada.
+                    <li>Pellentesque a ipsum vitae nisl ultrices faucibus eget sit amet tortor.
+                </ol>
+            </div>
+            <hr>
+
+            <!-- dl, dt, dd tag -->
+            <div>
+                <p><mark><b>&lt;dl&gt; &lt;dt&gt; &lt;dd&gt; - 설명 목록 만들기</b></mark></p>
+                <p> 사전 구성처럼 '제목'과 '설명'이 한 쌍인 설명 목록(description list)를 만듬</p>
+                <p>&lt;dl&gt; 태그는 목록을 만들고</p>
+                <p>&lt;dt&gt; 태그는 제목을 만들고</p>
+                <p>&lt;dd&gt; 태그는 설명을 만든다</p>
+
+                <dl>
+                    <dt>Lorem Ipsum</dt>
+                    <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</dd>
+                    <dd>Maecenas finibus velit vitae risus ullamcorper, id aliquet leo malesuada.</dd>
+
+                    <dt>Lorem Ipsum2</dt>
+                    <dd>Sed fermentum dolor vel urna pulvinar, eget pellentesque ante gravida.</dd>
+                    <dd>Nulla tristique ipsum a lacus consequat vehicula.</dd>
+                    <dd>Sed mattis odio vitae felis laoreet, quis pharetra leo auctor.</dd>
+                </dl>
+            </div>
+            <hr>
+        </div>
+
+        <div id="chap4">
+            <h1><strong><mark>표를 만드는 태그</mark></strong></h1>
+
+            <!-- table, tr, td, th tag -->
+            <div>
+                <p><mark><b>&lt;table&gt; &lt;tr&gt; &lt;td&gt; &lt;th&gt; - 기본적인 표 만들기</b></mark></p>
+                <p>&lt;tr&gt; 행 (table row)</p>
+                <p>&lt;td&gt; 데이터 (table data)</p>
+                <p>&lt;th&gt; 표에 제목 셀 만들기, 셀의 중앙에 배치하고 굵게 표시</p>
+
+                <table>
+                    <tr>
+                        <th>제목 셀 1</th>
+                        <td>1행 2열</td>
+                        <td>1행 3열</td>
+                    </tr>
+                    <tr>
+                        <th>제목 셀 2</th>
+                        <td>2행 2열</td>
+                        <td>2행 3열</td>
+                    </tr>
+                </table>
+                <br>
+                <p><strong><em>colspan, rowspan - 행 또는 열 합치기</em></strong></p>
+                <p>셀을 합치는 것이기 때문에 &lt;td&gt; 태그나 &lt;th&gt; 태그에서 이루어 집니다.</p>
+                <p>&lt;td colspan="합칠 셀의 개수"&gt; 내용 &lt;/td&gt;</p>
+                <p>&lt;th colspan="합칠 셀의 개수"&gt; 내용 &lt;/th&gt;</p>
+                <p>&lt;td rowspan="합칠 셀의 개수"&gt; 내용 &lt;/td&gt;</p>
+                <p>&lt;th rowspan="합칠 셀의 개수"&gt; 내용 &lt;/th&gt;</p>
+                <table>
+                    <tr>
+                        <th>이름</th>
+                        <td></td>
+                        <th>연락처</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>주소</th>
+                        <td colspan="3"></td>
+                    </tr>
+                    <tr>
+                        <th>자기소개</th>
+                        <td colspan="3"></td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+
+            <!-- caption, figcation tag -->
+            <div>
+                <p><mark><b>&lt;caption&gt; &lt;figcation&gt; - 표에 제목 붙히기</b></mark></p>
+                <p><strong><em>&lt;caption&gt; 태그는 &lt;table&gt; 태그 바로 다음에 사용</em></strong></p>
+                <p>표의 위쪽 중앙에 표시</p>
+                <p>caption 태그를 이용해 제목을 여러 줄로 표시하거나 텍스트를 꾸밀 수 있음</p>
+
+                <table>
+                    <cation>
+                        <strong>Lorem Ipsum</strong>
+                        <p><quote>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+                            "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."</quote>
+                        </p>
+                    </cation>
+                    <tr>
+                        <th>브라우저</th>
+                        <th>제조업체</th>
+                        <th>다운로드</th>
+                    </tr>
+                    <tr>
+                        <th>크롬(chrome)</th>
+                        <td>Google</td>
+                        <td>google.com</td>
+                    </tr>
+                    <tr>
+                        <th>파이어폭스(firefox)</th>
+                        <td>Mozilla</td>
+                        <td>mozilla.com</td>
+                    </tr>
+                    <tr>
+                        <th>엣지(edge)</th>
+                        <td>Microsoft</td>
+                        <td>microsoft.com</td>
+                    </tr>
+                </table>
+
+                <p><strong><em>&lt;figcaption&gt;</em></strong></p>
+                <p>&lt;figure&gt;태그로 감싼 후 &lt;figcaption&gt;태그를 이용해 제목이나 설명 글을 입력</p>
+                <p><small>(이 경우 &lt;caption&gt; 태그를 사용하지 않으며, 중앙에 정렬되지 않음)</small></p>
+                <p>&lt;table&gt;태그보다 앞에 사용하면 표 위에 제목이 표시되고,</p>
+                <p>&lt;table&gt;태그보다 뒤에 사용하면 표 아래에 제목이 표시</p>
+                <figure>
+                    <figcaption>
+                        <p>figcaption 내용, (&lt;table&gt; 태그 앞)</p>
+                    </figcaption>
+                    <table>
+                        <tr>
+                            <th>브라우저</th>
+                            <th>제조업체</th>
+                            <th>다운로드</th>
+                        </tr>
+                        <tr>
+                            <th>크롬(chrome)</th>
+                            <td>Google</td>
+                            <td>google.com</td>
+                        </tr>
+                        <tr>
+                            <th>파이어폭스(firefox)</th>
+                            <td>Mozilla</td>
+                            <td>mozilla.com</td>
+                        </tr>
+                        <tr>
+                            <th>엣지(edge)</th>
+                            <td>Microsoft</td>
+                            <td>microsoft.com</td>
+                        </tr>
+                    </table>
+                    <figcaption>
+                        <p>figcaption 내용, (&lt;table&gt; 태그 뒤)</p>
+                    </figcaption>
+                </figure>
+
+                <p><strong><em>aria-describeby - 표에 대한 설명 제공</em></strong></p>
+                <p>&lt;table&gt; 태그 안에 aria-describeby 속성을 추가</p>
+                <p id="table-summary">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <table aria-describedby="table-summary">
+                    <cation>
+                        <strong>Lorem Ipsum</strong>
+                        <p><quote>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+                            "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."</quote>
+                        </p>
+                    </cation>
+                    <tr>
+                        <th>브라우저</th>
+                        <th>제조업체</th>
+                        <th>다운로드</th>
+                    </tr>
+                    <tr>
+                        <th>크롬(chrome)</th>
+                        <td>Google</td>
+                        <td>google.com</td>
+                    </tr>
+                    <tr>
+                        <th>파이어폭스(firefox)</th>
+                        <td>Mozilla</td>
+                        <td>mozilla.com</td>
+                    </tr>
+                    <tr>
+                        <th>엣지(edge)</th>
+                        <td>Microsoft</td>
+                        <td>microsoft.com</td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+
+            <!-- thead, tbody, tfoot tag -->
+            <div>
+                <p><mark><b>&lt;thead&gt; &lt;tbody&gt; &lt;tfoot&gt; - 표 구조 정의하기</b></mark></p>
+                <p>표 아래쪽에 합계나 요약 내용을 표시</p>
+                <p>제목이 있는 부분, 내용이 있는 본문, 요약이 있는 부분</p>
+
+                <table>
+                    <cation>Lorem Ipsum</cation>
+                    <thead>
+                        <tr>
+                            <th>head1</th>
+                            <th>head2</th>
+                            <th>head3</th>
+                            <th>head4</th>
+                            <th>head5</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>body</th>
+                            <td>body</td>
+                            <td>body</td>
+                            <td>body</td>
+                            <td>body</td>
+                        </tr>
+                        <tr>
+                            <th>body</th>
+                            <td>body</td>
+                            <td>body</td>
+                            <td>body</td>
+                            <td>body</td>
+                        </tr>
+                        <tr>
+                            <th>body</th>
+                            <td>body</td>
+                            <td>body</td>
+                            <td>body</td>
+                            <td>body</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>foot</th>
+                            <td>foot</td>
+                            <td>foot</td>
+                            <td>foot</td>
+                            <td>foot</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <hr>
+
+            <!-- col, colgroup tag -->
+            <div>
+                <p><mark><b>&lt;col&gt; &lt;colgroup&gt; - 여러 열을 묶어 스타일 지정</b></mark></p>
+                <p>표에서 하나의 열이나 여러개의 열을 묶어 스타일을 지정할 때 사용</p>
+                <p>&lt;col&gt;태그는 닫는 태그가 없음</p>
+                <p>둘 이상의 열을 묶을 때는 &lt;span&gt; 속성을 이용해 몇 줄(열)을 함께 묶을지 지정</p>
+                <p><string>&lt;col&gt;태그와 &lt;colgroup&gt;태그는 &lt;caption&gt;태그와 &lt;tr&gt; &lt;td&gt; 태그 전에 사용해야함</string></p>
+
+                <table>
+                    <catpion>colgroup practice</catpion>
+                    <colgroup>
+                        <col>
+                        <col span="2" style="background-color:#eee;">
+                        <col style="background-color: green;">
+                        <col style="background-color: yellow;">
+                    </colgroup>
+                    <tr>
+                        <th>title1</th>
+                        <td>data</td>
+                        <td>data</td>
+                        <td>data</td>
+                        <td>data</td>
+                    </tr>
+                    <tr>
+                        <th>title2</th>
+                        <td>data</td>
+                        <td>data</td>
+                        <td>data</td>
+                        <td>data</td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+
+        </div>
+    </div>
+</body>
+</html>

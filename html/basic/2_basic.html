@@ -1,0 +1,246 @@
+<!DOCTYPE html>     <!-- 현재 문서가 html5 언어로 작성된 웹 문서라는 뜻 -->
+<html lang="ko">    <!-- 웹 문서의 시작과 끝을 나타내는 태그 -->
+<head>              <!-- 웹 브라우저가 웹 문서를 해석하기 위해 필요한 정보들을 입력하는 부분, <style> <script> ... -->
+    <!-- meta : 문서 정보 -->
+    <meta charset="UTF-8">  <!-- 화면에 글자를 표시할 때 어떤 인코딩 방법을 사용할지 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- 모바일 기기 고려 -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">   <!-- 검색 엔진 고려 -->
+    <meta name="basic html" content="html 기본 구조">   <!-- 해당 문서의 키워드 -->
+    <meta name="description" content="html5를 통해 웹 표준 공부하기"> <!-- 해당 문서의 설명 -->
+    <meta name="author" content="byfuls"> <!-- 해당 문서의 소유자 또는 제작자 -->
+    
+    <title>웹 브라우저의 제목 표시줄 (1)</title>
+
+    <style>
+        #subject {
+            padding: 20px;
+            margin: 30px;
+
+            font-size:60px;
+            color:white;
+            background-color: black;
+        }
+        #chap1 {
+            border: 3px solid red;
+            padding: 20px;
+            margin: 30px;
+        }
+        #chap2 {
+            border: 3px solid green;
+            padding: 20px;
+            margin: 30px;
+        }
+        #chap3 {
+            border: 3px solid orange;
+            padding: 20px;
+            margin: 30px;
+        }
+        #chap4 {
+            border: 3px solid blue;
+            padding: 20px;
+            margin: 30px;
+        }
+
+        table, td, th {
+            border: 1px solid black;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+    </style>
+</head>
+<body>              <!-- 실제로 웹 브라우저 화면에 나타날 내용 -->
+    <div>
+        <div id="subject">
+            2. 이미지와 하이퍼링크
+        </div>
+        <div id="chap1">
+            <h1><strong><mark>이미지</mark></strong></h1>
+
+            <!--
+                gif         : 이미지 파일 크기가 작기 때문에 아이콘, 불릿, 등 작은 이미지에 주로 사용
+                            : 투명한 배경이나 움직이는 이미지를 만들 수 있다는 장점
+                jpg/jpeg    : 사진을 위해 개발된 형식
+                png         : 투명 배경을 만들면서 다양한 색상도 표현 가능 (많이 사용)
+            -->
+
+            <!-- img tag -->
+            <div>
+                <p><mark><b>&lt;img&gt; - 이미지 삽입</b></mark></p>
+                <p> src 속성을 이용해 파일 경로를 지정</p>
+                <div>
+                    <p>호두</p>
+                    <img src="images/puppy.jpeg" alt="귀여운 호두" width="20%" height="20%">
+                </div>
+                <p><strong><em>alt - 이미지를 설명해 주는 대체 텍스트</em></strong></p>
+
+                <p><strong><em>width, height - 이미지 크기 조정</em></strong></p>
+                <p>지정하지 않으면 원본 크기 그대로 화면에 표시</p>
+
+                <p><strong><em>figure, figcaption - 이미지에 설명 글 붙이기</em></strong></p>
+                <p>이미지 뿐만아니라 표, 멀티미디어 요소 등 어디에나 설명 글을 함께 붙일 수 있음</p>
+                <p>설명 글이 필요한 대상은 &lt;figure&gt; 태그로 묶고,</p>
+                <p>설명 글은 &lt;figcaption&gt; 태그로 묶음</p>
+                <figure>
+                    <img src="images/puppy.jpeg" alt="귀여운 호두" width="20%" height="20%">
+                    <figcaption>귀여운 호두호두호두</figcaption>
+                </figure>
+            </div>
+            <hr>
+        </div>
+
+        <div id="chap2">
+            <h1><strong><mark>링크 만들기</mark></strong></h1>
+
+            <!-- a tag -->
+            <div>
+                <p><mark><b>&lt;a&gt;태그, href 속성 - 링크 만들기</b></mark></p>
+                <p> 링크를 만드는 &lt;a&gt; 태그는 텍스트와 함께 사용하면, 텍스트 링크</p>
+                <p> 이미지와 함께 사용하면 이미지 링크</p>
+                <div>
+                    <pre>
+                        <a href="링크할 주소" [속성="속성 값"]> 텍스트 </a>
+                        <a href="링크할 주소" [속성="속성 값"]><img src="이미지 파일 경로"></a>
+                    </pre>
+                </div>
+                <div>
+                    <caption>&lt;a&gt; 태그 속성</caption>
+                    <table>
+                        <thread>
+                            <tr>
+                                <th>속성</th>
+                                <th>설명</th>
+                                <th>option value</th>
+                                <th>option detail</th>
+                            </tr>
+                        </thread>
+                        <tbody>
+                            <tr>
+                                <td>href</td>
+                                <td>링크한 문서나 사이트의 주소를 입력</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">target</td>
+                                <td rowspan="4">현재 창 or 새창</td>
+                                <td>_blank</td>
+                                <td>새창 or 새탭</td>
+                            </tr>
+                            <tr>
+                                <td>_self</td>
+                                <td>링크가 있는 화면에서 바뀜(default)</td>
+                            </tr>
+                            <tr>
+                                <td>_parent</td>
+                                <td>(프레임 사용 시) 부모 프레임에 표시</td>
+                            </tr>
+                            <tr>
+                                <td>_top</td>
+                                <td>(프레임 사용 시) 프레임에서 벗어나 내용을 전체 화면에 표시</td>
+                            </tr>
+                            <tr>
+                                <td>download</td>
+                                <td>보여주는게 아니라 다운로드</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>rel</td>
+                                <td>해당 문서와 관계</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>hreflang</td>
+                                <td>해당 문서 언어 지정</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>type</td>
+                                <td>해당 문서 파일 유형</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div>
+                        <p>google homepage</p>
+                        <a href="http://www.google.com">google</a> <br>
+                        <a href="http://www.google.com" target="_blank">
+                            <img src="images/puppy.jpeg" width="20%" height="20%">
+                        </a>
+                    </div>
+
+                </div>
+
+                <div>
+                    <p><strong><em>앵커 - 한 페이지 안에서 점프</em></strong></p>
+                    <p>이동하고 싶은 위치마다 id속성을 이용해 앵커를 각각 다른 이름으로 지정</p>
+                    <p>앵커 이름앞에 #을 붙여 앵커 표시</p>
+                    <ul id="menu">
+                        <li><a href="#content1">menu1</a></li>
+                        <li><a href="#content2">menu2</a></li>
+                        <li><a href="#content3">menu3</a></li>
+                    </ul>
+                    <h2 id="content1">menu1</h2>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                    <p><a href="#menu">go top</a></p>
+                    <h2 id="content2">menu2</h2>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                    <p><a href="#menu">go top</a></p>
+                    <h2 id="content3">menu3</h2>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                    <p><a href="#menu">go top</a></p>
+                </div>
+            </div>
+
+            <!-- map, area, usemap tag -->
+            <div>
+                <p><mark><b>&lt;map&gt;태그, &lt;area&gt; 태그, usemap 속성 - 이미지 맵 지정</b></mark></p>
+                <p> 한 이미지상에서 클릭 위치에 따라 서로 다른 링크가 열림, 이미지 맵 </p>
+                <p> &lt;map&gt;을 통해 이미지 맵 만들고, </p>
+                <p> &lt;img&gt; usemap 속성으로 이미지 맵을 지정</p>
+                <p> &lt;area&gt; 통해 이미지에 영역을 표시</p>
+
+                <img src="images/deadpool.jpg" alt="" width="400" heigth="220" usemap="#favorite">
+                <map name="#favorite">
+                    <area shape="rect" coords="10,10,160,200" href="http://www.google.com" target="_blank">
+                    <area shape="rect" coords="200,10,380,200" href="http://www.naver.com" target="_blank">
+                </map>
+            </div>
+        </div>
+
+        <div id="chap3">
+            <h1><strong><mark>SVG 이미지</mark></strong></h1>
+
+            <!-- svg? -->
+            <div>
+                <p><mark><b>SVG란?</b></mark></p>
+                <p> 이미지를 아무리 확대하거나 축소해도 원래의 깨끗한 상태 그대로 유지되는 이미지를 벡터 이미지(vector image), 즉 SVG 이미지</p>
+                <p> ex) 로고, 아이콘, 등 </p>
+                <p> reference</p>
+                <p> <a href="http://d3js.org/" target="_blank">d3.js</a></p>
+                <p> <a href="http://dmitrybaranovskiy.github.io/raphael/" target="_blank">Raphael.js</a></p>
+                <p> !!! TODO TODO TODO !!! </p>
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+</body>
+</html>

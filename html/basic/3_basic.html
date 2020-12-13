@@ -1,0 +1,1283 @@
+<!DOCTYPE html>     <!-- 현재 문서가 html5 언어로 작성된 웹 문서라는 뜻 -->
+<html lang="ko">    <!-- 웹 문서의 시작과 끝을 나타내는 태그 -->
+<head>              <!-- 웹 브라우저가 웹 문서를 해석하기 위해 필요한 정보들을 입력하는 부분, <style> <script> ... -->
+    <!-- meta : 문서 정보 -->
+    <meta charset="UTF-8">  <!-- 화면에 글자를 표시할 때 어떤 인코딩 방법을 사용할지 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- 모바일 기기 고려 -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">   <!-- 검색 엔진 고려 -->
+    <meta name="basic html" content="html 기본 구조">   <!-- 해당 문서의 키워드 -->
+    <meta name="description" content="html5를 통해 웹 표준 공부하기"> <!-- 해당 문서의 설명 -->
+    <meta name="author" content="byfuls"> <!-- 해당 문서의 소유자 또는 제작자 -->
+    
+    <title>웹 브라우저의 제목 표시줄 (1)</title>
+
+    <style>
+        #subject {
+            padding: 20px;
+            margin: 30px;
+
+            font-size:60px;
+            color:white;
+            background-color: black;
+        }
+        #chap1 {
+            border: 3px solid red;
+            padding: 20px;
+            margin: 30px;
+        }
+        #chap2 {
+            border: 3px solid green;
+            padding: 20px;
+            margin: 30px;
+        }
+        #chap3 {
+            border: 3px solid orange;
+            padding: 20px;
+            margin: 30px;
+        }
+        #chap4 {
+            border: 3px solid blue;
+            padding: 20px;
+            margin: 30px;
+        }
+        #chap5 {
+            border: 3px solid gray;
+            padding: 20px;
+            margin: 30px;
+        }
+        #doitmyself {
+            border: 3px solid pink;
+            padding: 20px;
+            margin: 30px;
+        }
+
+        table, td, th {
+            border: 1px solid black;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+
+        /* for doitmyself - start */
+        .container {
+            width: 600px;
+            margin: 0 auto;
+        }
+        ul {    /* 순서 없는 목록에 적용할 스타일 */
+            list-style-type: none; /* 불릿 없앰 */
+        }
+        label.title {   /* class=title인 label에 적용할 스타일 */
+            font-weight: bold;      /* 굵은 글자  */
+            width: 80px;            /* 너비 80px */
+            float: left;            /* 왼쪽부터 배치 */
+        }
+        div.centered {  /* class=centered인 div에 적용할 스타일 */
+            text-align: center;     /* 가운데 정렬 */
+        }
+        fieldset {      /* 필드셋에 적용할 스타일 */
+            margin: 15px 10px;      /* 상하 마진 15px, 좌우 마진 10px */
+        }
+        fieldset legend {   /* 필드셋의 제목 */
+            font-weight: bold;      /* 굵은 글자 */
+            font-size: 18px;        /* 글자 크기 18 px */
+            color: purple;        /* 자주 색 글자 */
+        }
+        ul li {    /* 목록의 각 항목 */
+            margin-bottom: 10px;    /* 아래 마진 10px */
+        }
+        /* for doitmyself - end */
+    </style>
+</head>
+<body>              <!-- 실제로 웹 브라우저 화면에 나타날 내용 -->
+    <div>
+        <div id="subject">
+            3. 폼 관련 태그들
+        </div>
+        <div id="chap1">
+            <h1><strong><mark>폼 만들기</mark></strong></h1>
+            <p>사용자가 웹 사이트로 정보를 보낼 수 있는 요소들은 모두 폼(form) </p>
+            <p>텍스트 상자나 버튼 같은 폼의 형태를 만드는 것은 HTML 태그를 이용하고,</p>
+            <p>그 폼에 입력한 사용자 정보를 처리하는 것은 서버 프로그래밍을 이용. (정보 저장, 검색, 수정은 서버의 데이터베이스 기반)</p>
+
+            <!-- form tag -->
+            <div>
+                <p><mark><b>&lt;form&gt; - 폼 만들기</b></mark></p>
+                <figure>
+                    <figcaption>form 태그 속성</figcaption>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>속성</th>
+                                <th colspan="2">설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="3">method</td>
+                                <td colspan="2">서버 쪽으로 어떻게 넘겨줄지 지정</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">속성 값</td>
+                                <td>get - 주소 표시줄에 사용자가 입력한 내용이 그대로 나타남 (256byte ~ 4096byte)</td>
+                            </tr>
+                            <tr>
+                                <td>pos - (대부분 이 방식) 입력 길이에 제한을 받지 않고 사용자가 입력한 내용이 드러나지 않음</td>
+                            </tr>
+                            <tr>
+                                <td>name</td>
+                                <td colspan="2">폼의 이름을 지정 (폼들을 구분하기 위함)</td>
+                            </tr>
+                            <tr>
+                                <td>action</td>
+                                <td colspan="2">서버상의 프로그램을 지정</td>
+                            </tr>
+                            <tr>
+                                <td>target</td>
+                                <td colspan="2">&lt;action&gt; 지정한 스크립트 파일을 현재창이 아닌 다른 위치에 열도록 지정</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>&lt;form&gt;태그와 &lt;form&gt; 태그 사이에 여러가지 입력할 태그들을 삽입</p>
+                </figure>
+                <hr>
+
+                <p><strong><em>&lt;input&gt; - 사용자가 내용을 입력하는 필드를 삽입할 때나 버튼을 삽입할 때 사용</em></strong></p>
+                <figure>
+                    <form action="3_basic.js" method="post" autocomplete="on">
+                        <input type="text" title="Send">
+                        <input type="submit" value="Send">
+                    </form>
+                    <figcaption>
+                        <p>!!! CHECK MORE - TODO TODO TODO !!!</p>
+                    </figcaption>
+                </figure>
+                <hr>
+
+                <p><strong><em>autocomplete 속성 - 자동 완성 기능</em></strong></p>
+                <p>사용자가 입력했던 내용을 기억했다가 비슷한 내용을 입력할 경우, 이전에 입력했던 내용을 힌트로 보여줌 (기본값 "on")</p>
+                <figure>
+                    <form action="3_basic.js" autocomplete="off">
+                        <input type="text" title="Send">
+                        <input type="submit" value="Send">
+                    </form>
+                    <figcaption>
+                        <p>!!! CHECK MORE - TODO TODO TODO !!!</p>
+                    </figcaption>
+                </figure>
+                <hr>
+
+                <p><strong><em>&lt;label&gt; - 폼 요소에 레이블 붙이기</em></strong></p>
+                <p>입력 창 옆에 붙여 놓은 텍스트</p>
+                <p>사용 방법 1. &lt;label&gt; 태그 안에 폼 요소를 넣는 것</p>
+                <p>사용 방법 2. &lt;label&gt; 요소와 폼 요소를 따로 사용하고 &lt;label&gt; 태그안에 for 속성을 이용하고 폼 요소에서는 id속성을 이용해 연결</p>
+                <figure>
+                    <form action="3_basic.js" autocomplete="on" id="for-label">
+                        <label for="for-label">input</label>
+                        <input type="text" title="Send">
+                        <input type="submit" value="Send">
+                    </form>
+                    <figcaption>
+                        <p>!!! CHECK MORE - TODO TODO TODO !!!</p>
+                    </figcaption>
+                </figure>
+                <hr>
+
+                <p><strong><em>라디오 버튼과 체크박스에서 사용하는 &lt;label&gt; 태그</em></strong></p>
+                <p>label로 라디오 버튼과 체크박스를 만들면, 텍스트를 클릭해도 해당 버튼이 선택됨</p>
+                <figure>
+                    <form>
+                        <h3>수강 분야 (다수 선택 가능) (label 사용 X)</h3>
+                        <ul style="list-style: none;">
+                            <li><input type="checkbox" value="grm">문법</li>
+                            <li><input type="checkbox" value="wr">작문</li>
+                            <li><input type="checkbox" value="rd">독해</li>
+                        </ul>
+
+                        <h3>수강 과목 (1과목만 선택 가능) (label 사용 O)</h3>
+                        <ul style="list-style: none;">
+                            <li>
+                                <label><input type="radio" name="subject" value="eng">영어회화</label>
+                            </li>
+                            <li>
+                                <label><input type="radio" name="subject" value="ch">중국어회화</label>
+                            </li>
+                            <li>
+                                <label><input type="radio" name="subject" value="jp">일어회화</label>
+                            </li>
+                        </ul>
+                    </form>
+                </figure>
+                <hr>
+
+                <p><strong><em>&lt;fieldset&gt;, &lt;legend&gt; 태그 - 폼 요소 그룹으로 묶기</em></strong></p>
+                <p>하나의 폼 안에서 여러 구역을 나누어 표시하려고 할 때 사용</p>
+                <p>&lt;fieldset&gt; 과 &lt;fieldset&gt; 태그 사이의 폼들을 하나의 영역으로 묶고 외곽선을 그려줌</p>
+                <p>&lt;legend&gt;태그는 &lt;fieldset&gt;태그로 묶은 그룹에 제목을 붙여줌</p>
+                <figrue>
+                    <form>
+                        <fieldset>
+                            <legend>개인 정보</legend>
+                            <ul style="list-style: none;">
+                                <li>
+                                    <label for="name">이름</label>
+                                    <input id="name" type="text">
+                                </li>
+                                <li>
+                                    <label for="mail">메일 주소</label>
+                                    <input id="mail" type="mail">
+                                </li>
+                            </ul>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>로그인 정보</legend>
+                            <ul style="list-style: none">
+                                <li>
+                                    <label for="id">아이디</label>
+                                    <input id="id" type="text">
+                                </li>
+                                <li>
+                                    <label for="password">비밀번호</label>
+                                    <input id="password" type="password">
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </form>
+                </figrue>
+            </div>
+        </div>
+
+        <div id="chap2">
+            <h1><strong><mark>사용자 입력을 위한 &lt;input&gt; 태그</mark></strong></h1>
+            <p>사용자가 웹 사이트로 정보를 보낼 수 있는 요소들은 모두 폼(form) </p>
+
+            <!-- input tag -->
+            <div>
+                <p><mark><b>&lt;input&gt; - 태그 살펴보기</b></mark></p>
+                <p>&lt;input&gt; 태그는 폼에서 사용자 입력을 받기 위해 사용하는 태그라는 것!</p>
+            </div>
+            <hr>
+
+            <!-- input tag -->
+            <div>
+                <p><mark><b>&lt;input&gt; - 입력 항목 만들기</b></mark></p>
+                <p>&lt;input&gt; 태그는 폼에서 사용자 입력을 받기 위해 사용하는 태그라는 것!</p>
+                <p>폼 = 사용자가 입력하는 부분 + 입력한 내용을 서버로 보내는 버튼 부분</p>
+                <p>사용자가 입력하는 부분을 &lt;input&gt;로 처리</p>
+            </div>
+
+            <firgure>
+                <figcaption>
+                    <p><strong><em>&lt;input&gt; 태그의 type속성에서 사용 가능한 유형</em></strong></p>
+                </figcaption>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>유형</th>
+                            <th>설명</th>
+                            <th>속성</th>
+                            <th>설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>hidden</td>
+                            <td>사용자에게는 보이지 않지만 서버로 넘겨지는 값을 가짐</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4">text</td>
+                            <td rowspan="4">한 줄짜리 텍스트를 입력할 수 있는 텍스트 상자 </td>
+                            <td>name</td>
+                            <td>텍스트 필드 구별하는 이름</td>
+                        </tr>
+                        <tr>
+                            <td>size</td>
+                            <td>텍스트 필드의 길이 지정 (화면에 몇 글자가 보이도록 지정)</td>
+                        </tr>
+                        <tr>
+                            <td>value</td>
+                            <td>빈 텍스트 필드 부분에 표시될 내용</td>
+                        </tr>
+                        <tr>
+                            <td>maxlength</td>
+                            <td>텍스트 필드에 입력할 수 있는 최대 문자 개수</td>
+                        </tr>
+
+                        <tr>
+                            <td>search</td>
+                            <td>검색 상자</td>
+                        </tr>
+                        <tr>
+                            <td>tel</td>
+                            <td>전화번호 입력 필드</td>
+                        </tr>
+                        <tr>
+                            <td>url</td>
+                            <td>URL 주소를 입력하는 필드</td>
+                        </tr>
+                        <tr>
+                            <td>email</td>
+                            <td>메일 주소를 입력하는 필드</td>
+                        </tr>
+                        <tr>
+                            <td>password</td>
+                            <td>비밀번호를 입력하는 필드</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4">datetime</td>
+                            <td rowspan="4">국제 표준시(UTC) 설정된 날짜와 시간(연,월,일,시,분,초,분할 초) 입력 필드</td>
+                            <td>min</td>
+                            <td>날짜나 시간의 최솟값</td>
+                        </tr>
+                        <tr>
+                            <td>max</td>
+                            <td>날짜나 시간의 최댓값</td>
+                        </tr>
+                        <tr>
+                            <td>step</td>
+                            <td>화살표 누를때마다 날짜나 시간을 얼마나 조절할지 지정</td>
+                        </tr>
+                        <tr>
+                            <td>value</td>
+                            <td>화면에 표시할 초깃값 지정. type="time"일 경우(00:00~23:59), type="datetime" 이나 type="datetime-local"일 경우(날짜 다음에 키워드 T쓰고 24시간제로 새간 지정)(ex. 오후 6시라면, T18:00)</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4">datetime-local</td>
+                            <td rowspan="4">사용자가 있는 지역을 기준으로 날짜와 시간(연,월,일,시,분,초,분할 초) 입력 필드</td>
+                            <td>min</td>
+                            <td>날짜나 시간의 최솟값</td>
+                        </tr>
+                        <tr>
+                            <td>max</td>
+                            <td>날짜나 시간의 최댓값</td>
+                        </tr>
+                        <tr>
+                            <td>step</td>
+                            <td>화살표 누를때마다 날짜나 시간을 얼마나 조절할지 지정</td>
+                        </tr>
+                        <tr>
+                            <td>value</td>
+                            <td>화면에 표시할 초깃값 지정. type="time"일 경우(00:00~23:59), type="datetime" 이나 type="datetime-local"일 경우(날짜 다음에 키워드 T쓰고 24시간제로 새간 지정)(ex. 오후 6시라면, T18:00)</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">date</td>
+                            <td rowspan="3">사용자 지역을 기준으로 날짜(연, 월, 일) 입력 필드</td>
+                            <td>date</td>
+                            <td>날짜를 선택</td>
+                        </tr>
+                        <tr>
+                            <td>month</td>
+                            <td>월(Month)dhk 연도(Year)를 선택</td>
+                        </tr>
+                        <tr>
+                            <td>week</td>
+                            <td>주(Week)와 연도(Year)를 선택</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">month</td>
+                            <td rowspan="3">사용자 지역을 기준으로 날짜(연, 월) 입력 필드</td>
+                            <td>date</td>
+                            <td>날짜를 선택</td>
+                        </tr>
+                        <tr>
+                            <td>month</td>
+                            <td>월(Month)dhk 연도(Year)를 선택</td>
+                        </tr>
+                        <tr>
+                            <td>week</td>
+                            <td>주(Week)와 연도(Year)를 선택</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">week</td>
+                            <td rowspan="3">사용자 지역을 기준으로 날짜(연, 주) 입력 필드</td>
+                            <td>date</td>
+                            <td>날짜를 선택</td>
+                        </tr>
+                        <tr>
+                            <td>month</td>
+                            <td>월(Month)dhk 연도(Year)를 선택</td>
+                        </tr>
+                        <tr>
+                            <td>week</td>
+                            <td>주(Week)와 연도(Year)를 선택</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4">time</td>
+                            <td rowspan="4">사용자 지역을 기준으로 시간(시, 분, 초, 분할 초) 입력 필드</td>
+                            <td>min</td>
+                            <td>날짜나 시간의 최솟값</td>
+                        </tr>
+                        <tr>
+                            <td>max</td>
+                            <td>날짜나 시간의 최댓값</td>
+                        </tr>
+                        <tr>
+                            <td>step</td>
+                            <td>화살표 누를때마다 날짜나 시간을 얼마나 조절할지 지정</td>
+                        </tr>
+                        <tr>
+                            <td>value</td>
+                            <td>화면에 표시할 초깃값 지정. type="time"일 경우(00:00~23:59), type="datetime" 이나 type="datetime-local"일 경우(날짜 다음에 키워드 T쓰고 24시간제로 새간 지정)(ex. 오후 6시라면, T18:00)</td>
+                        </tr>
+                        <tr>
+                            <td>number</td>
+                            <td>숫자를 조절 할 수 있는 화살표를 넣음</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4">range</td>
+                            <td rowspan="4">숫자를 조절할 수 있는 슬라이드 막대를 넣음</td>
+                            <td>min</td>
+                            <td>최솟값 (기본 0부터)</td>
+                        </tr>
+                        <tr>
+                            <td>max</td>
+                            <td>최댓값 (기본 최대값 100까지)</td>
+                        </tr>
+                        <tr>
+                            <td>step</td>
+                            <td>숫자 간격 지정 (기본 값 1)(생략 가능)</td>
+                        </tr>
+                        <tr>
+                            <td>value</td>
+                            <td>필드에 표시할 초기값</td>
+                        </tr>
+                        <tr>
+                            <td>color</td>
+                            <td>색상 표 넣음</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">checkbox</td>
+                            <td rowspan="3">주어진 항목에서 2개 이상 선택가능한 체크 박스</td>
+                            <td>name</td>
+                            <td>여러개 있을 경우 해당 폼을 구분하기 위해 이름 지정</td>
+                        </tr>
+                        <tr>
+                            <td>value</td>
+                            <td>해당 체크된 값을 서버로 넘길 값 지정, 영문/숫자 (필수 속성)</td>
+                        </tr>
+                        <tr>
+                            <td>checked</td>
+                            <td>기본으로 선택해 놓을 항목이 있다면 해당 속성을 사용</td>
+                        <tr>
+                            <td rowspan="3">radio</td>
+                            <td rowspan="3">주어진 항목에서 1개만 선택할 수 있는 라디오 버튼</td>
+                            <td>name</td>
+                            <td>여러개 있을 경우 해당 폼을 구분하기 위해 이름 지정</td>
+                        </tr>
+                        <tr>
+                            <td>value</td>
+                            <td>해당 체크된 값을 서버로 넘길 값 지정, 영문/숫자 (필수 속성)</td>
+                        </tr>
+                        <tr>
+                            <td>checked</td>
+                            <td>기본으로 선택해 놓을 항목이 있다면 해당 속성을 사용</td>
+                        </tr>
+                        <tr>
+                            <td>file</td>
+                            <td>파일을 첨부할 수 있는 버튼</td>
+                        </tr>
+                        <tr>
+                            <td>submit</td>
+                            <td>서버 전송 버튼</td>
+                        </tr>
+                        <tr>
+                            <td>image</td>
+                            <td>submit버튼 대신 사용할 이미지</td>
+                        </tr>
+                        <tr>
+                            <td>reset</td>
+                            <td>리셋 버튼</td>
+                        </tr>
+                        <tr>
+                            <td>button</td>
+                            <td>버튼 넣음</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </firgure>
+            <hr>
+
+            <figure>
+                <figcaption>회원 가입 폼 만들기</figcaption>
+                <div>
+                    <form>
+                        <h3>회원 가입</h3>
+                        <fieldset>
+                            <legend>로그인 정보</legend>
+                            <ul style="list-style: none;">
+                                <li>
+                                    <label for="id">아이디</label>
+                                    <input id="id" type="text">
+                                </li>
+                                <li>
+                                    <label for="password">비밀번호</label>
+                                    <input id="password" type="password">
+                                </li>
+                                <li>
+                                    <label for="password-check">비밀번호 확인</label>
+                                    <input id="password-check" type="password">
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <fieldset>
+                            <legend>개인 정보</legend>
+                            <ul style="list-style: none;">
+                                <li>
+                                    <label for="name">이름</label>
+                                    <input id="name" type="text">
+                                </li>
+                                <li>
+                                    <label for="mail">메일 주소</label>
+                                    <input id="mail" type="mail">
+                                </li>
+                                <li>
+                                    <label for="tel">연락처</label>
+                                    <input id="tel" type="tel">
+                                </li>
+                                <li>
+                                    <label for="url">블로그/홈페이지</label>
+                                    <input id="url" type="url">
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <input type="button" value="가입하기">
+                    </form>
+                </div>
+            </figure>
+            <hr>
+
+            <figure>
+                <figcaption>다양한 숫자 입력 폼</figcaption>
+                <form>
+                    <fieldset>
+                        <legen>등록 정보</legen>
+                        <ul style="list-style: none;">
+                            <li>
+                                <label for="party">참여인원(최대 10명)</label>
+                                <input type="number" id="party">
+                            </li>
+                            <li>
+                                <label for="products">지원물품(1인당 5개)</label>
+                                <input type="number" id="products">
+                            </li>
+                            <li>
+                                <label for="satis">희망 단계(하, 중, 상)</label>
+                                <input type="range" id="satis" value="1" step="1" min="1" max="3">
+                            </li>
+                        </ul>
+                    </fieldset>
+                </form>
+            </figure>
+            <hr>
+
+            <figure>
+                <figcaption>라디오 버튼과 체크박스 삽입하기</figcaption>
+                <form>
+                    <fieldset>
+                        <legend>신청 과목</legend>
+                        <p>이 달에 신청할 과목을 선택하세요 (1과목만 가능)</p>
+                        <label><input type="radio" name="subject" value="speaking" checked>회화</label>
+                        <label><input type="radio" name="subject" value="gram">문법</label>
+                        <label><input type="radio" name="subject" value="writing">작문</label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>메일링</legend>
+                        <p>메일로 받고 싶은 뉴스 주제를 선택해 주세요 (복수 선택 가능)</p>
+                        <label><input type="checkbox" name="mailing1" value="news">해외 단신</label>
+                        <label><input type="checkbox" name="mailing2" value="speaking" checked>5분 회화</label>
+                        <label><input type="checkbox" name="mailing2" value="pops" checked>모닝팝스</label>
+                    </fieldset>
+                </form>
+            </figure>
+            <hr>
+
+            <figure>
+                <figcaption>색상 선택 폼 삽입하기</figcaption>
+                <fieldset>
+                    <legend>과 티셔츠 설문</legend>
+                    <p>올해 과 티(T)를 만들려고 합니다. 원하는 색상을 추천해 주세요.</p>
+                    <label>선호 색상 <input type="color" value="#00ff00"></label>
+                </fieldset>
+            </figure>
+            <hr>
+
+            <figure>
+                <figcaption>날짜 입력 폼 삽입하기</figcaption>
+                <p>조회기간 선택</p>
+                <input type="date" id="start">
+                <input type="date" id="end">
+            </figure>
+            <hr>
+
+            <figure>
+                <figcaption>시간 입력 폼 삽입하기</figcaption>
+                <h3>원하는 대관시간을 선택하세요(오늘)</h3>
+                <label>시작 시간<input type="time" value="09:00" id="start1"></label>
+                <label>종료 시간<input type="time" value="18:00" id="end1"></label>
+
+                <h3>대관시간을 선택하세요(다른날짜)</h3>
+                <label>시작 시간<input type="datetime-local" value="2016-03-02T09:00" id="start2"></label>
+                <label>종료 시간<input type="datetime-local" value="2016-03-03T18:00" id="end2"></label>
+            </figure>
+            <hr>
+
+            <p><strong><em>type="submit", type="reset" - 서버 전송, 리셋 버튼 넣기</em></strong></p>
+            <p>reset 버튼은 <input>요소에 입력된 모든 정보를 재설정해, 입력한 내용을 모두 지울 수 있음</p>
+            <p>submit 버튼은 사용자가 폼에 입력한 정보를 서버로 전송하는 submit 버튼을 넣음. <br> submit 버튼으로 전송된 정보는 &lt;form&gt;태그에서 지정한 폼 처리 프로그램에 넘겨짐</p>
+            <figure>
+                <figcaption>submit 버튼과 reset 버튼 삽입하기</figcaption>
+                <form action="register.php" method="post">
+                    <label>메일 주소 <input type="text"></label>
+                    <input type="submit" value="제출">
+                    <input type="reset" value="다시 입력">
+                </form>
+            </figure>
+            <hr>
+
+            <p><strong><em>type="image" - 이미지 버튼 넣기</em></strong></p>
+            <p>submit 버튼 대신 전송 이미지를 넣을 수 있음</p>
+            <figure>
+                <figcaption>submit 버튼에 이미지 사용하기</figcaption>
+                <label>아이디 <input type="text" size="15"></label>
+                <label>비밀번호 <input type-"password" size="15"></label>
+                <input type="image" id="butn" src="images/puppy.jpeg" width="30px" height="30px" alt="login">
+            </figure>
+            <hr>
+
+            <p><strong><em>type="button" - 버튼 넣기</em></strong></p>
+            <p>submit, reset과 같은 기능은 없고, 오직 버튼만 넣기 때문에 스크립트 함수 등을 연결해 사용, value 속성을 사용해 버튼에 표시할 내용 지정</p>
+            <figure>
+                <figcaption>버튼 삽입하기</figcaption>
+                <input type="button" value="새 탭 열기" onclick="window.open()">
+            </figure>
+            <hr>
+
+            <p><strong><em>type="file" - 파일 첨부하기</em></strong></p>
+            <figure>
+                <label>첨부 파일 <input type="file"></label>
+            </figure>
+        </div>
+
+        <div id="chap3">
+            <h1><strong><mark>&lt;input&gt; 태그의 다양한 속성</mark></strong></h1>
+
+            <!-- autofocus -->
+            <div>
+                <p><mark><b>autofocus - 입력 커서 표시하기</b></mark></p>
+                <p>페이지를 불러오자마자 폼의 요소 중에서 원하는 요소에 마우스 커서를 표시할 수 있음</p>
+                
+                <figure>
+                    <figcaption>텍스트 필드에 입력 커서 표시하기</figcaption>
+                    <h3>여름방학 특강 신청</h3>
+                    <fieldset>
+                        <legend>수강과목</legend>
+                        <label>영어회화(초급)<input type="datetime-local"></label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>신청자</legend>
+                        <ul style="list-style:none;">
+                            <li style="margin-bottom: 5px;"><label>이름<input type="text" autofocus required></label>
+                            <li style="margin-bottom: 5px;"><label>학번<input type="text" placeholder="하이픈 없이 입력"></label>
+                            <li style="margin-bottom: 5px;"><label>학과<input type="text"></label>
+                        </ul>
+                    </fieldset>
+                </figure>
+            </div>
+            <hr>
+
+            <!-- placeholder -->
+            <div>
+                <p><mark><b>placeholder - 힌트 표시하기</b></mark></p>
+                <p>텍스트를 입력할 때 도움이 되도록 입력란에 힌트 내용 표시, 그 필드 클릭하면 내용이 사라짐</p>
+                <p>제목을 사용하지 않고도 어떤 내용을 입력해야하는지 알려줄 수 있어 편리</p>
+                <figure>
+                    <figcaption>
+                        텍스트 필드에 플레이스 홀더 표시하기
+                    </figcaption>
+                    <fieldset style="width: 500px;">
+                        <legend>신청자</legend>
+                        <ul style="list-style:none;">
+                            <li><label>이름<input type="text"></label>
+                            <li><label>학번<input type="text" placeholder="하이픈 없이 입력" required></label>
+                        </ul>
+                    </fieldset>
+                </figure>
+            </div>
+            <hr>
+
+            <!-- readonly -->
+            <div>
+                <p><mark><b>readonly - 읽기 전용 필드 만들기</b></mark></p>
+                <p>사용자가 입력하지 못하고 읽게만</p>
+                <p>readonly="true" or readonly or readonly="readonly"</p>
+                <figure>
+                    <figcaption>
+                        읽기 전용 필드 만들기 
+                    </figcaption>
+
+                    <fieldset>
+                        <legend>수강과목</legend>
+                        <label for="subj">
+                            영어회화(초급)
+                        </label>
+                        <input id="subj" type="text" value="오전 09:00~11:00" readonly>
+                    </fieldset>
+                </figure>
+            </div>
+            <hr>
+
+            <!-- required -->
+            <div>
+                <p><mark><b>required - 필수 필드 지정하기</b></mark></p>
+                <p>submit 버튼 클릭시 서버로 전송하는데, 이때 필수 필드에 필요한 내용이 채워졌는지 검사</p>
+                <p>필수적으로 입력해야 하는 내용에는 required 속성을 지정해 필수 필드로 만듬</p>
+                <p>required="required" or required</p>
+                <small>필수 필드는 브라우저에서 직접 체크하는 것이므로 오류 메시지 내용은 브라우저들마다 다르게 나타남</small>
+
+                <figure>
+                    <figcaption>
+                        필수 필드 지정하기
+                    </figcaption>
+
+                    <form>
+                        <fieldset>
+                            <legend>신청자</legend>
+                            <ul style="list-style: none;">
+                                <li><label>이름 <input type="text" required></label>
+                                <li><label>학번 <input type="text" placeholder="하이픈 없이 입력" required></label>
+                                <li><input type="submit">
+                            </ul>
+                        </fieldset>
+                    </form>
+                </figure>
+            </div>
+            <hr>
+
+            <!-- min, max, step -->
+            <div>
+                <p><mark><b>min, max, step 속성</b></mark></p>
+                <p>해당 필드의 최솟값과 최댓값 지정</p>
+                <p>min : 최솟값</p>
+                <p>max : 최댓값</p>
+                <p>step : 허용된범위 내의 숫자의 간격</p>
+                <p>&lt;input&gt; 태그 유형이 date, datetime, datetime-local, month, week, time, number, range 일 경우에만 사용</p>
+
+                <figure>
+                    <figcaption>최대, 최솟값, step 지정하기</figcaption>
+                    <fieldset>
+                        <legend>교재 주문</legend>
+                        <ul style="list-style: none;">
+                            <li><label>교재 <input type="number"></label>
+                            <li><label>워크시트<input type="number"></label>
+                            <li><label>단체주문<input type="number" min="0" max="100" step="10"></label>
+                        </ul>
+                    </fieldset>
+                </figure>
+            </div>
+            <hr>
+
+            <!-- size, minlength, maxlength -->
+            <div>
+                <p><mark><b>size, minlength, maxlength 속성 - 길이, 최소 길이, 최대 길이 속성</b></mark></p>
+                <p>size 속성은 한줄짜리 텍스트와 관련된 필드에서 몇 글자까지 화면에 보이게 할지 지정</p>
+                <p>maxlength 속성은 사용자가 최대 몇 글자까지 입력할 수 있는지 지정</p>
+                <p>minlength 속성은 사용자가 최소 몇 글자 이상을 입력해야하는지 지정</p>
+
+                <figure>
+                    <figcaption>
+                        텍스트 필드의 글자 길이 지정
+                    </figcaption>
+                    <h3>회원 가입을 환영합니다</h3>
+                    <form>
+                        <fieldset>
+                            <ul style="list-style: none;">
+                                <li><label>id <input type="text" size="8" minlength="4" maxlength="8"></label><small style="color:red;"> (4~8자리 영문과 숫자)</small>
+                                <li><label>e-mail <input type="email" size="8" minlength="4" maxlength="8"></label>
+                                <li><label>password <input type="password" size="8" minlength="4" maxlength="8"></label>
+                                <li><label>password check<input type="password" size="8" minlength="4" maxlength="8"></label>
+                                <li><input type="submit" value="회원가입">
+                            </ul>
+                        </fieldset>
+                    </form>
+                </figure>
+            </div>
+            <hr>
+
+            <!-- etc -->
+            <div>
+                <p><mark><b>etc - TODO TODO TODO</b></mark></p>
+            </div>
+            <hr>
+        </div>
+
+        <div id="doitmyself">
+            <div id="container">
+                <h1><strong><mark>상품 주문서 작성하기</mark></strong></h1>
+                <form>
+                    <fieldset>
+                        <legend>개인 정보</legend>
+                        <ul>
+                            <li><label for="name" class="title">이름</label>
+                            <input id="name" type="text" placeholder="여백없이 입력" required></li>
+                            <li><label for="tel" class="title">연락처</label>
+                            <input id="tel" type="tel" placeholder="연락가능한 번호"></li>
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend>배송지 정보</legend>
+                        <ul>
+                            <li>
+                                <label for="addr" class="title">주소</label>
+                                <input id="addr" type="text">
+                            </li>
+                            <li>
+                                <label for="telnum" class="title">전화번호</label>
+                                <input id="telnum" type="tel">
+                            </li>
+                            <li>
+                                <label for="title" class="title">메모</label>
+                                <textarea id="title" cols="40" rows="3" id="comment"></textarea>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend>주문 정보</legend>
+                        <ul>
+                            <li>
+                                <label><input type="checkbox">과테말라 안티구아 (100g)</label>
+                                <label><input type="number" value="0" min="0" max="5">개</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox">인도네시아 만델링 (100g)</label>
+                                <label><input type="number" value="0" min="0" max="5">개</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox">탐라는도다(블렌딩) (100g)</label>
+                                <label><input type="number" value="0" min="0" max="5">개</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+
+                    <div class="centered">
+                        <input type="submit" value="주문하기">
+                        <input type="reset" value="다시 작성">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="chap4">
+            <h1><strong><mark>여러 데이터 나열해 보여 주기</mark></strong></h1>
+
+            <!-- select, optgroup, option 태그 -->
+            <div>
+                <p><mark><b>&lt;select&gt; &lt;optgroup&gt; &lt;option&gt; 태그 - 드롭다운 목록 만들기</b></mark></p>
+                <p>사용자가 내용을 입력하는 것이 아니라, 여러 옵션 중에서 선택하도록 하고 싶을 때 드롭다운 목록을 사용</p>
+                <p>드롭다운 목록은 &lt;select&gt; 태그와 &lt;option&gt;태그를 이용해 표시</p>
+                <p>&lt;select&gt; 태그로 드롭다운 목록의 시작과 끝 표시</p>
+                <p>&lt;option&gt;태그를 이용해 항목을 추가. 여기서 value는 서버로 넘겨주기 위한 값을 지정</p>
+
+                <figure>
+                    <figcaption>
+                        <p><strong><em>&lt;select&gt; 태그 속성</em></strong></p>
+                    </figcaption>
+
+                    <p>size속성이나 multiple 속성을 이용하면 드롭다운 목록의 크기나 선택할 항목의 개수를 조절할 수 있음</p>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>속성</th>
+                                <th>설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>size</td>
+                                <td>화면에 표시될 드롭다운 메뉴의 항목 개수 지정 (size="3"지정하면 4개의 옵션이 표시)</td>
+                            </tr>
+                            <tr>
+                                <td>multiple</td>
+                                <td>여러개의 옵션이 함께 표시되면서 ctrl누른상태로 여러 항목을 선택할 수 있음</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </figure>
+                <hr>
+
+                <figure>
+                    <figcaption>
+                        <p><strong><em>&lt;option&gt; 태그 속성</em></strong></p>
+                    </figcaption>
+
+                    <p>드롭다운 목록에 표시되는 옵션들은 &lt;option&gt; 태그를 이용해 지정됨</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>속성</th>
+                                <th>설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>value</td>
+                                <td>서버로 넘겨질 값 지정</td>
+                            </tr>
+                            <tr>
+                                <td>selected</td>
+                                <td>기본적으로 선택되어 있는 옵션을 지정</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </figure>
+                <hr>
+
+                <figure>
+                    <figcaption>드롭다운 목록 만들기</figcaption>
+
+                    <h3>여름방학 특강 신청</h3>
+                    <fieldset>
+                        <legend>수강 신청인</legend>
+                        <ul>
+                            <li>
+                                <label for="id" id="title">학번</label>
+                                <input id="id" type="text">
+                            </li>
+                            <li>
+                                <label for="name" id="title">이름</label>
+                                <input id="name" type="text">
+                            </li>
+                            <li>
+                                <label for="subj" id="title">학과</label>
+                                <select size="5" id="subj" multiple>
+                                    <option value="archi">건축공학과</option>
+                                    <option value="mechanic">기계공학과</option>
+                                    <option value="indust">산업공학과</option>
+                                    <option value="elec">전기전자공학과</option>
+                                    <option value="computer" selected>컴퓨터공학과</option>
+                                    <option value="chemical">화학공학과</option>
+                                </select>
+                            </li>
+                            <li>
+                                <label for="pet-select" id="title">Choose a pet:</label>
+                                <select name="pets" id="pet-select">
+                                    <option value="">--Please choose an option--</option>
+                                    <option value="dog">Dog</option>
+                                    <option value="cat">Cat</option>
+                                    <option value="hamster">Hamster</option>
+                                    <option value="parrot">Parrot</option>
+                                    <option value="spider">Spider</option>
+                                    <option value="goldfish">Goldfish</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </figure>
+                <hr>
+
+                <figure>
+                    <figcaption>
+                        <p><strong><em>&lt;option&gt; 태그 속성</em></strong></p>
+                    </figcaption>
+
+                    <h3>여름방학 특강 신청</h3>
+                    <fieldset>
+                        <legend>수강 신청인</legend>
+                        <ul>
+                            <li>
+                                <label for="num" id="title">학번</label>
+                                <input id="num" type="number">
+                            </li>
+                            <li>
+                                <label for="name" id="title">이름</label>
+                                <input id="name" type="text">
+                            </li>
+                            <li>
+                                <label for="subj" id="title">학과</label>
+                                <select id="subj">
+                                    <optgroup label="공과대학">
+                                        <option value="archi">건축공학과</option>
+                                        <option value="mechanic">기계공학과</option>
+                                        <option value="indust">산업공학과</option>
+                                        <option value="elec">전기전자공학과</option>
+                                        <option value="computer" selected>컴퓨터공학과</option>
+                                        <option value="chemical">화학공학과</option>
+                                    </optgroup>
+                                    <optgroup label="인문대학">
+                                        <option value="history">사학과</option>
+                                        <option value="lang">어문학부</option>
+                                        <opiont value="philo">철학</opiont>
+                                    </optgroup>
+                                </select>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </figure>
+                <hr>
+
+                <figure>
+                    <figcaption>
+                        <p><strong><em>&lt;datalist&gt; 태그, &lt;option&gt; 태그 </em></strong></p>
+                        <p>텍스트 필드에 직접 값을 입력하는 것이 아니라, 데이터 목록에 제시한 값 중에서 선택하면 그 값이 자동으로 입력</p>
+                        <p>데이터 목록은 텍스트 필드와 함께 사용하기 때문에 &lt;input&gt; 태그를 함께 사용</p>
+                        <p>사용법은 &lt;input&gt; 태그의 list 속성 값과 데이터 목록의 id를 같게</p>
+                        <p>&lt;datalist&gt; 태그를 이용해 데이터 목록의 시작과 끝을 표시</p>
+                        <p>&lt;option&gt; 태그를 사용해 각 데이터 옵션을 표시</p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>속성</th>
+                                    <th>설명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>서버로 넘겨질 값 지정</td>
+                                </tr>
+                                <tr>
+                                    <td>label</td>
+                                    <td>브라우저에 표시할 레이블, 따로 지정하지 않을 경우 value 값을 레이블로 사용</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </figcaption>
+
+                    <figure>
+                        <figcaption>데이터 목록 만들기</figcaption>
+
+                        <fieldset>
+                            <legend>수강 과목을 선택하세요</legend>
+                            <label for="fav" id="title">관심분야</label>
+                            <input id="fav" type="text" id="interest" list="choices">
+                            <datalist id="choices">
+                                <option value="grammer" label="문법"></option>
+                                <option value="voca" label="어휘"></option>
+                                <option value="speaking" label="회화"></option>
+                                <option value="listening" label="리스닝"></option>
+                                <option value="news" label="뉴스청취"></option>
+                            </datalist>
+                        </fieldset>
+                    </figure>
+                </figure>
+            </div>
+
+            <!-- textarea 태그 -->
+            <div>
+                <p><mark><b>&lt;textarea&gt; 태그 - 여러 줄 입력하는 텍스트 영역 만들기</b></mark></p>
+                <p>한 줄 이상의 문장을 입력할 때 사용하는 폼</p>
+                <p>게시물을 입력하거나 회원가입 양식에서 사용자 약관을 표시할 때 자주 사용</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>속성</th>
+                            <th>설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>name</td>
+                            <td>텍스트 영역의 이름을 지정</td>
+                        </tr>
+                        <tr>
+                            <td>cols</td>
+                            <td>가로 너비를 문자 단위로 지정</td>
+                        </tr>
+                        <tr>
+                            <td>rows</td>
+                            <td>세로 길이를 줄 단위로 지정 (지정한 숫자보다 줄 개수가 많아지면 스크롤 막대가 생김)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <figrue>
+                    <figcaption>텍스트 영역 삽입하기</figcaption>
+                    <fieldset>
+                        <legend>go byfuls</legend>
+                        <textarea name="intro" cols="60" rows="5">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </textarea>
+                    </fieldset>
+                </figrue>
+            </div>
+        </div>
+
+        <div id="chap5">
+            <h1><strong><mark>기타 다양한 폼 요소들</mark></strong></h1>
+
+            <!-- button 태그 -->
+            <div>
+                <p><mark><b>&lt;button&gt; 태그 - 버튼 넣기</b></mark></p>
+                <p>&lt;button&gt; 태그의 type 속성은 버튼이 활성화 되었을 때 어떤 동작을 할지 지정</p>
+                <p>선택할 수 있는 값은 submit, reset, button 이고, 지정하지 않으면 submit으로 간주</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>속성 값</th>
+                            <th>설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>submit</td>
+                            <td>폼을 서버로 전송. &lt;button type="submit"&gt;전송하기&lt;/button&gt;와 같이 사용됨</td>
+                        </tr>
+                        <tr>
+                            <td>reset</td>
+                            <td>폼에 입력한 모든 내용을 초기화</td>
+                        </tr>
+                        <tr>
+                            <td>button</td>
+                            <td>버튼만 있을뿐 자체 기능은 없음</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <small>&lt;input type="submit"&gt; 이나 &lt;input type="reset"&gt;, &lt;input type="button"&gt; 처럼 &lt;input&gt; 태그를 이용해 삽입 할 수도 있고, </small><br>
+                <small>&lt;button&gt;태그를 이용해 삽입할 수도 있슴</small>
+
+                <p>&lt;button&gt; 태그를 사용한 버튼에는 콘텐츠를 포함할 수 있기 때문에 아이콘을 추가할 수 있고, css 이용해 원하는 형태로 꾸밀 수도 있음</p>
+
+                <figure>
+                    <figcaption>버튼 삽입하기</figcaption>
+                    <form>
+                        <button type="submit" style="text-align: center;">
+                            <img src="images/tick.png" alt="" style="width:30px; height:auto; float:left; ">전송하기
+                        </button>
+                    </form>
+                </figure>
+            </div>
+            <hr>
+
+            <!-- output 태그 -->
+            <div>
+                <p><mark><b>&lt;output&gt; 태그 - 계산 결과</b></mark></p>
+                <p>&lt;output&gt; 입력하는 값이 계산 결과라는 것을 브라우저에게 알려줌</p>
+                <p>TODO TODO TODO</p>
+            </div>
+            <hr>
+
+            <!-- progress 태그 -->
+            <div>
+                <p><mark><b>&lt;progress&gt; 태그 - 진행 상태 보여주기</b></mark></p>
+                <p>작업 시작을 0으로 하고 최종 완료를 최댓값으로 해 얼마나 진척되었는지 숫자로 표현</p>
+                <p>이때 단위는 없고 표시하지 않음</p>
+
+                <figure>
+                    <figcaption>&lt;progress&gt; 속성</figcaption>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>속성</th>
+                                <th>설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>value</td>
+                                <td>진행 상태를 나타내며, 부동 수소점으로 표현. 값은 0보다 크거나 같고 max값보다 작거나 같아야함 (max값이 지정되지 않았다면 1.0보다 작아야함)</td>
+                            </tr>
+                            <tr>
+                                <td>max</td>
+                                <td>작업 완료되려면 얼마나 많은 작업을 해야하는지 부동 소수점으로 표현. 이 값은 0보다 커야함</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </figure>
+
+                <figure>
+                    <figcaption>진행 상태 막대 삽입하기</figcaption>
+                    <fieldset>
+                        <ul>
+                            <li>
+                                <label>10초 남음</label>
+                                <!--전체 60초 중 50초 진행-->
+                                <progress value="50" max="60"></progress>
+                            </li>
+                            <li>
+                                <label>진행률 30%</label>
+                                <!--전체 100 중 30만큼 진행-->
+                                <progress value="30" max="100"></progress>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <strong>자바스크립트를 이용하면 &lt;progress&gt; 막대의 진행을 순차적으로 계속 진행시켜 마치 애니메이션처럼 보이게 할 수 있음</strong>
+                </figure>
+            </div>
+            <hr>
+
+            <!-- meter 태그 -->
+            <div>
+                <p><mark><b>&lt;meter&gt; 태그 - 값이 차지하는 크기 표시하기</b></mark></p>
+                <p>진행 상황을 나타내는 &lt;progress&gt;태그 </p>
+                <p>&lt;meter&gt;태그는 전체 크기 중에서 얼마나 차지하는지를 표현</p>
+                <p>&lt;meter&gt;태그는 진행된다는 의미보다 하드 디스크 전체 용량 중 현재 얼마나 사용하고 있는지를 나타내는 사용량이나 투표율처럼 지정된 범위 내에서 해당 값이 어느 정도 차지하는지 표현</p>
+
+                <figrue>
+                    <figcation>&lt;meter&gt; 태그 속성</figcation>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>속성</th>
+                                <th>설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>min, max</td>
+                                <td>최솟값과 최댓값 (지정하지 않으면 0과 1로 간주)</td>
+                            </tr>
+                            <tr>
+                                <td>value</td>
+                                <td>범위 내에서 차지하는 값</td>
+                            </tr>
+                            <tr>
+                                <td>low</td>
+                                <td>"이 정도면 낮다" 라고 할 정도의 값 지정</td>
+                            </tr>
+                            <tr>
+                                <td>high</td>
+                                <td>"이 정도면 높다" 라고 할 정도의 값 지정</td>
+                            </tr>
+                            <tr>
+                                <td>optimum</td>
+                                <td>"이 정도면 적당하다" 라고 할 정도의 범위 지정. optimum값이 high값보다 크다면 value값이 클수록 좋고, optimum값이 low값보다 작다면 value 값이 작을수록 좋음</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </figrue>
+
+                <figure>
+                    <figcaption>전체 크기 중 차지하는 크기 삽입하기</figcaption>
+                    <ul>
+                        <li>
+                            <label>점유율 0.8</label>
+                            <!-- 전체 크기 1을 기준으로 0.8만큼 차지합니다 -->
+                            <meter value="0.8"></meter>
+                        </li>
+                        <li>
+                            <label>사용량 64%</label>
+                            <!-- 전체 100 중에서 64만큼 차지합니다 -->
+                            <meter min="0" max="100" value="64"></meter>
+                        </li>
+                        <li>
+                            <label>트래픽 초과</label>
+                            <!-- 전체 크기는 1024~10240인데 높다고 설정한 8192보다 현재 값 9216이 더 큽니다 -->
+                            <meter min="1024" max="10240" low="2048" high="8192" value="9216"></meter>
+                        </li>
+                        <li>
+                            <label>적절한 트래픽</label>
+                            <!-- 전체 1중에서 현재 0.5 차지하고 있으며 적정도를 0.8로 설정 -->
+                            <meter value="0.5" optimum="0.8"></meter>
+                        </li>
+                    </ul>
+                </figure>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
