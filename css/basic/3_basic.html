@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">   <!-- 검색 엔진 고려 -->
+    <meta name="basic html" content="html 기본 구조">   <!-- 해당 문서의 키워드 -->
+    <meta name="description" content="html5를 통해 웹 표준 공부하기"> <!-- 해당 문서의 설명 -->
+    <meta name="author" content="byfuls"> <!-- 해당 문서의 소유자 또는 제작자 -->
+
+    <title>basic css</title>
+
+    <style>
+        <link rel="stylesheet" href="css/style.css">
+
+
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+      function basic_1() {
+        document.getElementById("3_basic_1").onclick = () => {
+          let w = open("3_basic_src/3_basic_1.html", "3_basic_1.html", "width=700, height=500");
+        }
+      }
+      window.onload = () => {
+        basic_1()
+      }
+    </script>
+</head>
+<body>
+    <div>
+        <div id="subject">
+            색상과 배경을 위한 스타일
+        </div>
+        <div id="chap1">
+            <h1><strong><mark>웹에서 색상 표현하기</mark></strong></h1>
+
+            <p><mark><b>16진수 표기법</b></mark></p>
+            <ul>
+              <li>#ffff00처럼 #기호 다음에 6자리의 16진수로 표시
+              <li>6자리는 앞부터 두자리씩 묶어 #RRGGBB형식으로 표현<br>
+                (검은색 #000000, 흰색 #ffffff)
+            </ul>
+            <hr>
+
+            <p><mark><b>rgb 와 rgba 표기법</b></mark></p>
+            <figure>
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">color:rgb(255,0,0,0);</div><div style="padding:0 6px; white-space:pre; line-height:130%">color:rgba(255,0,0,0.5);</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+            </figure>
+            <ul>
+              <li>rgb(red 값, green 값, blue 값);
+                  rgba(red 값, green 값, blue 값, alpha 값);
+              <li>a(alpha)는 불투명도 값을 나타냄, 0부터 1까지 값 중에서 사용<br>
+                  1은 완전히 불투명한 것, 작아질수록 조금씩 투명해지다 0이 되면 완전히 투명
+            </ul>
+            <hr>
+
+            <p><mark><b>hsl과 hsla표기법</b></mark></p>
+            <figure>
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">hsl(<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">hue(색상)</span>&nbsp;<span style="color:#a8ff58">값</span><span style="color:#f0f0f0">&gt;</span>,&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">saturation(채도)</span>&nbsp;<span style="color:#a8ff58">값</span><span style="color:#f0f0f0">&gt;</span>,&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">lightness(밝기)</span>&nbsp;<span style="color:#a8ff58">값</span><span style="color:#f0f0f0">&gt;</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">hsl(<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">hue(색상)</span>&nbsp;<span style="color:#a8ff58">값</span><span style="color:#f0f0f0">&gt;</span>,&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">saturation(채도)</span>&nbsp;<span style="color:#a8ff58">값</span><span style="color:#f0f0f0">&gt;</span>,&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">lightness(밝기)</span>&nbsp;<span style="color:#a8ff58">값</span><span style="color:#f0f0f0">&gt;</span>,&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">alpha</span>&nbsp;<span style="color:#a8ff58">값</span><span style="color:#f0f0f0">&gt;</span>);</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+            </figure>
+            <ul>
+              <li>#ffff00처럼 #기호 다음에 6자리의 16진수로 표시
+              <li>6자리는 앞부터 두자리씩 묶어 #RRGGBB형식으로 표현<br>
+                (검은색 #000000, 흰색 #ffffff)
+            </ul>
+            <hr>
+        </div>
+
+        <div id="chap2">
+            <h1><strong><mark>배경 색과 배경 이미지</mark></strong></h1>
+
+            <p><mark><b>background-color 속성 - 배경 색 지정하기</b></mark></p>
+            <figure>
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">background-color:&nbsp;#00ff00;</div><div style="padding:0 6px; white-space:pre; line-height:130%">background-color:&nbsp;rgb(0,255,0);</div><div style="padding:0 6px; white-space:pre; line-height:130%">background-color:&nbsp;green;</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+              <p><small>(투명도도 함께 조절하고 싶다면 rgba 표기법 이용)</small></p>
+            </figure>
+
+            <p><strong><em>배경 색 스타일과 상속</em></strong></p>
+            <ul>
+              <li>글꼴이나 글자 크기 등은 &lt;body&gt;태그 선택자에서 지정하면 문서 전체에 상속됨, 하지만 backgroud-color값은 상속되지 않음
+              <li>&lt;body&gt;태그에서 background-color를 이용해 배경색을 지정하면 그 안에 있는모든 표나 목록 등의 색깔도 그래도 비치는 이유는<br>
+                  기본적으로 모든 웹 문서 요소의 배경은 투명하기 때문
+            </ul>
+            <hr>
+
+            <p><mark><b>background-clip 속성 - 배경 적용 범위 조절하기</b></mark></p>
+            <ul>
+              <li>박스 모델 관점에서 배경 적용 범위 조절
+              <li>테두리까지 적용할지<br>
+                  테두리를 빼고 패딩범위까지 적용할지<br>
+                  내용 부분에만 적용할지 선택
+            </ul>
+            <figure>
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">background-clip:&nbsp;border-box&nbsp;|&nbsp;padding-box&nbsp;|&nbsp;content-box</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+              <br>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>속성 값</th>
+                    <th>설명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>border-box</td>
+                    <td>박스 모델의 가장 외곽인 테두리(border)까지 적용 (기본값)</td>
+                  </tr>
+                  <tr>
+                    <td>padding-box</td>
+                    <td>박스 모델의 테두리를 뺀 패딩(padding) 범위까지 적용</td>
+                  </tr>
+                  <tr>
+                    <td>content-box</td>
+                    <td>박스 모델에서 내용 부분에만 적용</td>
+                  </tr>
+                </tbody>
+              </table>
+            </figure>
+            <hr>
+
+            <p><mark><b>background-image 속성 - 웹 요소에 배경 이미지 넣기</b></mark></p>
+            <ul>
+              <li>url(파열경로) 형식으로 사용<br>
+                  (파일경로에서 작은따옴표(또는 큰따옴표)를 붙여도 되고 안붙여도 됨)
+              <li>배경 이미지는 여러 개를 사용할 수 있는데 이럴 경우, 첫 번째 이미지부터 순서대로 표시
+              <li>이미지가 채우려는 요소 크기보다 작을 경우, 해당 요소를 가득 채울 정도로 가로와 세로로 반복
+            </ul>
+            <hr>
+
+            <p><mark><b>background-repeat 속성 - 배경 이미지 반복 방법 지정하기</b></mark></p>
+            <ul>
+              <li>기본적으로 배경 이미지 크기가 배경 채우려는 요소보다 작을 경우 기본적으로 반복해 표시
+              <li>이때 background-repeat 속성을 사용하면 배경 이미지를 반복하지 않게 할 수 있고<br>
+                  반복하더라도 가로 반복이나 세로 반복 등 반복 방향을 지정할 수 있음
+            </ul>
+            <figure>
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">background-repeat:&nbsp;repeat&nbsp;|&nbsp;repeat-x&nbsp;|&nbsp;repeat-y&nbsp;|&nbsp;no-repeat</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+              <br>
+              <table>
+                <thead>
+                  <tr>
+                    <th>속성 값</th>
+                    <th>설명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>repeat</td>
+                    <td>가로와 세로로 반복 (기본값)</td>
+                  </tr>
+                  <tr>
+                    <td>repeat-x</td>
+                    <td>가로로 반복</td>
+                  </tr>
+                  <tr>
+                    <td>repeat-y</td>
+                    <td>세로로 반복</td>
+                  </tr>
+                  <tr>
+                    <td>no-repeat</td>
+                    <td>배경 이미지를 한번만 표시하고 반복하지 않음</td>
+                  </tr>
+                </tbody>
+              </table>
+            </figure>
+            <hr>
+
+            <p><mark><b>background-size 속성 - 배경 이미지 크기 조절하기</b></mark></p>
+            <ul>
+              <li>배경 이미지를 여러 크기로 조절
+            </ul>
+            <figure>
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">background-size:&nbsp;auto&nbsp;|&nbsp;contain&nbsp;|&nbsp;cover&nbsp;|&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">크기</span>&nbsp;<span style="color:#a8ff58">값</span><span style="color:#f0f0f0">&gt;</span>&nbsp;|&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">백분율</span><span style="color:#f0f0f0">&gt;</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+              <br>
+              <table>
+                <thead>
+                  <tr>
+                    <th>속성 값</th>
+                    <th>설명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>auto</td>
+                    <td>원래 배경 이미지 크기 그대로 표시 (기본값)</td>
+                  </tr>
+                  <tr>
+                    <td>contain</td>
+                    <td>요소 안에 배경 이미지가 다 들어오도록 이미지를 확대/축소</td>
+                  </tr>
+                  <tr>
+                    <td>cover</td>
+                    <td>배경 이미지로 요소를 모두 덮도록 이미지를 확대/축소</td>
+                  </tr>
+                  <tr>
+                    <td>&lt;크기 값&gt;</td>
+                    <td>
+                      너비 값과 높이 값을 지정<br>
+                      너비 값만 지정할 경우, 원래 배경 이미지 크기를 기준으로 축소/확대 비율을 자동으로 계산해 높이 값을 지정
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>&lt;백분율&gt;</td>
+                    <td>
+                      배경 이미지가 들어갈 요소의 크기를 기준으로 백분율 값을 지정하고<br>
+                      그 크기에 맞도록 배경 이미지를 확대하거나 축소
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </figure>
+            <hr>
+
+            <p><mark><b>background-position 속성 - 배경 이미지 위치 조절하기</b></mark></p>
+            <ul>
+              <li>배경 이미지는 제목이나 본문에서 한쪽에 이미지를 표시할 때도 이용
+              <li>배경 이미지가 표시되는 위치를 조절
+            </ul>
+            <figure>
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">background-position&nbsp;:&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">수평</span>&nbsp;<span style="color:#a8ff58">위치</span><span style="color:#f0f0f0">&gt;</span>&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">수직</span>&nbsp;<span style="color:#a8ff58">위치</span><span style="color:#f0f0f0">&gt;</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">수평&nbsp;위치&nbsp;:&nbsp;left&nbsp;|&nbsp;center&nbsp;|&nbsp;right&nbsp;|&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">백분율</span><span style="color:#f0f0f0">&gt;</span>&nbsp;|&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">길이</span>&nbsp;<span style="color:#a8ff58">값</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">수직&nbsp;위치&nbsp;:&nbsp;top&nbsp;|&nbsp;center&nbsp;|&nbsp;bottom&nbsp;|&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">백분율</span><span style="color:#f0f0f0">&gt;</span>&nbsp;|&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">길이</span>&nbsp;<span style="color:#a8ff58">값</span><span style="color:#f0f0f0">&gt;</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+              <small>(하나만 값을 지정할 경우, 그 값은 수평 값으로 간주하고 수직 값은 50%나 center로 간주)</small>
+              <br>
+
+              <div class="sourceCoding">
+                <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div><div style="line-height:130%">18</div><div style="line-height:130%">19</div><div style="line-height:130%">20</div><div style="line-height:130%">21</div><div style="line-height:130%">22</div><div style="line-height:130%">23</div><div style="line-height:130%">24</div><div style="line-height:130%">25</div><div style="line-height:130%">26</div><div style="line-height:130%">27</div><div style="line-height:130%">28</div><div style="line-height:130%">29</div><div style="line-height:130%">30</div><div style="line-height:130%">31</div><div style="line-height:130%">32</div><div style="line-height:130%">33</div><div style="line-height:130%">34</div><div style="line-height:130%">35</div><div style="line-height:130%">36</div><div style="line-height:130%">37</div><div style="line-height:130%">38</div><div style="line-height:130%">39</div><div style="line-height:130%">40</div><div style="line-height:130%">41</div><div style="line-height:130%">42</div><div style="line-height:130%">43</div><div style="line-height:130%">44</div><div style="line-height:130%">45</div><div style="line-height:130%">46</div><div style="line-height:130%">47</div><div style="line-height:130%">48</div><div style="line-height:130%">49</div><div style="line-height:130%">50</div><div style="line-height:130%">51</div><div style="line-height:130%">52</div><div style="line-height:130%">53</div><div style="line-height:130%">54</div><div style="line-height:130%">55</div><div style="line-height:130%">56</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">!doctype</span>&nbsp;<span style="color:#a8ff58">html</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">html</span>&nbsp;<span style="color:#a8ff58">lang</span>=<span style="color:#ffd500">"ko"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">head</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">meta</span>&nbsp;<span style="color:#a8ff58">charset</span>=<span style="color:#ffd500">"UTF-8"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">title</span><span style="color:#f0f0f0">&gt;</span>배경&nbsp;이미지&nbsp;위치&nbsp;조정하기<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">title</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">style</span><span style="color:#f0f0f0">&gt;</span><span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#bg1&nbsp;</span>{<span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-image</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;url("../images/check-circle-regular.svg")</span><span style="color:#ff3399">;</span><span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-repeat</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;no-repeat</span><span style="color:#ff3399">;</span><span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-position</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;5px&nbsp;center</span><span style="color:#ff3399">;</span><span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-size</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;20%</span><span style="color:#ff3399">;</span><span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;white</span><span style="color:#ff3399">;</span><span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;100px</span><span style="color:#ff3399">;</span><span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;50px</span><span style="color:#ff3399">;</span><span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>}<span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#bg2&nbsp;</span>{<span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-image</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;url("../images/check-circle-regular.svg")</span><span style="color:#ff3399">;</span><span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-repeat</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;no-repeat</span><span style="color:#ff3399">;</span><span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-position</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;right&nbsp;center</span><span style="color:#ff3399">;</span><span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-size</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;20%</span><span style="color:#ff3399">;</span><span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;white</span><span style="color:#ff3399">;</span><span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;100px</span><span style="color:#ff3399">;</span><span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;50px</span><span style="color:#ff3399">;</span><span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>}<span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#bg3&nbsp;</span>{<span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-image</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;url("../images/check-circle-regular.svg")</span><span style="color:#ff3399">;</span><span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-repeat</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;no-repeat</span><span style="color:#ff3399">;</span><span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-position</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;left&nbsp;center</span><span style="color:#ff3399">;</span><span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-size</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;20%</span><span style="color:#ff3399">;</span><span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;white</span><span style="color:#ff3399">;</span><span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;100px</span><span style="color:#ff3399">;</span><span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;50px</span><span style="color:#ff3399">;</span><span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">style</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">link</span>&nbsp;<span style="color:#a8ff58">ref</span>=<span style="color:#ffd500">"stylesheet"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">href</span>=<span style="color:#ffd500">"../css/style.css"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">head</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">body</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">button</span>&nbsp;<span style="color:#a8ff58">id</span>=<span style="color:#ffd500">"bg1"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;button</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">button</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">button</span>&nbsp;<span style="color:#a8ff58">id</span>=<span style="color:#ffd500">"bg2"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;button</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">button</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">button</span>&nbsp;<span style="color:#a8ff58">id</span>=<span style="color:#ffd500">"bg3"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;button</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">button</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">body</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">html</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                <button type="button" value="3_basic_1" id="3_basic_1" style="margin-top: 15px;">결과보기</button>
+              </div>
+            </figure>
+            <hr>
+
+            <p><mark><b>background-origin 속성 - 배경 이미지 배치할 기준 조절하기</b></mark></p>
+            <ul>
+              <li>배경 이미지를 배치할 때 기준을 지정<br>
+                  (backgroud-clip과 같음)
+            </ul>
+            <figure>
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">background-origin:&nbsp;border-box&nbsp;|&nbsp;padding-box&nbsp;|&nbsp;content-box</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+              <br>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>속성 값</th>
+                    <th>설명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>border-box</td>
+                    <td>박스 모델의 가장 외곽인 테두리(border)가 기준</td>
+                  </tr>
+                  <tr>
+                    <td>padding-box</td>
+                    <td>박스 모델에서 테두리를 뺀 패딩(padding) 기준 (기본값)</td>
+                  </tr>
+                  <tr>
+                    <td>content-box</td>
+                    <td>박스 모델에서 내용 부분이 기준</td>
+                  </tr>
+                </tbody>
+              </table>
+            </figure>
+            <hr>
+
+            <p><mark><b>background-attach 속성 - 배경 이미지 고정하기</b></mark></p>
+            <ul>
+              <li>지금까지는 스크롤을 내렸을때 배경 이미지도 함께 이동함
+              <li>background-attachment 속성 이용하면 배경 이미지를 고정할 수 있음
+            </ul>
+            <figure>
+                <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">background-attachment:&nbsp;scroll&nbsp;|&nbsp;fixed</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                <br>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>속성</th>
+                      <th>설명</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>scroll</td>
+                      <td>화면 스크롤과 함께 배경 이미지도 스크롤 (기본값)</td>
+                    </tr>
+                    <tr>
+                      <td>fixed</td>
+                      <td>화면이 스크롤 되더라도 배경 이미지는 고정</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </figure>
+            <hr>
+
+            <p><mark><b>background 속성 - 속성 하나로 배경 이미지 제어하기</b></mark></p>
+            <ul>
+              <li>지금까지 배경 이미지 관련 속성을 background라는 하나의 속성으로 줄여 사용 가능
+            </ul>
+            <figure>
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">background:&nbsp;url('images/hi.jpg')&nbsp;no-repeat&nbsp;fixed&nbsp;right&nbsp;buttom;</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+              <br>
+              <table>
+                <thead>
+                  <tr>
+                    <th>속성</th>
+                    <th>속성 값</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>background-image</td>
+                    <td>url('images/bg3.jpg')
+                  </tr>
+                  <tr>
+                    <td>background-repeat</td>
+                    <td>no-repeat</td>
+                  </tr>
+                  <tr>
+                    <td>background-attachment</td>
+                    <td>fixed</td>
+                  </tr>
+                  <tr>
+                    <td>background-position</td>
+                    <td>right buttom</td>
+                  </tr>
+                  <tr>
+                    <td>background-clip</td>
+                    <td>border-box</td>
+                  </tr>
+                  <tr>
+                    <td>background-origin</td>
+                    <td>padding-box</td>
+                  </tr>
+                  <tr>
+                    <td>background-size</td>
+                    <td>auto</td>
+                  </tr>
+                </tbody>
+              </table>
+              <small>(속성 값이 다르므로 입력 순서는 상관없음)</small>
+            </figure>
+        </div>
+        <div id="chap3">
+            <h1><strong><mark>그라데이션 효과로 배경 꾸미기</mark></strong></h1>
+
+            <p><mark><b>TODO TODO TODO</b></mark></p>
+            <figure>
+            </figure>
+        </div>
+    </div>
+</body>
+</html>

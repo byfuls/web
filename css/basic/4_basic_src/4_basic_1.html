@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>박스 모델의 너비와 높이 지정하기</title>
+
+  <style>
+    .box1{
+      width: 400px;   /* 고정 너비 */
+      height: 100px;  /* 고정 높이 */
+      background: #ff6a00;
+    }
+    .box2{
+      width: 50%;     /* 부모 요소 기준 가변 길이 - 지금은 브라우저 창의 50% */
+      height: 100px;  /* 고정 높이 */
+      background: #0094ff;
+    }
+    div{
+      margin:10px;    /* div 영역 사이의 여백 */
+    }
+  </style>
+  <link ref="stylesheet" href="../css/style.css">
+</head>
+<body>
+	<div class="box1">
+	</div>
+	<div class="box2">
+	</div>
+</body>
+</html>

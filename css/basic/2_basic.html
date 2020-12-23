@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">   <!-- 검색 엔진 고려 -->
+    <meta name="basic html" content="html 기본 구조">   <!-- 해당 문서의 키워드 -->
+    <meta name="description" content="html5를 통해 웹 표준 공부하기"> <!-- 해당 문서의 설명 -->
+    <meta name="author" content="byfuls"> <!-- 해당 문서의 소유자 또는 제작자 -->
+
+    <title>basic css</title>
+
+    <style>
+        <link rel="stylesheet" href="css/style.css">
+
+
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+      function basic_1() {
+        document.getElementById("2_basic_1").onclick = () => {
+          let w = open("2_basic_src/2_basic_1.html", "2_basic_1.html", "width=700, height=500");
+        }
+      }
+      function basic_2() {
+        document.getElementById("2_basic_2").onclick = () => {
+          let w = open("2_basic_src/2_basic_2.html", "2_basic_2.html", "width=700, height=500");
+        }
+      }
+      function basic_3() {
+        document.getElementById("2_basic_3").onclick = () => {
+          let w = open("2_basic_src/2_basic_3.html", "2_basic_3.html", "width=700, height=500");
+        }
+      }
+      function basic_4() {
+        document.getElementById("2_basic_4").onclick = () => {
+          let w = open("2_basic_src/2_basic_4.html", "2_basic_4.html", "width=700, height=500");
+        }
+      }
+      function basic_5() {
+        document.getElementById("2_basic_5").onclick = () => {
+          let w = open("2_basic_src/2_basic_5.html", "2_basic_5.html", "width=700, height=500");
+        }
+      }
+      function basic_6() {
+        document.getElementById("2_basic_6").onclick = () => {
+          let w = open("2_basic_src/2_basic_6.html", "2_basic_6.html", "width=700, height=500");
+        }
+      }
+      function basic_7() {
+        document.getElementById("2_basic_7").onclick = () => {
+          let w = open("2_basic_src/2_basic_7.html", "2_basic_7.html", "width=700, height=500");
+        }
+      }
+      function basic_8() {
+        document.getElementById("2_basic_8").onclick = () => {
+          let w = open("2_basic_src/2_basic_8.html", "2_basic_8.html", "width=700, height=500");
+        }
+      }
+      function basic_9() {
+        document.getElementById("2_basic_9").onclick = () => {
+          let w = open("2_basic_src/2_basic_9.html", "2_basic_9.html", "width=700, height=500");
+        }
+      }
+      function basic_10() {
+        document.getElementById("2_basic_10").onclick = () => {
+          let w = open("2_basic_src/2_basic_10.html", "2_basic_10.html", "width=700, height=500");
+        }
+      }
+      function basic_11() {
+        document.getElementById("2_basic_11").onclick = () => {
+          let w = open("2_basic_src/2_basic_11.html", "2_basic_11.html", "width=700, height=500");
+        }
+      }
+      window.onload = () => {
+        basic_1()
+        basic_2()
+        basic_3()
+        basic_4()
+        basic_5()
+        basic_6()
+        basic_7()
+        basic_8()
+        basic_9()
+        basic_10()
+        basic_11()
+      }
+    </script>
+</head>
+
+<body>
+    <div>
+        <div id="subject">
+          텍스트 관련 스타일
+        </div>
+        <div id="chap1">
+            <h1><strong><mark>글꼴 관련 스타일</mark></strong></h1>
+
+            <p><mark><b>font-family 속성 - 글꼴 지정하기</b></mark></p>
+            <ul>
+              <li>font-family 속성으로 지정
+              <li>&lt;body&gt;, &lt;p&gt;, &lt;hn&gt; 태그들 처럼 텍스트를 사용하는 요소들에 주로 사용
+              <li>한 가지 글꼴만 지정하기도 하지만, 지정한 글꼴이 없을 경우에 대비해 두 번째, 세 번째 글꼴까지 지정 <br>
+                  두 개 이상의 글꼴 이름 지정시 쉼표(,)로 구분<br>
+                  <small>body { font-family: "맑은 고딕", 돋움, 굴림 } <br>
+                        맑은 고딕이 없으면 돋움, 돋움이 없으면 굴림</small>
+            </ul>
+            <hr>
+
+            <p><mark><b>@font-face 속성 - 웹 폰트 사용하기</b></mark></p>
+            <ul>
+              <li>웹 폰트란 웹 문서를 작성할 때 웹 문서 안에 글꼴 정보도 함께 저장했다가, 사용자가 웹 문서에 접속하면 글꼴을 사용자 시스템으로 다운로드시키는 방식 <br>
+                  사용자가 글꼴이 없더라도 웹 문서를 통해 필요한 글꼴을 다운로드한 후 표시하기 때문에 웹 제작자가 의도한 대로 텍스트를 표시할 수 있음
+            </ul>
+            <p><strong><em>구글 웹 폰트 사용하기</em></strong></p>
+            <ul>
+              <li><a href="https://fonts.google.com">https://fonts.google.com</a>에 접속해서 구글에서 제공하는 웹 폰트 사용 가능
+            </ul>
+            <hr>
+
+            <p><strong><em>직접 웹폰트 업로드해 사용하기</em></strong></p>
+            <p> TODO TODO TODO </p>
+            <hr>
+
+            <p><strong><em>웹 폰트 적용하기</em></strong></p>
+            <p> TODO TODO TODO </p>
+            <hr>
+
+            <p><mark><b>font-size 속성 - 글자 크기 조절하기</b></mark></p>
+            <figure>
+              <figcaption>font-size 속성 속성값 </figcaption>
+              <table>
+                <thead>
+                  <tr>
+                    <th>속성 값</th>
+                    <th>설명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>절대크기</td>
+                    <td>브라우저에서 지정한 글자 크기. xx-small | x-small | small | medium | large | x-large | xx-large</td>
+                  </tr>
+                  <tr>
+                    <td>상대크기</td>
+                    <td>부모 요소의 글자 크기(font-size) 기준으로 더 크게 or 더 작게 표시. larger | smaller
+                  </tr>
+                  <tr>
+                    <td>크기</td>
+                    <td>브라우저와 상관없이 글자 크기 직접 지정</td>
+                  </tr>
+                  <tr>
+                    <td>백분율</td>
+                    <td>부모 요소 글자 크기(font-size)기준으로 해당하는 %를 계산해 표시 (%와 함께 표기)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </figure>
+            <figure>
+              <figcaption>&lt;크기&gt;값을 직접 지정할 때 사용하는 단위</figcaption>
+              <table>
+                <thead>
+                  <tr>
+                    <th>단위</th>
+                    <th>설명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>em</td>
+                    <td>해당 글꼴의 대문자 M의 너비를 기준으로 크기를 조절</td>
+                  </tr>
+                  <tr>
+                    <td>ex</td>
+                    <td>해당 글꼴의 소문자 x의 높이를 기준으로 크기 조절</td>
+                  </tr>
+                  <tr>
+                    <td>px</td>
+                    <td>픽셀, 모니터에 따라 상대적 크기가 됨</td>
+                  </tr>
+                  <tr>
+                    <td>pt</td>
+                    <td>포인트, 일반 문서에서 많이 사용하는 단위</td>
+                  </tr>
+                </tbody>
+              </table>
+            </figure>
+            <hr>
+
+            <p><strong><em>px 단위 사용하기</em></strong></p>
+            <ul>
+              <li>웹에서 font-size 속성을 사용해 폰트 크기 지정할 떄는 주로 px단위를 많이 사용
+              <li>폰트 크기가 고정되기 때문에 창 크기가 작은 모바일 기기로 볼때도 같은 크기로 화면에 표시. 결국 작은 화면 안에 작은 글씨로 표시 <br>
+                  모바일 기기까지 고려한다면 px단위보다 em단위 사용이 좋음<br>
+                  <small>(크기 따로 지정하지 않으면 기본 16px)</small>
+            </ul>
+            <hr>
+
+            <p><strong><em>em 단위 사용하기</em></strong></p>
+            <ul>
+              <li>부모 요소에서 지정한 폰트의 대문자 M의 너비를 1em으로 놓고 상대적 값을 계산해 다른 요소들의 글자 크기를 조절
+              <li>만약 지정한 크기가 없다면 &lt;body&gt;요소의 크기 16px이 기본값 1em으로 지정
+            </ul>
+            <hr>
+
+            <p><mark><b>font-weight 속성 - 글자 굵기 지정하기</b></mark></p>
+            <figure>
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">font-weight:&nbsp;normal&nbsp;|&nbsp;bold&nbsp;|&nbsp;bolder&nbsp;|&nbsp;lighter&nbsp;|&nbsp;100&nbsp;|&nbsp;200&nbsp;|&nbsp;300&nbsp;|&nbsp;400&nbsp;|&nbsp;500&nbsp;|&nbsp;600&nbsp;|&nbsp;700&nbsp;|&nbsp;800&nbsp;|&nbsp;900</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+              <br>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>속성 값</th>
+                    <th>설명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>normal</td>
+                    <td>일반적인 형태로 기본 값</td>
+                  </tr>
+                  <tr>
+                    <td>bold | lighter | bolder</td>
+                    <td>굵게 | 더 가늘게 | 더 굵게</td>
+                  </tr>
+                  <tr>
+                    <td>100 ~ 900 사이의 수치</td>
+                    <td>400은 normal, 700은 bold에 해당하며 숫자 값을 조절해 좀 더 세밀히 글꼴 두께를 조절가능</td>
+                  </tr>
+                </tbody>
+              </table>
+            </figure>
+            <hr>
+
+            <p><mark><b>font-variant 속성 - 작은 대문자로 표시하기</b></mark></p>
+            <figure>
+              <figcaption>작은 대문자란 대문자를 소문자 크기에 맞추어 작게 표시한 것</figcaption>
+              <table>
+                <thead>
+                  <tr>
+                    <th>속성 값</th>
+                    <th>설명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>normal</td>
+                    <td>일반적인 형태로 표시</td>
+                  </tr>
+                  <tr>
+                    <td>small-caps</td>
+                    <td>작은 대문자로 표시</td>
+                  </tr>
+                </tbody>
+              </table>
+              <br>
+
+              <div class="sourceCoding">
+                <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div><div style="line-height:130%">18</div><div style="line-height:130%">19</div><div style="line-height:130%">20</div><div style="line-height:130%">21</div><div style="line-height:130%">22</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">!doctype</span>&nbsp;<span style="color:#a8ff58">html</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">html</span>&nbsp;<span style="color:#a8ff58">lang</span>=<span style="color:#ffd500">"ko"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">head</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">meta</span>&nbsp;<span style="color:#a8ff58">charset</span>=<span style="color:#ffd500">"UTF-8"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">title</span><span style="color:#f0f0f0">&gt;</span>글자&nbsp;굴기&nbsp;및&nbsp;작은&nbsp;대문자&nbsp;지정하기<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">title</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">style</span><span style="color:#f0f0f0">&gt;</span><span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;.accent&nbsp;</span>{<span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-variant</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;small-caps</span><span style="color:#ff3399">;</span><span style="color:#ff3399">&nbsp;</span><span style="color:#999999">/*&nbsp;작은&nbsp;대문자&nbsp;*/</span><span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-weight</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;bolder</span><span style="color:#ff3399">;</span><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#999999">/*&nbsp;좀&nbsp;더&nbsp;굵게&nbsp;*/</span><span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;</span>}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">style</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">link</span>&nbsp;<span style="color:#a8ff58">ref</span>=<span style="color:#ffd500">"stylesheet"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">href</span>=<span style="color:#ffd500">"../css/style.css"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">head</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">body</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">id</span>=<span style="color:#ffd500">"container"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">h1</span><span style="color:#f0f0f0">&gt;</span>What&nbsp;is&nbsp;Lorem&nbsp;Ipsum?<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">h1</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">p</span><span style="color:#f0f0f0">&gt;</span><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">span</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"accent"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span>Lorem&nbsp;Ipsum<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">span</span><span style="color:#f0f0f0">&gt;</span>is&nbsp;simply&nbsp;dummy&nbsp;text&nbsp;of&nbsp;the&nbsp;printing&nbsp;and&nbsp;typesetting&nbsp;industry.<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">p</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">body</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">html</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                <button type="button" value="2_basic_1" id="2_basic_1" style="margin-top: 15px">결과보기</button>
+              </div>
+            </figure>
+            <hr>
+
+            <p><mark><b>font-style 속성 - 글자 스타일 지정하기</b></mark></p>
+            <figure>
+              <figcaption>font-style 속성은 글자를 이탤릭체로 표현할지 여부를 결정</figcaption>
+              <table>
+                <thead>
+                  <tr>
+                    <th>속성 값</th>
+                    <th>설명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>normal</td>
+                    <td>일반적인 형태로 표시</td>
+                  </tr>
+                  <tr>
+                    <td>italic</td>
+                    <td>이틸릭체로 표시</td>
+                  </tr>
+                  <tr>
+                    <td>italic</td>
+                    <td>이틸릭체로 표시</td>
+                  </tr>
+                </tbody>
+              </table>
+            </figure>
+            <hr>
+
+            <p><mark><b>font 속성 - 글꼴 속성을 한꺼번에 묶어 표현</b></mark></p>
+            <figure>
+              <figcaption>
+                font 속성을 이용해 font-style, font-variant, font-weight, font-size/line-height, font-fmaily 속성을 한꺼번에 묶어 약식으로 표현<br>
+                <small>font-size/line-height(줄 간격 조절 속성)은 하나의 속성처럼 사용되기도함. (ex)12px/24px</small>
+              </figcaption>
+              <div class="sourceCoding">
+                <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">font:&nbsp;&lt;font-style&gt;&lt;font-variant&gt;&lt;font-weight&gt;&lt;font-size/line-height&gt;&lt;font-family&gt;&nbsp;|&nbsp;caption&nbsp;|&nbsp;icon&nbsp;|&nbsp;menu&nbsp;|&nbsp;message-box&nbsp;|&nbsp;small-caption&nbsp;|&nbsp;status-bar</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+              </div>
+            <figure>
+        </div>
+
+        <div id="chap2">
+            <h1><strong><mark>텍스트 스타일</mark></strong></h1>
+            <ul>
+              <li>글꼴은 폰트와 관련된 내용
+              <li>텍스트 스타일은 글자와 단어들, 글자들로 이루어진 문단에서 사용되는 스타일
+            </ul>
+            <hr>
+
+            <p><mark><b>color 속성 - 글자 색 지정하기</b></mark></p>
+            <ul>
+              <li>문단이나 제목 등의 텍스트에서 사용되는 글자 색을 바꿀 때는 color 속성을 사용
+              <li>색상 값은 16진수나 rgb(or rgba), hsl(or hsla) 또는 색상 이름으로 표기
+            </ul>
+            <figure>
+              <figcaption>글자 색 지정하기</figcaption>
+
+              <div class="sourceCoding">
+                <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div><div style="line-height:130%">18</div><div style="line-height:130%">19</div><div style="line-height:130%">20</div><div style="line-height:130%">21</div><div style="line-height:130%">22</div><div style="line-height:130%">23</div><div style="line-height:130%">24</div><div style="line-height:130%">25</div><div style="line-height:130%">26</div><div style="line-height:130%">27</div><div style="line-height:130%">28</div><div style="line-height:130%">29</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">!doctype</span>&nbsp;<span style="color:#a8ff58">html</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">html</span>&nbsp;<span style="color:#a8ff58">lang</span>=<span style="color:#ffd500">"ko"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">head</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">meta</span>&nbsp;<span style="color:#a8ff58">charset</span>=<span style="color:#ffd500">"UTF-8"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">title</span><span style="color:#f0f0f0">&gt;</span>글자&nbsp;색&nbsp;지정하기<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">title</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">style</span><span style="color:#f0f0f0">&gt;</span><span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;h1&nbsp;</span>{<span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;rgb(0,&nbsp;200,&nbsp;0)</span><span style="color:#ff3399">;</span><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#999999">/*&nbsp;rgb&nbsp;사용&nbsp;-&nbsp;녹색&nbsp;계열&nbsp;*/</span><span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;</span>}<span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;h2&nbsp;</span>{<span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;blue</span><span style="color:#ff3399">;</span><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#999999">/*&nbsp;색상&nbsp;이름&nbsp;지정&nbsp;*/</span><span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;</span>}<span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;.accent&nbsp;</span>{<span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;#ff0000</span><span style="color:#ff3399">;</span><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#999999">/*&nbsp;16&nbsp;진수&nbsp;사용&nbsp;-&nbsp;빨강&nbsp;*/</span><span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;</span>}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">style</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">link</span>&nbsp;<span style="color:#a8ff58">ref</span>=<span style="color:#ffd500">"stylesheet"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">href</span>=<span style="color:#ffd500">"../css/style.css"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">head</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">body</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">id</span>=<span style="color:#ffd500">"container"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">h1</span><span style="color:#f0f0f0">&gt;</span>Lorem&nbsp;Ipsum<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">h1</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">h2</span><span style="color:#f0f0f0">&gt;</span>"Neque&nbsp;porro&nbsp;quisquam&nbsp;est&nbsp;qui&nbsp;dolorem&nbsp;ipsum&nbsp;quia&nbsp;dolor&nbsp;sit&nbsp;amet,&nbsp;consectetur,&nbsp;adipisci&nbsp;velit..."</div><div style="padding:0 6px; white-space:pre; line-height:130%">"There&nbsp;is&nbsp;no&nbsp;one&nbsp;who&nbsp;loves&nbsp;pain&nbsp;itself,&nbsp;who&nbsp;seeks&nbsp;after&nbsp;it&nbsp;and&nbsp;wants&nbsp;to&nbsp;have&nbsp;it,&nbsp;simply&nbsp;because&nbsp;it&nbsp;is&nbsp;pain..."<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">h2</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">p</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"accent"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span>Lorem&nbsp;Ipsum&nbsp;is&nbsp;simply&nbsp;dummy&nbsp;text&nbsp;of&nbsp;the&nbsp;printing&nbsp;and&nbsp;typesetting&nbsp;industry.&nbsp;Lorem&nbsp;Ipsum&nbsp;has&nbsp;been&nbsp;the&nbsp;industry's&nbsp;standard&nbsp;dummy&nbsp;text&nbsp;ever&nbsp;since&nbsp;the&nbsp;1500s,&nbsp;when&nbsp;an&nbsp;unknown&nbsp;printer&nbsp;took&nbsp;a&nbsp;galley&nbsp;of&nbsp;type&nbsp;and&nbsp;scrambled&nbsp;it&nbsp;to&nbsp;make&nbsp;a&nbsp;type&nbsp;specimen&nbsp;book.<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">p</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">body</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">html</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                <button type="button" value="2_basic_2" id="2_basic_2" style="margin-top: 15px">결과보기</button>
+              </div>
+            </figure>
+            <hr>
+
+            <p><mark><b>text-decoration 속성 - 텍스트에 줄 표시하기/없애기</b></mark></p>
+            <ul>
+              <li>텍스트에 밑줄 표시
+              <li>텍스트에 취소선 표시
+            </ul>
+            <figure>
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">text-decoration&nbsp;:&nbsp;none&nbsp;|&nbsp;underline&nbsp;|&nbsp;overline&nbsp;|&nbsp;line-through</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+              <br>
+              <table>
+                <thead>
+                  <tr>
+                    <th>속성 값</th>
+                    <th>설명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>none</td>
+                    <td>밑줄을 표시하지 않습니다.</td>
+                  </tr>
+                  <tr>
+                    <td>underline</td>
+                    <td>밑줄을 표시합니다</td>
+                  </tr>
+                  <tr>
+                    <td>overline</td>
+                    <td>영역 위로 선을 그림</td>
+                  </tr>
+                  <tr>
+                    <td>line-through</td>
+                    <td>취소선</td>
+                  </tr>
+                </tbody>
+              </table>
+            </figure>
+            <hr>
+
+            <p><mark><b>text-transfrom 속성 - 텍스트 대.소문자 변환하기</b></mark></p>
+            <ul>
+              <li>텍스트를 대.소문자로 변환
+              <li>텍스트를 전각문자로 변환
+            </ul>
+            <figure>
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">text-transfrom&nbsp;:&nbsp;none&nbsp;|&nbsp;capitalize&nbsp;|&nbsp;uppercase&nbsp;|&nbsp;lowercase&nbsp;|&nbsp;full-width</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+              <br>
+              <table>
+                <thead>
+                  <tr>
+                    <th>속성 값</th>
+                    <th>설명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>none</td>
+                    <td>변환하지 않음</td>
+                  </tr>
+                  <tr>
+                    <td>capitalize</td>
+                    <td>시작하는 첫 번째 글자를 대문자로 변환</td>
+                  </tr>
+                  <tr>
+                    <td>uppercase</td>
+                    <td>모든 글자를 대문자로 변환</td>
+                  </tr>
+                  <tr>
+                    <td>lowercase</td>
+                    <td>모든 글자를 소문자로 변환</td>
+                  </tr>
+                  <tr>
+                    <td>full-width</td>
+                    <td>가능한 모든 문자를 전각 문자로 변환</td>
+                  </tr>
+                </tbody>
+              </table>
+            </figure>
+            <hr>
+
+            <p><mark><b>text-shadow 속성 - 텍스트에 그림자 효과 추가하기</b></mark></p>
+            <ul>
+              <li>제목이나 강조해야 할 글자에 사용하면 눈에 띄는 효과
+              <li>텍스트를 좀 더 입체적으로 표시
+              <li>그림자 값은 쉼표로 구분해 여러값을 지정 할 수 있음 <br>
+                <i>보통 그림자 값은 하나만 사용하지만 여러 개를 사용하면 마치 그래픽으로 처리한 듯한 텍스트를 만들 수 있음</i>
+            </ul>
+            <figure>
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">text-shadow&nbsp;:&nbsp;none&nbsp;|&nbsp;&lt;가로&nbsp;거리&gt;&nbsp;|&nbsp;&lt;세로&nbsp;거리&gt;&nbsp;|&nbsp;&lt;번짐&nbsp;정도&gt;&nbsp;|&nbsp;&lt;색상&gt;</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+              <br>
+              <table>
+                <thead>
+                  <tr>
+                    <th>속성 값</th>
+                    <th>설명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>&lt;가로 거리&gt;</td>
+                    <td>
+                      텍스트부터 그림자까지의 가로 거리<br>
+                      양수 값은 글자 오른쪽, 음수 값은 글자 왼쪽. <strong>(필수속성)</strong>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>&lt;세로 거리&gt;</td>
+                    <td>
+                      텍스트로부터 그림자까지의 세로 거리<br>
+                      양수 값은 글자 아래쪽, 음수 값은 글자 위쪽. <strong>(필수속성)</strong>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>&lt;번짐 정도&gt;</td>
+                    <td>
+                      그림자가 번지는 정도<br>
+                      양수 값을 사용하면 그림자가 모든 방향으로 퍼져나가 그림자가 크게 표시<br>
+                      음수 값을 사용하면 그림자가 모든 방향으로 축소됨. (기본 값은 0)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>&lt;색상&gt;</td>
+                    <td>
+                      그림자 색상 지정<br>
+                      한 가지만 지정 할 수 있고 공백으로 구분해 여러 색상 지정 할 수 있음<br>
+                      기본 값은 현재 글자 색
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <br>
+
+              <div class="sourceCoding">
+                <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div><div style="line-height:130%">18</div><div style="line-height:130%">19</div><div style="line-height:130%">20</div><div style="line-height:130%">21</div><div style="line-height:130%">22</div><div style="line-height:130%">23</div><div style="line-height:130%">24</div><div style="line-height:130%">25</div><div style="line-height:130%">26</div><div style="line-height:130%">27</div><div style="line-height:130%">28</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">!doctype</span>&nbsp;<span style="color:#a8ff58">html</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">html</span>&nbsp;<span style="color:#a8ff58">lang</span>=<span style="color:#ffd500">"ko"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">head</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">meta</span>&nbsp;<span style="color:#a8ff58">charset</span>=<span style="color:#ffd500">"UTF-8"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">title</span><span style="color:#f0f0f0">&gt;</span>텍스트에&nbsp;그림자&nbsp;효과&nbsp;추가하기<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">title</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">style</span><span style="color:#f0f0f0">&gt;</span><span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;.shadow1&nbsp;</span>{<span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;orange</span><span style="color:#ff3399">;</span><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#999999">/*&nbsp;글자&nbsp;색&nbsp;*/</span><span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-shadow</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;1px&nbsp;1px</span><span style="color:#ff3399">;</span><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#999999">/*&nbsp;텍스트&nbsp;그림자&nbsp;:&nbsp;가로&nbsp;거리,&nbsp;세로&nbsp;거리&nbsp;*/</span><span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;</span>}<span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;.shadow2&nbsp;</span>{<span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-shadow</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;5px&nbsp;5px&nbsp;3px&nbsp;#f00</span><span style="color:#ff3399">;</span><span style="color:#ff3399">&nbsp;&nbsp;</span><span style="color:#999999">/*&nbsp;텍스트&nbsp;그림자&nbsp;*/</span><span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;</span>}<span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;.shadow3&nbsp;</span>{<span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;#fff</span><span style="color:#ff3399">;</span><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#999999">/*&nbsp;글자&nbsp;색&nbsp;*/</span><span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-shadow</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;7px&nbsp;-7px&nbsp;5px&nbsp;#000</span><span style="color:#ff3399">;</span><span style="color:#ff3399">&nbsp;</span><span style="color:#999999">/*&nbsp;텍스트&nbsp;그림자&nbsp;*/</span><span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;</span>}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">style</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">link</span>&nbsp;<span style="color:#a8ff58">ref</span>=<span style="color:#ffd500">"stylesheet"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">href</span>=<span style="color:#ffd500">"../css/style.css"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">head</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">body</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">h1</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"shadow1"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span>text-shadow<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">h1</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">h1</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"shadow2"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span>text-shadow<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">h1</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">h1</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"shadow3"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span>text-shadow<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">h1</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">body</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">html</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                <button type="button" value="2_basic_3" id="2_basic_3" style="margin-top: 15px">결과보기</button>
+              </div>
+              <br>
+              <div class="sourceCoding">
+                <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div><div style="line-height:130%">18</div><div style="line-height:130%">19</div><div style="line-height:130%">20</div><div style="line-height:130%">21</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">!doctype</span>&nbsp;<span style="color:#a8ff58">html</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">html</span>&nbsp;<span style="color:#a8ff58">lang</span>=<span style="color:#ffd500">"ko"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">head</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">meta</span>&nbsp;<span style="color:#a8ff58">charset</span>=<span style="color:#ffd500">"UTF-8"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">title</span><span style="color:#f0f0f0">&gt;</span>텍스트에&nbsp;여러&nbsp;개의&nbsp;그림자&nbsp;효과&nbsp;추가하기<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">title</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">style</span><span style="color:#f0f0f0">&gt;</span><span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;.shadow4&nbsp;</span>{<span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;#000</span><span style="color:#ff3399">;</span><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#999999">/*&nbsp;글자&nbsp;색&nbsp;*/</span><span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-shadow</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;0&nbsp;0&nbsp;4px&nbsp;#ccc,&nbsp;0&nbsp;-5px&nbsp;4px&nbsp;#ff3,</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2px&nbsp;-10px&nbsp;6px&nbsp;#fd3,&nbsp;-2px&nbsp;-15px&nbsp;11px&nbsp;#f80,</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2px&nbsp;-19px&nbsp;18px&nbsp;#f20</span><span style="color:#ff3399">;</span><span style="color:#ff3399">&nbsp;&nbsp;</span><span style="color:#999999">/*&nbsp;텍스트&nbsp;그림자&nbsp;*/</span><span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;</span>}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">style</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">link</span>&nbsp;<span style="color:#a8ff58">ref</span>=<span style="color:#ffd500">"stylesheet"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">href</span>=<span style="color:#ffd500">"../css/style.css"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">head</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">body</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">h1</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"shadow4"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span>text-shadow<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">h1</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">body</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">html</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                <button type="button" value="2_basic_4" id="2_basic_4" style="margin-top: 15px">결과보기</button>
+              </div>
+            </figure>
+            <hr>
+
+            <p><mark><b>white-space 속성 - 공백 처리하기</b></mark></p>
+            <ul>
+              <li>텍스트와 함꼐 연속해 입력된 여러 개의 공백을 어떻게 처리할지 지정할 수 있음
+            </ul>
+            <figure>
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">white-space&nbsp;:&nbsp;normal&nbsp;|&nbsp;nowrap&nbsp;|&nbsp;pre&nbsp;|&nbsp;pre-line&nbsp;|&nbsp;pre-wrap</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+              <br>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>속성 값</th>
+                    <th>설명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>normal</td>
+                    <td>여러 개의 공백을 하나로 표시 (기본 값)</td>
+                  </tr>
+                  <tr>
+                    <td>nowrap</td>
+                    <td>
+                      여러 개의 공백을 하나로 표시하고<br>
+                      영역 너비를 넘어가는 내용은 줄 바꾸지 않고 계속 한 줄로 표시
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>pre</td>
+                    <td>
+                      여러 개의 공백을 그대로 표시하고<br>
+                      영역 너비를 넘어가는 내용은 줄 바꾸지 않고 계속 한 줄로 표시
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>pre-line</td>
+                    <td>
+                      여러 개의 공백을 하나로 표시하고<br>
+                      영역 너비를 넘어가는 내용은 자동으로 줄을 바꿔 표시
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>pre-wrap</td>
+                    <td>
+                      여러 개의 공백을 그대로 표시하고<br>
+                      영역 너비를 넘어가는 내용은 자동으로 줄을 바꿔 표시
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </figure>
+            <hr>
+
+            <p><mark><b>letter-spacing과 word-spacing 속성 - 텍스트 간격 조절하기</b></mark></p>
+            <ul>
+              <li>텍스트 자간 조절
+              <li>강조하고 싶은 글자나 &lt;hn&gt;태그를 이용해 표시한 글자들은 글자 사이 간격을 조절해 좀 더 여유 있게 표시 할 수 있음
+              <li>letter-spacing 속성은 낱 글자 사이 간격을 조절하고<br>
+                  word-spacing 속성은 단어와 단어 사이 간격을 조절<br>
+                  (주로 단어 사이 간격은 수정하지 않고, letter-spacing속성을 사용해 자간을 조절)
+            </ul>
+            <figure>
+              <figcaption>글자 간격 조절하기</figcaption>
+              <div class="sourceCoding">
+                <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div><div style="line-height:130%">18</div><div style="line-height:130%">19</div><div style="line-height:130%">20</div><div style="line-height:130%">21</div><div style="line-height:130%">22</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">!doctype</span>&nbsp;<span style="color:#a8ff58">html</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">html</span>&nbsp;<span style="color:#a8ff58">lang</span>=<span style="color:#ffd500">"ko"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">head</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">meta</span>&nbsp;<span style="color:#a8ff58">charset</span>=<span style="color:#ffd500">"UTF-8"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">title</span><span style="color:#f0f0f0">&gt;</span>글자&nbsp;간격&nbsp;조절하기<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">title</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">style</span><span style="color:#f0f0f0">&gt;</span><span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;.letter1&nbsp;</span>{<span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;letter-spacing</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;0.2em</span><span style="color:#ff3399">;</span><span style="color:#ff3399">&nbsp;&nbsp;</span><span style="color:#999999">/*&nbsp;자간&nbsp;조절&nbsp;*/</span><span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;</span>}<span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;.letter2&nbsp;</span>{<span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;letter-spacing</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;0.5em</span><span style="color:#ff3399">;</span><span style="color:#ff3399">&nbsp;&nbsp;</span><span style="color:#999999">/*&nbsp;자간&nbsp;조절&nbsp;*/</span><span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;</span>}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">style</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">link</span>&nbsp;<span style="color:#a8ff58">ref</span>=<span style="color:#ffd500">"stylesheet"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">href</span>=<span style="color:#ffd500">"../css/style.css"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">head</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">body</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">h1</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"letter1"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span>Letter&nbsp;spacing<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">h1</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">h1</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"letter2"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span>Letter&nbsp;spacing<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">h1</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">body</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">html</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                <button type="button" value="2_basic_5" id="2_basic_5" style="margin-top: 15px">결과보기</button>
+              </div>
+            </figure>
+        </div>
+
+        <div id="chap3">
+            <h1><strong><mark>문단 스타일</mark></strong></h1>
+            <ul>
+              <li>문단 스타일에서 조절하는 부분은 "텍스트 정렬", "들여쓰기", "줄 간격" 등
+            </ul>
+            <hr>
+
+            <p><mark><b>direction 속성 - 글자 쓰기 방향 지정하기</b></mark></p>
+            <ul>
+              <li>텍스트를 어느 방향부터 쓰기 시작해 화면에 표시할지를 결정
+            </ul>
+            <figure>
+              <figcaption>
+                <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">direction&nbsp;:&nbsp;ltr&nbsp;|&nbsp;rtl</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+              </figcaption>
+              <br>
+              <table>
+                <thead>
+                  <tr>
+                    <th>속성 값</th>
+                    <th>설명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>ltr</td>
+                    <td>왼쪽에서 오른쪽으로 (left-to-right) 기본값</td>
+                  </tr>
+                  <tr>
+                    <td>rtl</td>
+                    <td>오른쪽에서 왼쪽으로 (right-to-left)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </figure>
+            <hr>
+
+            <p><mark><b>text-align 속성 - 텍스트 정렬하기</b></mark></p>
+            <ul>
+              <li>문단의 텍스트 정렬 방법 지정
+              <li>"왼쪽 정렬", "오른쪽 정렬", "양쪽 정렬", "가운데 정렬"
+            </ul>
+            <figure>
+              <figcaption>
+                <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">text-align&nbsp;:&nbsp;start&nbsp;|&nbsp;end&nbsp;|&nbsp;left&nbsp;|&nbsp;right&nbsp;|&nbsp;center&nbsp;|&nbsp;justify&nbsp;|&nbsp;match-parent</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+              </figcaption>
+              <br>
+              <table>
+                <thead>
+                  <tr>
+                    <th>속성 값</th>
+                    <th>설명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>start</td>
+                    <td>
+                      시작 위치에 맞추어 문단을 정렬<br>
+                      left-to-right언어라면 왼쪽으로, right-to-left언어라면 오른쪽으로 맞추어 정렬
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>end</td>
+                    <td>
+                      끝 위치에 맞추어 문단을 정렬<br>
+                      left-to-right언어라면 오른쪽으로, right-to-left언어라면 왼쪽으로 맞추어 정렬
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>left</td>
+                    <td>왼쪽에 맞추어 문단을 정렬</td>
+                  </tr>
+                  <tr>
+                    <td>right</td>
+                    <td>오른쪽에 맞추어 문단을 정렬</td>
+                  </tr>
+                  <tr>
+                    <td>center</td>
+                    <td>가운데 정렬</td>
+                  </tr>
+                  <tr>
+                    <td>justify</td>
+                    <td>양쪽에 맞추어 정렬</td>
+                  </tr>
+                  <tr>
+                    <td>match-parent</td>
+                    <td>부모 요소를 따라 문단을 정렬</td>
+                  </tr>
+                </tbody>
+              </table>
+            </figure>
+            <figure>
+              <figcaption>텍스트 정렬하기</figcaption>
+              <div class="sourceCoding">
+                <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div><div style="line-height:130%">18</div><div style="line-height:130%">19</div><div style="line-height:130%">20</div><div style="line-height:130%">21</div><div style="line-height:130%">22</div><div style="line-height:130%">23</div><div style="line-height:130%">24</div><div style="line-height:130%">25</div><div style="line-height:130%">26</div><div style="line-height:130%">27</div><div style="line-height:130%">28</div><div style="line-height:130%">29</div><div style="line-height:130%">30</div><div style="line-height:130%">31</div><div style="line-height:130%">32</div><div style="line-height:130%">33</div><div style="line-height:130%">34</div><div style="line-height:130%">35</div><div style="line-height:130%">36</div><div style="line-height:130%">37</div><div style="line-height:130%">38</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">!doctype</span>&nbsp;<span style="color:#a8ff58">html</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">html</span>&nbsp;<span style="color:#a8ff58">lang</span>=<span style="color:#ffd500">"ko"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">head</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">meta</span>&nbsp;<span style="color:#a8ff58">charset</span>=<span style="color:#ffd500">"UTF-8"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">title</span><span style="color:#f0f0f0">&gt;</span>텍스트&nbsp;정렬하기<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">title</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">style</span><span style="color:#f0f0f0">&gt;</span><span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.align-left&nbsp;</span>{<span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-align</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;left</span><span style="color:#ff3399">;</span><span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>}<span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.align-right&nbsp;</span>{<span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-align</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;right</span><span style="color:#ff3399">;</span><span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>}<span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.align-center&nbsp;</span>{<span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-align</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;center</span><span style="color:#ff3399">;</span><span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>}<span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.align-justify&nbsp;</span>{<span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-align</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;justify</span><span style="color:#ff3399">;</span><span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">style</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">link</span>&nbsp;<span style="color:#a8ff58">ref</span>=<span style="color:#ffd500">"stylesheet"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">href</span>=<span style="color:#ffd500">"../css/style.css"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">head</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">body</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">p</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"align-left"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem&nbsp;Ipsum&nbsp;is&nbsp;simply&nbsp;dummy&nbsp;text&nbsp;of&nbsp;the&nbsp;printing&nbsp;and&nbsp;typesetting&nbsp;industry.&nbsp;Lorem&nbsp;Ipsum&nbsp;has&nbsp;been&nbsp;the&nbsp;industry's&nbsp;standard&nbsp;dummy&nbsp;text&nbsp;ever&nbsp;since&nbsp;the&nbsp;1500s,&nbsp;when&nbsp;an&nbsp;unknown&nbsp;printer&nbsp;took&nbsp;a&nbsp;galley&nbsp;of&nbsp;type&nbsp;and&nbsp;scrambled&nbsp;it&nbsp;to&nbsp;make&nbsp;a&nbsp;type&nbsp;specimen&nbsp;book.</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">p</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">p</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"align-right"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem&nbsp;Ipsum&nbsp;is&nbsp;simply&nbsp;dummy&nbsp;text&nbsp;of&nbsp;the&nbsp;printing&nbsp;and&nbsp;typesetting&nbsp;industry.&nbsp;Lorem&nbsp;Ipsum&nbsp;has&nbsp;been&nbsp;the&nbsp;industry's&nbsp;standard&nbsp;dummy&nbsp;text&nbsp;ever&nbsp;since&nbsp;the&nbsp;1500s,&nbsp;when&nbsp;an&nbsp;unknown&nbsp;printer&nbsp;took&nbsp;a&nbsp;galley&nbsp;of&nbsp;type&nbsp;and&nbsp;scrambled&nbsp;it&nbsp;to&nbsp;make&nbsp;a&nbsp;type&nbsp;specimen&nbsp;book.</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">p</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">p</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"align-center"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem&nbsp;Ipsum&nbsp;is&nbsp;simply&nbsp;dummy&nbsp;text&nbsp;of&nbsp;the&nbsp;printing&nbsp;and&nbsp;typesetting&nbsp;industry.&nbsp;Lorem&nbsp;Ipsum&nbsp;has&nbsp;been&nbsp;the&nbsp;industry's&nbsp;standard&nbsp;dummy&nbsp;text&nbsp;ever&nbsp;since&nbsp;the&nbsp;1500s,&nbsp;when&nbsp;an&nbsp;unknown&nbsp;printer&nbsp;took&nbsp;a&nbsp;galley&nbsp;of&nbsp;type&nbsp;and&nbsp;scrambled&nbsp;it&nbsp;to&nbsp;make&nbsp;a&nbsp;type&nbsp;specimen&nbsp;book.</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">p</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">p</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"align-justify"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem&nbsp;Ipsum&nbsp;is&nbsp;simply&nbsp;dummy&nbsp;text&nbsp;of&nbsp;the&nbsp;printing&nbsp;and&nbsp;typesetting&nbsp;industry.&nbsp;Lorem&nbsp;Ipsum&nbsp;has&nbsp;been&nbsp;the&nbsp;industry's&nbsp;standard&nbsp;dummy&nbsp;text&nbsp;ever&nbsp;since&nbsp;the&nbsp;1500s,&nbsp;when&nbsp;an&nbsp;unknown&nbsp;printer&nbsp;took&nbsp;a&nbsp;galley&nbsp;of&nbsp;type&nbsp;and&nbsp;scrambled&nbsp;it&nbsp;to&nbsp;make&nbsp;a&nbsp;type&nbsp;specimen&nbsp;book.</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">p</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">body</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">html</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                <button type="button" value="2_basic_6" id="2_basic_6" style="margin-top: 15px;">결과보기</button>
+              </div>
+            </figure>
+            <hr>
+
+            <p><mark><b>text-justify 속성 - 정렬 시 공백 조절하기</b></mark></p>
+            <ul>
+              <li>text-align 속성 값이 justify인 경우, 양쪽 끝에 맞추기 때문에 글자와 단어 사이 간격이 어색하게 벌어질 수 있음<br>
+                  이때, 간격을 어떻게 조절해 정렬할 것인지 지정하는 것이 text-justify
+            </ul>
+
+            <figure>
+              <figcaption>
+                <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">text-justify&nbsp;:&nbsp;auto&nbsp;|&nbsp;none&nbsp;|&nbsp;inter-word&nbsp;|&nbsp;distribute</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+              </figcaption>
+              <br>
+              <table>
+                <thead>
+                  <tr>
+                    <th>속성 값</th>
+                    <th>설명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>auto</td>
+                    <td>웹 브라우저에서 자동으로 지정</td>
+                  </tr>
+                  <tr>
+                    <td>none</td>
+                    <td>정렬하지 않음</td>
+                  </tr>
+                  <tr>
+                    <td>inter-word</td>
+                    <td>단어 사이의 공백을 조절해 정렬</td>
+                  </tr>
+                  <tr>
+                    <td>distribute</td>
+                    <td>인접한 글자 사이의 공백을 똑같이 맞추어 정렬</td>
+                  </tr>
+                </tbody>
+              </table>
+            </figure>
+            <hr>
+
+            <p><mark><b>text-indent 속성 - 텍스트 들여쓰기</b></mark></p>
+            <ul>
+              <li>문단의 첫 글자를 얼마나 들여 쓸지를 지정
+            </ul>
+            <figure>
+              <figcaption>
+                <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">text-indent&nbsp;:&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">크기</span><span style="color:#f0f0f0">&gt;</span>&nbsp;|&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">백분율</span><span style="color:#f0f0f0">&gt;</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+              </figcaption>
+              <br>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>속성 값</th>
+                    <th>설명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>&lt;크기&gt;</td>
+                    <td>들여 쓸 크기를 지정 (음수 값도 사용 가능)</td>
+                  </tr>
+                  <tr>
+                    <td>&lt;백분율&gt;</td>
+                    <td>부모 요소의 너비를 기준으로 상대적 크기 지정</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="sourceCoding">
+                <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div><div style="line-height:130%">18</div><div style="line-height:130%">19</div><div style="line-height:130%">20</div><div style="line-height:130%">21</div><div style="line-height:130%">22</div><div style="line-height:130%">23</div><div style="line-height:130%">24</div><div style="line-height:130%">25</div><div style="line-height:130%">26</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">!doctype</span>&nbsp;<span style="color:#a8ff58">html</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">html</span>&nbsp;<span style="color:#a8ff58">lang</span>=<span style="color:#ffd500">"ko"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">head</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">meta</span>&nbsp;<span style="color:#a8ff58">charset</span>=<span style="color:#ffd500">"UTF-8"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">title</span><span style="color:#f0f0f0">&gt;</span>텍스트&nbsp;들여쓰기<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">title</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">style</span><span style="color:#f0f0f0">&gt;</span><span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.indent1&nbsp;</span>{<span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-indent</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;15px</span><span style="color:#ff3399">;</span><span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>}<span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.indent2&nbsp;</span>{<span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-indent</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;5%</span><span style="color:#ff3399">;</span><span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">style</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">link</span>&nbsp;<span style="color:#a8ff58">ref</span>=<span style="color:#ffd500">"stylesheet"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">href</span>=<span style="color:#ffd500">"../css/style.css"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">head</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">body</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">p</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"indent1"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem&nbsp;Ipsum&nbsp;is&nbsp;simply&nbsp;dummy&nbsp;text&nbsp;of&nbsp;the&nbsp;printing&nbsp;and&nbsp;typesetting&nbsp;industry.&nbsp;Lorem&nbsp;Ipsum&nbsp;has&nbsp;been&nbsp;the&nbsp;industry's&nbsp;standard&nbsp;dummy&nbsp;text&nbsp;ever&nbsp;since&nbsp;the&nbsp;1500s,&nbsp;when&nbsp;an&nbsp;unknown&nbsp;printer&nbsp;took&nbsp;a&nbsp;galley&nbsp;of&nbsp;type&nbsp;and&nbsp;scrambled&nbsp;it&nbsp;to&nbsp;make&nbsp;a&nbsp;type&nbsp;specimen&nbsp;book.</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">p</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">p</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"indent2"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem&nbsp;Ipsum&nbsp;is&nbsp;simply&nbsp;dummy&nbsp;text&nbsp;of&nbsp;the&nbsp;printing&nbsp;and&nbsp;typesetting&nbsp;industry.&nbsp;Lorem&nbsp;Ipsum&nbsp;has&nbsp;been&nbsp;the&nbsp;industry's&nbsp;standard&nbsp;dummy&nbsp;text&nbsp;ever&nbsp;since&nbsp;the&nbsp;1500s,&nbsp;when&nbsp;an&nbsp;unknown&nbsp;printer&nbsp;took&nbsp;a&nbsp;galley&nbsp;of&nbsp;type&nbsp;and&nbsp;scrambled&nbsp;it&nbsp;to&nbsp;make&nbsp;a&nbsp;type&nbsp;specimen&nbsp;book.</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">p</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">body</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">html</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                <button type="button" value="2_basic_7" id="2_basic_7" style="margin-top: 15px;">결과보기</button>
+              </div>
+            </figure>
+            <hr>
+
+            <p><mark><b>line-height 속성 - 줄 간격 조절하기</b></mark></p>
+            <ul>
+              <li>원하는 만큼 줄 간격 조절
+              <li>&lt;숫자&gt;나 &lt;백분율&gt;로 지정할 때는 글자 크기를 기준으로 설정<br>
+                  (ex) 글자 크기가 12px이고 줄 간격을 2.0으로 했다면, 실제 줄 간격은 글자 크기의 2.0배인 24px가 됨 (백분율도 같은 식으로 계산) <br>
+                  보통 줄 간격은 글자 크기의 1.5 ~ 2배가 적당
+            </ul>
+            <figure>
+              <figcaption>
+                <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">line-height&nbsp;:&nbsp;normal&nbsp;|&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">숫자</span><span style="color:#f0f0f0">&gt;</span>&nbsp;|&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">크기</span><span style="color:#f0f0f0">&gt;</span>&nbsp;|&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">백분율</span><span style="color:#f0f0f0">&gt;</span>&nbsp;|&nbsp;inherit</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                <br>
+                <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">p&nbsp;{&nbsp;font-size:&nbsp;15px;&nbsp;line-height:&nbsp;30px;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">p&nbsp;{&nbsp;font-size:&nbsp;15px;&nbsp;line-height:&nbsp;200%;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">p&nbsp;{&nbsp;font-size:&nbsp;15px;&nbsp;line-height:&nbsp;2.0;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+              </figcaption>
+
+              <div class="sourceCoding">
+                <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div><div style="line-height:130%">18</div><div style="line-height:130%">19</div><div style="line-height:130%">20</div><div style="line-height:130%">21</div><div style="line-height:130%">22</div><div style="line-height:130%">23</div><div style="line-height:130%">24</div><div style="line-height:130%">25</div><div style="line-height:130%">26</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">!doctype</span>&nbsp;<span style="color:#a8ff58">html</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">html</span>&nbsp;<span style="color:#a8ff58">lang</span>=<span style="color:#ffd500">"ko"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">head</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">meta</span>&nbsp;<span style="color:#a8ff58">charset</span>=<span style="color:#ffd500">"UTF-8"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">title</span><span style="color:#f0f0f0">&gt;</span>줄&nbsp;간격&nbsp;지정하기<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">title</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">style</span><span style="color:#f0f0f0">&gt;</span><span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.small-line&nbsp;</span>{<span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;line-height</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;0.7</span><span style="color:#ff3399">;</span><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#999999">/*&nbsp;글자&nbsp;크기&nbsp;0.7배만큼의&nbsp;줄&nbsp;간격&nbsp;*/</span><span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>}<span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.big-line&nbsp;</span>{<span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;line-height</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;2</span><span style="color:#ff3399">;</span><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#999999">/*&nbsp;글자&nbsp;크기&nbsp;2배만큼의&nbsp;줄&nbsp;간격&nbsp;*/</span><span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">style</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">link</span>&nbsp;<span style="color:#a8ff58">ref</span>=<span style="color:#ffd500">"stylesheet"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">href</span>=<span style="color:#ffd500">"../css/style.css"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">head</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">body</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">p</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"small-line"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem&nbsp;Ipsum&nbsp;is&nbsp;simply&nbsp;dummy&nbsp;text&nbsp;of&nbsp;the&nbsp;printing&nbsp;and&nbsp;typesetting&nbsp;industry.&nbsp;Lorem&nbsp;Ipsum&nbsp;has&nbsp;been&nbsp;the&nbsp;industry's&nbsp;standard&nbsp;dummy&nbsp;text&nbsp;ever&nbsp;since&nbsp;the&nbsp;1500s,&nbsp;when&nbsp;an&nbsp;unknown&nbsp;printer&nbsp;took&nbsp;a&nbsp;galley&nbsp;of&nbsp;type&nbsp;and&nbsp;scrambled&nbsp;it&nbsp;to&nbsp;make&nbsp;a&nbsp;type&nbsp;specimen&nbsp;book.</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">p</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">p</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"big-line"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem&nbsp;Ipsum&nbsp;is&nbsp;simply&nbsp;dummy&nbsp;text&nbsp;of&nbsp;the&nbsp;printing&nbsp;and&nbsp;typesetting&nbsp;industry.&nbsp;Lorem&nbsp;Ipsum&nbsp;has&nbsp;been&nbsp;the&nbsp;industry's&nbsp;standard&nbsp;dummy&nbsp;text&nbsp;ever&nbsp;since&nbsp;the&nbsp;1500s,&nbsp;when&nbsp;an&nbsp;unknown&nbsp;printer&nbsp;took&nbsp;a&nbsp;galley&nbsp;of&nbsp;type&nbsp;and&nbsp;scrambled&nbsp;it&nbsp;to&nbsp;make&nbsp;a&nbsp;type&nbsp;specimen&nbsp;book.</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">p</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">body</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">html</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                <button type="button" value="2_basic_8" id="2_basic_8" style="margin-top: 15px;">결과보기</button>
+              </div>
+            </figure>
+            <hr>
+
+            <p><mark><b>text-overflow 속성 - 넘치는 텍스트 표기하기</b></mark></p>
+            <ul>
+              <li>white-space: nowrap으로 지정해 줄 바꿈을 하지 않을 때는 텍스트가 기준선을 벗어나 넘칠 수 있음<br>
+                  이때, 넘치는 텍스트를 어떻게 처리할지 지정할 수 있음
+              <li>사용할 수 있는 값은 clip과 ellipsis가 있음
+              <li>다만, text-overflow속성은 해당 요소에서 overflow 속성값이 hidden이거나 scroll, auto이면서 white-space: nowrap일 경우에만 적용
+            </ul>
+            <figure>
+              <figcaption>
+                <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">text-overflow&nbsp;:&nbsp;clip&nbsp;|&nbsp;ellipsis</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+              </figcaption>
+              <br>
+              <table>
+                <thead>
+                  <tr>
+                    <th>속성 값</th>
+                    <th>설명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>clip</td>
+                    <td>넘치는 텍스트를 자름</td>
+                  </tr>
+                  <tr>
+                    <td>ellipsis</td>
+                    <td>말 줄임표(...)로 잘린 텍스트가 있다고 표시</td>
+                  </tr>
+                </tbody>
+              </table>
+            </figrue>
+            <figure>
+              <figcaption>
+                넘치는 텍스트 표시하기<br>
+                content 클래스 이름을 가진 요소에서 텍스트 내용이 넘치면 말 줄임표(...)로 표시되고 그 위로 마우스 오버하면 감추어진 내용 표시
+              </figcaption>
+              <div class="sourceCoding">
+                <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div><div style="line-height:130%">18</div><div style="line-height:130%">19</div><div style="line-height:130%">20</div><div style="line-height:130%">21</div><div style="line-height:130%">22</div><div style="line-height:130%">23</div><div style="line-height:130%">24</div><div style="line-height:130%">25</div><div style="line-height:130%">26</div><div style="line-height:130%">27</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">!doctype</span>&nbsp;<span style="color:#a8ff58">html</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">html</span>&nbsp;<span style="color:#a8ff58">lang</span>=<span style="color:#ffd500">"ko"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">head</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">meta</span>&nbsp;<span style="color:#a8ff58">charset</span>=<span style="color:#ffd500">"UTF-8"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">title</span><span style="color:#f0f0f0">&gt;</span>넘치는&nbsp;텍스트&nbsp;표시하기<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">title</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">style</span><span style="color:#f0f0f0">&gt;</span><span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.content&nbsp;</span>{<span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;1px&nbsp;solid&nbsp;#ccc</span><span style="color:#ff3399">;</span><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#999999">/*&nbsp;테두리&nbsp;*/</span><span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;300px</span><span style="color:#ff3399">;</span><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#999999">/*&nbsp;단락&nbsp;너비&nbsp;*/</span><span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;white-space</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;nowrap</span><span style="color:#ff3399">;</span><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#999999">/*&nbsp;줄&nbsp;바꿈&nbsp;안함&nbsp;*/</span><span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;overflow</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;hidden</span><span style="color:#ff3399">;</span><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#999999">/*&nbsp;넘치는&nbsp;부분&nbsp;감춤&nbsp;*/</span><span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-overflow</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;ellipsis</span><span style="color:#ff3399">;</span><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#999999">/*&nbsp;말&nbsp;줄임표&nbsp;*/</span><span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>}<span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.content</span><span style="color:#a8ff58">:hover&nbsp;</span><span style="color:#ff3399"></span>{<span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;overflow</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;visible</span><span style="color:#ff3399">;</span><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#999999">/*&nbsp;넘치는&nbsp;부분&nbsp;보여&nbsp;줌&nbsp;*/</span><span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">style</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">link</span>&nbsp;<span style="color:#a8ff58">ref</span>=<span style="color:#ffd500">"stylesheet"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">href</span>=<span style="color:#ffd500">"../css/style.css"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">head</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">body</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">p</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"content"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem&nbsp;Ipsum&nbsp;is&nbsp;simply&nbsp;dummy&nbsp;text&nbsp;of&nbsp;the&nbsp;printing&nbsp;and&nbsp;typesetting&nbsp;industry.&nbsp;Lorem&nbsp;Ipsum&nbsp;has&nbsp;been&nbsp;the&nbsp;industry's&nbsp;standard&nbsp;dummy&nbsp;text&nbsp;ever&nbsp;since&nbsp;the&nbsp;1500s,&nbsp;when&nbsp;an&nbsp;unknown&nbsp;printer&nbsp;took&nbsp;a&nbsp;galley&nbsp;of&nbsp;type&nbsp;and&nbsp;scrambled&nbsp;it&nbsp;to&nbsp;make&nbsp;a&nbsp;type&nbsp;specimen&nbsp;book.</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">p</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">body</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">html</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                <button type="button" value="2_basic_9" id="2_basic_9" style="margin-top: 15px;">결과보기</button>
+              </div>
+            </figure>
+        </div>
+
+        <div id="chap4">
+            <h1><strong><mark>목록 스타일</mark></strong></h1>
+            <hr>
+
+            <p><mark><b>list-style-type 속성 - 목록의 불릿과 번호 스타일 지정하기</b></mark></p>
+            <ul>
+              <li>순서 없는 목록의 경우 목록 앞에 불릿 넣을 수 있고<br>
+                  순서 있는 목록의 경우 목록 앞에 번호 스타일을 넣을 수 있는데<br>
+                  이 때 사용하는 속성이 list-style-type
+            </ul>
+
+            <p><strong><em>순서 없는 목록에서 불릿 모양 바꾸기</em></strong></p>
+            <figure>
+              <table>
+                <thead>
+                  <tr>
+                    <th>속성 값</th>
+                    <th>설명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>disc</td>
+                    <td>채운 원 (기본값)</td>
+                  </tr>
+                  <tr>
+                    <td>circle</td>
+                    <td>빈 원</td>
+                  </tr>
+                  <tr>
+                    <td>square</td>
+                    <td>채운 사각형</td>
+                  </tr>
+                  <tr>
+                    <td>none</td>
+                    <td>불릿 없애기</td>
+                  </tr>
+                </tbody>
+              </table>
+            </figure>
+            <hr>
+
+            <p><strong><em>순서 목록에서 숫자 바꾸기</em></strong></p>
+            <figure>
+              <table>
+                <thead>
+                  <tr>
+                    <th>속성 값</th>
+                    <th>설명</th>
+                    <th>예시</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>decimal</td>
+                    <td>1로 시작하는 십진수 (기본값)</td>
+                    <td>1,2,3, ..., 10,11</td>
+                  </tr>
+                  <tr>
+                    <td>decimal-leading-zero</td>
+                    <td>앞에 0이 붙는 십진수</td>
+                    <td>01,02,03, ..., 10,11</td>
+                  </tr>
+                  <tr>
+                    <td>lower-roman</td>
+                    <td>소문자 로마 숫자</td>
+                    <td>i, ii, iii, iv</td>
+                  </tr>
+                  <tr>
+                    <td>upper-roman</td>
+                    <td>대문자 로마 숫자</td>
+                    <td>I, II, III, IV</td>
+                  </tr>
+                  <tr>
+                    <td>lower-alpa 또는 lower-latin</td>
+                    <td>소문자 알파벳</td>
+                    <td>a,b,c,d,e,f</td>
+                  </tr>
+                  <tr>
+                    <td>upper-alpa 또는 upper-latin</td>
+                    <td>대문자 알파벳</td>
+                    <td>A,B,C,D,E,F</td>
+                  </tr>
+                  <tr>
+                    <td>armenian</td>
+                    <td>아르메니아 숫자</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>georgian</td>
+                    <td>조지 왕조시대의 숫자</td>
+                    <td>an,ban,gan</td>
+                  </tr>
+                </tbody>
+              </table>
+            </figure>
+            <hr>
+
+            <p><mark><b>list-style-image 속성 - 불릿 대신 이미지 넣기</b></mark></p>
+            <ul>
+              <li>불릿을 원하는 이미로 바꿈
+            </ul>
+            <figure>
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">list-style-image&nbsp;:&nbsp;none&nbsp;|&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">이미지</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">이미지</span><span style="color:#f0f0f0">&gt;</span>&nbsp;=&nbsp;url(이미지&nbsp;파일&nbsp;경로)</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+              <br>
+              <table>
+                <thead>
+                  <tr>
+                    <th>속성 값</th>
+                    <th>설명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>none</td>
+                    <td>이미지를 사용하지 않고 list-style-type속성에서 지정한 형태로 표시 (기본값)</td>
+                  </tr>
+                  <tr>
+                    <td>&lt;이미지&gt;</td>
+                    <td>url("images.jpg")처럼 url() 키워드 안에 이미지 파일 경로 지정</td>
+                  </tr>
+                </tbody>
+              </table>
+              <br>
+
+              <div class="sourceCoding">
+                <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div><div style="line-height:130%">18</div><div style="line-height:130%">19</div><div style="line-height:130%">20</div><div style="line-height:130%">21</div><div style="line-height:130%">22</div><div style="line-height:130%">23</div><div style="line-height:130%">24</div><div style="line-height:130%">25</div><div style="line-height:130%">26</div><div style="line-height:130%">27</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">!doctype</span>&nbsp;<span style="color:#a8ff58">html</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">html</span>&nbsp;<span style="color:#a8ff58">lang</span>=<span style="color:#ffd500">"ko"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">head</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">meta</span>&nbsp;<span style="color:#a8ff58">charset</span>=<span style="color:#ffd500">"UTF-8"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">title</span><span style="color:#f0f0f0">&gt;</span>불릿&nbsp;대신&nbsp;이미지&nbsp;표시하기<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">title</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">style</span><span style="color:#f0f0f0">&gt;</span><span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ul&nbsp;</span>{<span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-size</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;32px</span><span style="color:#ff3399">;</span><span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list-style-image</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;url("../images/check-circle-regular.svg")</span><span style="color:#ff3399">;</span><span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">style</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">link</span>&nbsp;<span style="color:#a8ff58">ref</span>=<span style="color:#ffd500">"stylesheet"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">href</span>=<span style="color:#ffd500">"../css/style.css"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">head</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">body</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">ul</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">li</span><span style="color:#f0f0f0">&gt;</span>one</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">li</span><span style="color:#f0f0f0">&gt;</span>two</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">li</span><span style="color:#f0f0f0">&gt;</span>three</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">li</span><span style="color:#f0f0f0">&gt;</span>four</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">li</span><span style="color:#f0f0f0">&gt;</span>five</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">li</span><span style="color:#f0f0f0">&gt;</span>six</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">li</span><span style="color:#f0f0f0">&gt;</span>seven</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">ul</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">body</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">html</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                <button type="button" value="2_basic_10" id="2_basic_10" style="margin-top: 15px;"> 결과보기</button>
+              </div>
+            </figure>
+            <hr>
+
+            <p><mark><b>list-style-position 속성 - 목록에 들여 쓰는 효과 내기</b></mark></p>
+            <ul>
+              <li>앞서 배운것으로 목록을 만들 경우, 불릿이나 번호는 실제 내용의 바깥쪽에 표시됨<br>
+                  하지만 list-style-position 속성 사용하면 실제 내용이 시작되는 위치에 불릿이나 번호를 표시하기 때문에<br>
+                  결과 화면에는 불릿이나 번호가 좀 더 안쪽으로 들여 써진 듯한 효과를 낼 수 있음
+            </ul>
+            <figure>
+              <table>
+                <thead>
+                  <tr>
+                    <th>속성 값</th>
+                    <th>설명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>inside</td>
+                    <td>불릿이나 숫자를 안쪽으로 들여 씀</td>
+                  </tr>
+                  <tr>
+                    <td>outside</td>
+                    <td>불릿이나 숫자를 밖으로 내어 씀 (기본값)</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="sourceCoding">
+                <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div><div style="line-height:130%">18</div><div style="line-height:130%">19</div><div style="line-height:130%">20</div><div style="line-height:130%">21</div><div style="line-height:130%">22</div><div style="line-height:130%">23</div><div style="line-height:130%">24</div><div style="line-height:130%">25</div><div style="line-height:130%">26</div><div style="line-height:130%">27</div><div style="line-height:130%">28</div><div style="line-height:130%">29</div><div style="line-height:130%">30</div><div style="line-height:130%">31</div><div style="line-height:130%">32</div><div style="line-height:130%">33</div><div style="line-height:130%">34</div><div style="line-height:130%">35</div><div style="line-height:130%">36</div><div style="line-height:130%">37</div><div style="line-height:130%">38</div><div style="line-height:130%">39</div><div style="line-height:130%">40</div><div style="line-height:130%">41</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">!doctype</span>&nbsp;<span style="color:#a8ff58">html</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">html</span>&nbsp;<span style="color:#a8ff58">lang</span>=<span style="color:#ffd500">"ko"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">head</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">meta</span>&nbsp;<span style="color:#a8ff58">charset</span>=<span style="color:#ffd500">"UTF-8"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">title</span><span style="color:#f0f0f0">&gt;</span>목록&nbsp;들여쓰기<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">title</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">style</span><span style="color:#f0f0f0">&gt;</span><span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.inside&nbsp;</span>{<span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list-style-position</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;inside</span><span style="color:#ff3399">;</span><span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list-style-image</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;url("../images/check-circle-regular.svg")</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>}<span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.outside&nbsp;</span>{<span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list-style-position</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;outside</span><span style="color:#ff3399">;</span><span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list-style-image</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;url("../images/check-circle-regular.svg")</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">style</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">link</span>&nbsp;<span style="color:#a8ff58">ref</span>=<span style="color:#ffd500">"stylesheet"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">href</span>=<span style="color:#ffd500">"../css/style.css"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">head</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">body</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">ul</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"inside"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">li</span><span style="color:#f0f0f0">&gt;</span>one</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">li</span><span style="color:#f0f0f0">&gt;</span>two</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">li</span><span style="color:#f0f0f0">&gt;</span>three</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">li</span><span style="color:#f0f0f0">&gt;</span>four</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">li</span><span style="color:#f0f0f0">&gt;</span>five</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">li</span><span style="color:#f0f0f0">&gt;</span>six</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">li</span><span style="color:#f0f0f0">&gt;</span>seven</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">ul</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">ul</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"outside"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">li</span><span style="color:#f0f0f0">&gt;</span>one</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">li</span><span style="color:#f0f0f0">&gt;</span>two</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">li</span><span style="color:#f0f0f0">&gt;</span>three</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">li</span><span style="color:#f0f0f0">&gt;</span>four</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">li</span><span style="color:#f0f0f0">&gt;</span>five</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">li</span><span style="color:#f0f0f0">&gt;</span>six</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">li</span><span style="color:#f0f0f0">&gt;</span>seven</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">ul</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">body</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">html</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+                <button type="button" value="2_basic_11" id="2_basic_11" style="margin-top: 15px;">결과보기</button>
+              </div>
+            </figure>
+            <hr>
+
+            <p><mark><b>list-style 속성 - 목록 속성 한꺼번에 표시하기</b></mark></p>
+            <ul>
+              <li> list-style-type:none; 을 list-style:none;으로 대체해 사용 가능
+              <li>
+                <pre>
+                  ul {
+                    list-style-type: lower-alpha;
+                    list-style-position: inside;
+                  }
+                </pre>
+                의 속성값을 아래로 한번에 표시 가능
+                <pre>
+                  ul {
+                    list-style: lower-alpha, inside;
+                  }
+                </pre>
+              </li>
+            </ul>
+
+
+    </div>
+
+</body>
+
+</html>

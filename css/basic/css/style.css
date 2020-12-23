@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
+
+* {
+  font-family: 'Stylish', sans-serif;
+  font-size: 25px;
+}
+
+h1 {
+  font-size: 45px;
+}
+
+h2 {
+    color: blue;        /* 글자 색 */
+}
+
+p {
+    font-size:0.9em;        /* 글자 크기 */
+    line-height: 2.0;       /* 줄 간격 */
+}
+
+ul {
+    /* list-style: none; */       /* 불릿 없애기 */
+    list-style-type: circle;        /* 속이 빈 원 */
+}
+li {
+    line-height: 1.5;
+}
+
+span {
+  color: gray;
+}
+
+table, td, th {
+  border: 1px solid black;
+}
+
+#subject {
+    padding: 20px;
+    margin: 30px;
+
+    font-size:60px;
+    color:white;
+    background-color: black;
+}
+#chap1 {
+    border: 3px solid red;
+    padding: 20px;
+    margin: 30px;
+}
+#chap2 {
+    border: 3px solid green;
+    padding: 20px;
+    margin: 30px;
+}
+#chap3 {
+    border: 3px solid orange;
+    padding: 20px;
+    margin: 30px;
+}
+#chap4 {
+    border: 3px solid blue;
+    padding: 20px;
+    margin: 30px;
+}
+#chap5 {
+    border: 3px solid gray;
+    padding: 20px;
+    margin: 30px;
+}
+#doitmyself {
+    border: 3px solid pink;
+    padding: 20px;
+    margin: 30px;
+}
+
+.sourceCoding {
+    /* border: 3px solid yellow; */
+    padding: 30px;
+    margin: 10px 10px;
+}
