@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>박스 모델의 너비 결정하기</title>
+
+  <style>
+    .box1{
+      box-sizing: content-box;    /* 컨텐츠 영역 기준 */
+      width: 300px;               /* 컨텐츠 영역 너비 300px */
+      height: 150px;              /* 높이 */
+      margin: 10px;               /* 마진 */
+      padding: 30px;              /* 패딩 */
+      border: 2px solid red;      /* 테두리 */
+    }
+    .box2{
+      box-sizing: border-box;     /* 테두리까지(박스 전체) 기준 */
+      width: 300px;               /* 컨텐츠 영역 너비 300px */
+      height: 150px;              /* 높이 */
+      margin: 10px;               /* 마진 */
+      padding: 30px;              /* 패딩 */
+      border: 2px solid blue;      /* 테두리 */
+    }
+    div{
+      margin:10px;    /* div 영역 사이의 여백 */
+    }
+  </style>
+  <link ref="stylesheet" href="../css/style.css">
+</head>
+<body>
+	<div class="box1">
+	</div>
+	<div class="box2">
+	</div>
+</body>
+</html>
