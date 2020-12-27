@@ -32,6 +32,7 @@ span {
 
 table, td, th {
   border: 1px solid black;
+  border-collapse: collapse;
 }
 
 #subject {
