@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">   <!-- 검색 엔진 고려 -->
+    <meta name="basic html" content="html 기본 구조">   <!-- 해당 문서의 키워드 -->
+    <meta name="description" content="html5를 통해 웹 표준 공부하기"> <!-- 해당 문서의 설명 -->
+    <meta name="author" content="byfuls"> <!-- 해당 문서의 소유자 또는 제작자 -->
+
+    <title>basic css</title>
+
+    <style>
+        <link rel="stylesheet" href="css/style.css">
+
+
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+      window.onload = () => {
+      }
+    </script>
+</head>
+<body>
+    <div>
+        <div id="subject">
+          HTML5와 멀티미디어
+        </div>
+        <div id="chap1">
+            <h1><strong><mark>웹과 멀티미디어</mark></strong></h1>
+            <ul>
+              <li>HTML5에서는 웹 브라우저 안에서 멀티미디어를 직접 재생할 수 있음
+            </ul>
+            <hr>
+
+            <p><mark><b>웹에서 사용하는 멀티미디어</b></mark></p>
+            <hr>
+
+            <p><mark><b>&lt;object&gt;태그와 &lt;embed&gt;태그 - 플러그인 사용하기</b></mark></p>
+            <ul>
+              <li>웹 브라우저에서 처리할 수 없는 작업을 위해 웹 문서 안에 포함시킨 외부 프로그램 기능을 플러그인이라 함
+              <li>플러그인을 웹 브라우저에 적용하려면 &lt;object&gt;태그와 &lt;embed&gt;태그를 사용
+            </ul>
+            <p><strong><em>&lt;object&gt; - 외부 파일 삽입하기</em></strong></p>
+            <ul>
+              <li>웹 브라우저에서 직접 재생할 수 없는 자바 애플릿이나 PDF파일, 플래시 무비 같은 컨텐츠를 웹 문서 안에 포함시키기 위해 사용
+              <li>&lt;object&gt;태그로 이미지와 오디오, 비디오도 포함시킬 수 있지만 실제로 이런 콘텐츠는 &lt;img&gt;태그와 &lt;audio&gt;, &lt;video&gt;태그를 이용
+            </ul>
+            <figure>
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">object</span>&nbsp;<span style="color:#a8ff58">data</span>=<span style="color:#ffd500">"경로"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">type</span>=<span style="color:#ffd500">"유형"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">[name</span>=<span style="color:#ffd500">"이름"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">width</span>=<span style="color:#ffd500">"너비"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">height</span>=<span style="color:#ffd500">"높이"</span><span style="color:#a8ff58">]</span><span style="color:#f0f0f0">&gt;</span>&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">object</span><span style="color:#f0f0f0">&gt;</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+              <br>
+              <table>
+                <thead>
+                  <tr>
+                    <th>속성</th>
+                    <th>설명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>data</td>
+                    <td>외부 파일의 경로를 지정</td>
+                  </tr>
+                  <tr>
+                    <td>type</td>
+                    <td>포함시킨 내용의 유형을 지정</td>
+                  </tr>
+                  <tr>
+                    <td>name</td>
+                    <td>다른 요소들과 구분할 수 있는 이름을 지정</td>
+                  </tr>
+                  <tr>
+                    <td>width</td>
+                    <td>포함시킨 내용의 너비 값 지정</td>
+                  </tr>
+                  <tr>
+                    <td>height</td>
+                    <td>포함시킨 내용의 높이 값 지정</td>
+                  </tr>
+                </tbody>
+              </table>
+            </figure>
+            <p><strong><em>&lt;embed&gt; - 외부 파일 삽입하기</em></strong></p>
+            <ul>
+              <li>&lt;object&gt;태그와 달리 닫는 태그가 없는 &lt;embed&gt;태그는 주로 &lt;object&gt;태그를 지원하지 않는 이전 브라우저에서 사용
+              <li>플래시 무비 삽입
+            </ul>
+            <figure>
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">embed</span>&nbsp;<span style="color:#a8ff58">src</span>=<span style="color:#ffd500">"경로"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">type</span>=<span style="color:#ffd500">"유형"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">width</span>=<span style="color:#ffd500">"너비"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">height</span>=<span style="color:#ffd500">"높이"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+            </figure>
+        </div>
+
+        <div id="chap2">
+            <h1><strong><mark>오디오 & 비디오 재생하기</mark></strong></h1>
+            <ul>
+              <li>HTML태그를 이용해 오디오와 비디오를 재생
+            </ul>
+            <hr>
+
+            <p><mark><b>&lt;audio&gt; 태그 - 오디오 파일 삽입</b></mark></p>
+            <ul>
+              <li>HTML5에서 배경음악이나 효과음 등 오디오를 삽입할 때는 &lt;audio&gt;태그 사용
+              <li>일반적으로 mp3파일 삽입
+              <li>크롬 브라우저의 경우에는 자동 재생되지 않음
+            </ul>
+            <figure>
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">audio</span>&nbsp;<span style="color:#a8ff58">src</span>=<span style="color:#ffd500">"오디오&nbsp;파일&nbsp;경로"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">[속성]</span>&nbsp;<span style="color:#a8ff58">[속성</span>=<span style="color:#ffd500">"속성&nbsp;값"</span><span style="color:#a8ff58">]</span><span style="color:#f0f0f0">&gt;</span>&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">audio</span><span style="color:#f0f0f0">&gt;</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+              <br>
+              <table>
+                <thead>
+                  <tr>
+                    <th>속성</th>
+                    <th>설명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>autoplay</td>
+                    <td>오디오를 자동 재생</td>
+                  </tr>
+                  <tr>
+                    <td>controls</td>
+                    <td>웹 화면에 컨트롤 막대를 표시<br>
+                        재생/멈춤, 진행 바, 볼륭 등이 표시</td>
+                  </tr>
+                  <tr>
+                    <td>loop</td>
+                    <td>오디오를 반복 재생</td>
+                  </tr>
+                  <tr>
+                    <td>muted</td>
+                    <td>오디오를 재생해 진행하지만 소리는 끔</td>
+                  </tr>
+                  <tr>
+                    <td>preload</td>
+                    <td>재생 버튼을 눌러 재생하기 전에 오디오 파일을 다운로드해 준비해 둠</td>
+                  </tr>
+                </tbody>
+              </table>
+            </figure>
+            <hr>
+
+            <h1 style="color: red;"> TODO TODO TODO </h1>
+        </div>
+    </div>
+</body>
+</html>

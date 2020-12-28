@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">   <!-- 검색 엔진 고려 -->
+    <meta name="basic html" content="html 기본 구조">   <!-- 해당 문서의 키워드 -->
+    <meta name="description" content="html5를 통해 웹 표준 공부하기"> <!-- 해당 문서의 설명 -->
+    <meta name="author" content="byfuls"> <!-- 해당 문서의 소유자 또는 제작자 -->
+
+    <title>basic css</title>
+
+    <style>
+        <link rel="stylesheet" href="css/style.css">
+
+
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+      window.onload = () => {
+      }
+    </script>
+</head>
+<body>
+    <div>
+        <div id="subject">
+          HTML5와 시맨틱 태그
+        </div>
+        <div id="chap1">
+            <h1><strong><mark>HTML5 문서</mark></strong></h1>
+            <p><mark><b>시맨틱 태그가 사용된 HTML5 문서</b></mark></p>
+            <ul>
+              <li>시맨틱 태그란 태그만 보고도 페이지 구조를 쉽게 이해할 수 있도록 정의된 태그
+              <li>사이트 제목이나 로고, 검색 창이 있는 헤더(header)
+              <li>여러 내용이 있는 본문(content)
+              <li>본문 외 내용을 나타내는 사이드바(sidebar)와 푸터(footer)
+            </ul>
+        </div>
+        <div id="chap2">
+            <h1><strong><mark>문서 구조를 위한 HTML5 시맨틱 태그</mark></strong></h1>
+            <ul>
+              <li>사이트 별로 문서 구조는 약간씩 다르지만 보통 &lt;header&gt;태그와 &lt;section&gt;태그, &lt;footer&gt;태그 순으로 이루어짐
+            </ul>
+            <hr>
+
+            <p><mark><b>&lt;header&gt; 태그 - 머리말 지정하기</b></mark></p>
+            <ul>
+              <li>&lt;header&gt;태그는 특정 부분의 머리말에 해당
+              <li>헤더는 주로 페이지 맨 위쪽이나 왼쪾에 삽입하며<br>
+                  헤더의 내용으로는 주로 &lt;form&gt;태그를 사용해 검색 창을 넣거나<br>
+                  &lt;nav&gt;태그를 사용해 사이트 메뉴를 넣음
+            </ul>
+            <hr>
+
+            <p><mark><b>&lt;nav&gt; 태그 - 문서를 연결하는 내비게이션 링크</b></mark></p>
+            <ul>
+              <li>&lt;nav&gt;태그는 동일한 사이트 안의 문서나 다른 사이트의 문서로 연결하는 링크 모음
+              <li>&lt;nav&gt;태그는 내비게이션 메뉴뿐만 아니라 푸터에 있는 사이트 링크 모음 부분에도 많이 사용
+            </ul>
+            <hr>
+
+            <p><mark><b>&lt;section&gt; 태그 - 주제별 콘텐츠 영역 나타내기</b></mark></p>
+            <ul>
+              <li>콘텐츠가 들어가는 부분
+              <li>&lt;section&gt;태그는 문서에서 콘텐츠 영역늘 나타냄
+              <li>&lt;section&gt;태그는 콘텐츠를 주제별로 묶을 때 사용하며, 그 안에는 섹션 제목을 나타내는 &lt;h1&gt;~&lt;h6&gt; 제목 태그가 함께 사용<br>
+                  (&lt;section&gt;태그 안에 또 다른 &lt;section&gt;태그를 넣을 수도 있음)<br>
+                  (스타일을 적용하거나 스크립트를 사용하거나 단순히 영역을 나누기 위해 컨텐츠의 일부를 묶고 싶다면 &lt;section&gt;태그 대신 &lt;div&gt;태그를 사용하면 됨)
+            </ul>
+            <hr>
+
+            <p><mark><b>&lt;article&gt; 태그 - 콘텐츠 내용 넣기</b></mark></p>
+            <ul>
+              <li>웹 상의 실제 내용을 넣음<br>
+                  (보통 블로그의 포스트나 웹 사이트의 내용, 사용자가 등록한 코멘트, 독립적인 웹 콘텐츠 항목이 해당됨)
+              <li>&lt;section&gt;태그와 &lt;article&gt;태그를 혼동하는데,<br>
+                  &lt;section&gt;태그는 문맥 흐름 중에서 콘텐츠를 주제별로 묶을때 사용<br>
+                  (&lt;article&gt;태그 안에 &lt;section&gt;태그를 넣을 수도 있음)
+            </ul>
+            <hr>
+
+            <p><mark><b>&lt;aside&gt; 태그 - 본문 이외의 내용 표시하기</b></mark></p>
+            <ul>
+              <li>사이드바를 만드는 태그가 &lt;aside&gt;
+              <li>필수 요소는 아님 (보통 광고나 링크 모음 등 문서의 메인 내용에 영향을 미치지 않는 내용들을 넣을 때만 사용)
+              <li>&lt;aside&gt;태그는 본문 내용 외에 주변에 표시되는 기타 내용들을 나타냄
+            </ul>
+            <hr>
+
+            <p><mark><b>&lt;iframe&gt; 태그 - 외부 문서 삽입하기</b></mark></p>
+            <ul>
+              <li>웹 문서 안에 다른 웹 문서를 가져와 표시하는 것을 인라인 프레임(inline frame)
+              <li>인라인 프레임을 삽입하는 태그는 &lt;iframe&gt;
+            </ul>
+            <figure>
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">iframe</span>&nbsp;<span style="color:#a8ff58">src</span>=<span style="color:#ffd500">"삽입할&nbsp;문서&nbsp;주소"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">[속성</span>&nbsp;<span style="color:#a8ff58"></span>=<span style="color:#a8ff58"></span>&nbsp;<span style="color:#ffd500">"속성&nbsp;값"</span><span style="color:#a8ff58">]</span><span style="color:#f0f0f0">&gt;</span>&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">iframe</span><span style="color:#f0f0f0">&gt;</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+              <br>
+              <table>
+                <thead>
+                  <tr>
+                    <th>속성</th>
+                    <th>설명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>width</td>
+                    <td>인라인 프레임의 너비 (픽셀 or 백분율)</td>
+                  </tr>
+                  <tr>
+                    <td>height</td>
+                    <td>인라인 프레임의 높이 (픽셀 or 백분율)</td>
+                  </tr>
+                  <tr>
+                    <td>name</td>
+                    <td>인라인 프레임의 이름</td>
+                  </tr>
+                  <tr>
+                    <td>src</td>
+                    <td>프레임에 표시할 문서의 주소를 지정</td>
+                  </tr>
+                  <tr>
+                    <td>seamless</td>
+                    <td>프레임의 테두리를 없애 마치 본문의 일부처럼 보이도록 만들며 <br>
+                        속성 값 없이 seamless라고 쓰면 됨 (크롬과 사파리에서만 지원)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </figure>
+            <hr>
+
+            <p><mark><b>&lt;footer&gt; 태그 - 제작 정보와 저작권 정보 표시</b></mark></p>
+            <ul>
+              <li>일반적으로 웹 문서 끝자락에 들어가는 &lt;footer&gt;태그 안에는 사이트 제작자의 연락처 정보와 저작권 정보를 표시
+              <li>&lt;footer&gt;태그 안에는 &lt;header&gt;태그를 비롯해 &lt;section&gt;, &lt;article&gt;등 다른 레이아웃 태그들을 모두 사용할 수 있고 다양한 정보를 넣을 수 있음
+            </ul>
+            <hr>
+
+            <p><mark><b>&lt;address&gt; 태그 - 사이트 제작자 정보, 연락처 정보 나타내기</b></mark></p>
+            <ul>
+              <li>&lt;address&gt;태그는 주로 &lt;footer&gt;태그 안에 사용되는데 웹 페이지 제작자의 이름이나 제작자의 웹 페이지 또는 피드백을 위한 연락처 정보를 넣는데 사용
+            </ul>
+            <hr>
+
+            <p><mark><b>&lt;div&gt; 태그는 언제 사용할까?</b></mark></p>
+            <ul>
+              <li>HTML5에서는 주로 콘텐츠를 묶어 시각적 효과를 적용할 때 즉 콘텐츠에 CSS를 적용할 때 &lt;div&gt;태그를 사용
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
