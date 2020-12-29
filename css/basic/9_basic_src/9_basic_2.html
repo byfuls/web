@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML5 레이아웃</title>
+    <style>
+			.container {
+				width: 960px;
+				height: 500px;
+				margin : 0 auto;
+				border: 2px solid orange;
+			}
+			.origin {
+				width: 200px;
+				height: 150px;
+				border: 1px solid black;
+				float: left;
+				margin: 40px;
+			}
+			.move {
+				width: 200px;
+				height: 150px;
+				border: 1px solid red;
+				background-color: red;
+			}
+			.moveX:hover {
+				transform: scaleX(1.2);
+			}
+			.moveY:hover {
+				transform: scaleY(1.5);
+			}
+			.moveXY:hover {
+				transform: scale(0.7);
+			}
+			.moveXY2:hover {
+				transform: scale(1.7);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="origin">
+				<div class="move moveX"></div>
+			</div>
+			<div class="origin">
+				<div class="move moveY"></div>
+			</div>
+			<div class="origin">
+				<div class="move moveXY"></div>
+			</div>
+			<div class="origin">
+				<div class="move moveXY2"></div>
+			</div>
+  	</div>
+	</body>
+</html>
