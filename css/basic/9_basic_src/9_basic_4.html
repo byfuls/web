@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>이미지 2차원 회전하기</title>
+    <style>
+			.container {
+				width: 960px;
+				height: 700px;
+				margin : 0 auto;
+				border: 2px solid orange;
+			}
+			.origin {
+				width: 210px;
+				height: 200px;
+				border: 1px solid black;
+				float: left;
+				margin: 40px;
+
+				perspective: 200px;
+			}
+			.photo {
+				width: 210px;
+				height: 200px;
+			}
+			.rotateX:hover {
+				transform: rotateX(45deg);		/* X 축 기준으로 시계 방향으로 45도 회전 */
+			}
+			.rotateY:hover {
+				transform: rotateY(45deg);		/* Y 축 기준으로 시계 방향으로 45도 회전 */
+			}
+			.rotateZ:hover {
+				transform: rotateZ(45deg);		/* Z 축 기준으로 시계 방향으로 45도 회전 */
+			}
+			.rotateXYZ:hover {
+				transform: rotate3d(2.5, 1.2, -1.5, 45deg);	/* X 축으로 2.5, Y 축으로 1.2, Z 축으로 -1.5만큼의 방향 벡터로 45도 회전 */
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="origin">
+				<div class="rotateX">
+					<img src="../images/cute.jpeg" class="photo">
+				</div>
+			</div>
+			<div class="origin">
+				<div class="rotateY">
+					<img src="../images/cute.jpeg" class="photo">
+				</div>
+			</div>
+			<div class="origin">
+				<div class="rotateZ">
+					<img src="../images/cute.jpeg" class="photo">
+				</div>
+			</div>
+			<div class="origin">
+				<div class="rotateXYZ">
+					<img src="../images/cute.jpeg" class="photo">
+				</div>
+			</div>
+  	</div>
+	</body>
+</html>
