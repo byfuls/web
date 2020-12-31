@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>이미지 변형 시작점을 다양하게 지정하기</title>
+    <style>
+			.origin {
+				width: 210px;
+				height: 200px;
+				border: 1px solid black;
+				float: left;
+				margin: 40px;
+			}
+			.photo {
+				width: 210px;
+				height: 200px;
+			}
+			.ltop:hover {
+				width: 210px;
+				height: 200px;
+
+				transform-origin: left top;
+				transform: rotateZ(10deg);
+			}
+			.rtop:hover {
+				width: 210px;
+				height: 200px;
+
+				transform-origin: right top;
+				transform: rotateZ(10deg);
+			}
+			.lbottom:hover {
+				width: 210px;
+				height: 200px;
+
+				transform-origin: left bottom;
+				transform: rotateZ(10deg);
+			}
+			.rbottom:hover {
+				width: 210px;
+				height: 200px;
+
+				transform-origin: right bottom;
+				transform: rotateZ(10deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="origin">
+			<div class="ltop">
+				<img src="../images/cute.jpeg" class="photo">
+			</div>
+		</div>
+		<div class="origin">
+			<div class="rtop">
+				<img src="../images/cute.jpeg" class="photo">
+			</div>
+		</div>
+		<div class="origin">
+			<div class="lbottom">
+				<img src="../images/cute.jpeg" class="photo">
+			</div>
+		</div>
+		<div class="origin">
+			<div class="rbottom">
+				<img src="../images/cute.jpeg" class="photo">
+			</div>
+		</div>
+	</body>
+</html>

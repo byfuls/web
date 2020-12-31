@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>이미지 회전하며 원근감 주기</title>
+    <style>
+			.origin {
+				width: 210px;
+				height: 200px;
+				border: 1px solid black;
+				float: left;
+				margin: 40px;
+			}
+			.photo {
+				width: 210px;
+				height: 200px;
+			}
+			.photo:hover {
+				transform: rotateX(50deg);
+			}
+			.pers:hover {
+				perspective: 300px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="origin">
+			<div class="pers">
+				<img src="../images/cute.jpeg" class="photo">
+			</div>
+		</div>
+		<div class="origin">
+			<div class="no-pers">
+				<img src="../images/cute.jpeg" class="photo">
+			</div>
+		</div>
+	</body>
+</html>

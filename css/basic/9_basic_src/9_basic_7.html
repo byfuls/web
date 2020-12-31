@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>3D 변형을 적용하지 않았을 때 vs 적용했을 때</title>
+    <style>
+			.container {
+				width: 210px;
+				height: 200px;
+				border: 1px solid black;
+				float: left;
+				margin: 40px;
+				perspective: 300px;
+			}
+			.box1 {
+				background-color: gray;
+				transform: rotateY(45deg);
+			}
+			.box2 {
+				transform-origin: left top;
+			}
+			.box2:hover {
+				transform: rotateX(45deg);
+			}
+			.photoSz {
+				width: 210px;
+				height: 200px;
+			}
+
+			#tr-style1 {
+				transform-style: flat;
+			}
+			#tr-style2 {
+				transform-style: preserve-3d;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="box1" id="tr-style1">
+				<div class="box2">
+					<img src="../images/cute.jpeg" class="photoSz">
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="box1" id="tr-style2">
+				<div class="box2">
+					<img src="../images/cute.jpeg" class="photoSz">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
