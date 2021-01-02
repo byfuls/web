@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>정해진 시간 동안 배경 색과 회전, 높이, 너비 바꾸기</title>
+    <style>
+			.tr1 {
+				width: 100px;
+				height: 100px;
+				background-color: gray;
+				border: 1px solid black;
+				transition-property: background-color, transform, width, height;
+				transition-duration: 2s, 3s;
+			}
+			.tr1:hover {
+				width: 200px;
+				height: 200px;
+				background-color: #ff6e5f;
+				transform: rotate(180deg);
+			}
+			h1 {
+				text-align: center;
+				font-size: 52px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="tr1">
+			<h1>!</h1>
+		</div>
+	</body>
+</html>
