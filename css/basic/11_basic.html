@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">   <!-- 검색 엔진 고려 -->
+    <meta name="basic html" content="html 기본 구조">   <!-- 해당 문서의 키워드 -->
+    <meta name="description" content="html5를 통해 웹 표준 공부하기"> <!-- 해당 문서의 설명 -->
+    <meta name="author" content="byfuls"> <!-- 해당 문서의 소유자 또는 제작자 -->
+
+    <title>basic css</title>
+
+    <style>
+        <link rel="stylesheet" href="css/style.css">
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+      window.onload = () => {
+      }
+    </script>
+</head>
+<body>
+    <div>
+        <div id="subject">
+          반응형 웹 사이트 만들기
+        </div>
+        <div id="chap1">
+            <h1><strong><mark>모바일 기기와 웹 디자인</mark></strong></h1>
+            <ul>
+              <li>반응형 웹 디자인 이란?<br>
+                  PC 브라우저로 접속하든 모바일 브라우저로 접속하든 사용자의 접속 환경에 맞추어 사이트 레이아웃을 자연스럽게 바꾸어 보여주는 것을 '반응형 웹 디자인'이라고 함
+              <li>모바일 기기 화면과 PC 화면을 모두 볼 수 있는 웹 디자인을 만들기는 쉽지 않음<br>
+                  최근엔 다양한 화면 크기를 가진 기기로 웹 사이트에 접속하는 엔스크린(N-screen)을 지원하기 위한 여러 방법들이 등장하고 있는데<br>
+                  그중 가장 기본적인 '뷰포트'개념을 알아보고 반응형 웹이 등장한 이유도 확인해보자
+            </ul>
+            <hr>
+
+            <p><mark><b>반응형 웹 디자인</b></mark></p>
+            <ul>
+              <li>기존 웹 사이트의 내용을 그대로 유지하면서 다양한 화면 크기에 맞게 웹 사이트를 표시할 수 있는 방법이<br>
+                  바로 반응형 웹 디자인(responsive web design)
+              <li>반응형 웹 디자인은 화면 요소들을 화면 크기에 맞게 재배치하고 각 요소의 표시 방법만 바꾸어 사이트를 구현해줌
+              <li>화면 크기에 '반응'해 화면 요소들을 자동으로 바꾸어 사이트를 구현하는 것이 바로 반응형 웹 디자인<br>
+                  (반응형 웹은 모바일 기기에 반응하는 것이 아니라 모바일 기기에 있는 웹 브라우저 창의 너비 값에 반응)
+            </ul>
+            <hr>
+
+            <p><mark><b>반응형 웹의 장,단점</b></mark></p>
+            <ul>
+              <li>사이트를 하나만 만들면 데스크톱 PC와 모바일 기기에서 모두 사용할 수 있어 효율적
+              <li>모든 스마트 기기에서 접속 가능
+              <li>가로 모드에 맞추어 레이아웃 변경 가능
+              <li>사이트 유지,관리 용이
+            </ul>
+            <hr>
+
+            <p><mark><b>모바일 기기를 위한 기본 다지기, 뷰포트</b></mark></p>
+            <ul>
+              <li>PC화면에서 보이는 내용을 모바일 기기에서 그대로 볼 수 없는 이유는 PC화면과 모바일 화면의 픽셀 표현 방법이 다르기 때문<br>
+                  뷰포트를 지정하면 접속한 기기 화면에 맞추어 확대하거나 축소해 표시할 수 있음<br>
+                  이때, '뷰포트'란 스마트폰 화면에서 실제 내용이 표시되는 영역
+            </ul>
+            <hr>
+
+            <p><mark><b>뷰포트 지정하기</b></mark></p>
+            <ul>
+              <li>뷰포트는 &lt;meta&gt;태그를 이용해 &lt;head&gt;태그와 &lt;/head&gt;태그 사이에 작성
+            </ul>
+            <figure>
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">meta</span>&nbsp;<span style="color:#a8ff58">name</span>=<span style="color:#ffd500">"viewport"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">content</span>=<span style="color:#ffd500">"&lt;속성1=값&gt;,&nbsp;&lt;속성2=값&gt;,&nbsp;..."</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+              <br>
+              <table>
+                <thead>
+                  <tr>
+                    <th>속성</th>
+                    <th>설명</th>
+                    <th>사용 가능한 값</th>
+                    <th>기본 값</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>width</td>
+                    <td>뷰포트 너비</td>
+                    <td>device-width 또는 크기</td>
+                    <td>브라우저 기본 값</td>
+                  </tr>
+                  <tr>
+                    <td>height</td>
+                    <td>뷰포트 높이</td>
+                    <td>device-height 또는 크기</td>
+                    <td>브라우저 기본 값</td>
+                  </tr>
+                  <tr>
+                    <td>user-scalable</td>
+                    <td>확대/축소 가능 여부</td>
+                    <td>yes 또는 no</td>
+                    <td>yes</td>
+                  </tr>
+                  <tr>
+                    <td>initial-scale</td>
+                    <td>초기 확대/축소 값</td>
+                    <td>1~10</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>minimum-scale</td>
+                    <td>최소 확대/축소 값</td>
+                    <td>0~10</td>
+                    <td>0.25</td>
+                  </tr>
+                  <tr>
+                    <td>maximum-scale</td>
+                    <td>최대 확대/축소 값</td>
+                    <td>0~10</td>
+                    <td>1.6</td>
+                  </tr>
+                </tbody>
+              </table>
+              <br>
+              <figcaption>
+                [가장 많이 사용하는 형태] 웹 페이지 뷰포트의 너비를 스마트폰 화면 너비에 맞추고 초기 화면 배율을 1로 지정한 것
+              </figcaption>
+              <br>
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">meta</span>&nbsp;<span style="color:#a8ff58">name</span>=<span style="color:#ffd500">"viewport"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">content</span>=<span style="color:#ffd500">"width=device-width,&nbsp;initial-scale=1"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+              <br>
+              (반응형 웹 사이트를 만들었더라도 테스트하는게 쉽지 않은데, 이때 크롬 개발자 도구의 '디바이스 모드'를 활용하면 좋음)
+            </figure>
+        </div>
+    </div>
+</body>
+</html>

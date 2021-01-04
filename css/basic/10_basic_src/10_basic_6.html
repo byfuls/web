@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>@keyframes을 사용해 실행할 애니메이션 지정하기</title>
+<style>
+	div {
+		width: 100px;
+		height: 100px;
+		float: left;
+		margin: 50px;
+	}
+	#box1 {
+		/* background-color: #4cff00; */
+		border: 1px solid black;
+		animation-name: shape;
+		animation-duration: 3s;
+	}
+	@keyframes shape {
+		from {
+			background-color: black;
+			border: 1px solid black;
+		}
+		to {
+			background-color: white;
+			border: 1px solid black;
+			border-radius: 50%;
+		}
+	}
+
+	#box2 {
+		background-color: #8f06b0;
+		border: 1px solid black;
+		animation-name: rotate;
+		animation-duration: 3s;
+	}
+	@keyframes rotate {
+		from {
+			background-color: red;
+			transform: rotate(0deg);
+		}
+		to {
+			background-color: blue;
+			transform: rotate(45deg);
+		}
+	}
+</style>
+</head>
+
+<body>
+	<div id="box1"></div>
+	<div id="box2"></div>
+</body>
+</html>
