@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">   <!-- 검색 엔진 고려 -->
+    <meta name="basic html" content="html 기본 구조">   <!-- 해당 문서의 키워드 -->
+    <meta name="description" content="html5를 통해 웹 표준 공부하기"> <!-- 해당 문서의 설명 -->
+    <meta name="author" content="byfuls"> <!-- 해당 문서의 소유자 또는 제작자 -->
+
+    <title>basic css</title>
+
+    <style>
+        <link rel="stylesheet" href="css/style.css">
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+      function basic_1() {
+        document.getElementById("12_basic_1").onclick = () => {
+          let w = open("12_basic_src/12_basic_1.html", "12_basic_1.html", "width=700, height=500");
+        }
+      }
+      function basic_2() {
+        document.getElementById("12_basic_2").onclick = () => {
+          let w = open("12_basic_src/12_basic_2.html", "12_basic_2.html", "width=700, height=500");
+        }
+      }
+      function basic_3() {
+        document.getElementById("12_basic_3").onclick = () => {
+          let w = open("12_basic_src/12_basic_3.html", "12_basic_3.html", "width=700, height=500");
+        }
+      }
+      window.onload = () => {
+        basic_1()
+        basic_2()
+        basic_3()
+      }
+    </script>
+</head>
+<body>
+    <div>
+        <div id="subject">
+          미디어 쿼리
+        </div>
+        <div id="chap1">
+            <h1><strong><mark>미디어 쿼리 이해하기</mark></strong></h1>
+            <ul>
+              <li>웹 사이트에 접속할 수 있는 기기들이 늘면서 하나의 웹 사이트를 기기마다 다르게 표현하는 반응형 웹이 기본으로 되고 있음</li>
+              <li>반응형 웹 디자인은 사이트에 접근하는 기기의 해상도에 따라 서로 다른 스타일 시트를 적용해 주는 미디어 쿼리를 기반으로 함</li>
+            </ul>
+            <hr>
+
+            <p><mark><b>미디어 쿼리란?</b></mark></p>
+            <ul>
+              <li>미디어 쿼리(Media Query)는 CSS3 모듈 중 하나로 사이트에 접속하는 장치에 따라 특정한 CSS 스타일을 사용하도록 해 줌<br>
+                  접속하는 기기의 화면 크기에 따라 레이아웃이 달라짐</li>
+              <li>사용자가 어떤 미디어를 사용하는가에 따라 사이트의 형태가 바뀌도록 CSS를 작성하는 방법을 미디어 쿼리<br>
+                  (참조: https://mediaqueri.es/)</li>
+            </ul>
+            <hr>
+
+            <p><mark><b>미디어 구문</b></mark></p>
+            <ul>
+              <li>미디어 쿼리는 @media 속성을 사용해 특정 미디어에서 어떤 CSS를 적용할 것인지 지정해줌</li>
+            </ul>
+            <figure>
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">@media&nbsp;[only&nbsp;|&nbsp;not]&nbsp;미디어&nbsp;유형&nbsp;[and&nbsp;조건]&nbsp;*&nbsp;[and&nbsp;조건]</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+            </figure>
+            <ul>
+              <li>미디어 쿼리 구문은 &lt;style&gt;과 &lt;/style&gt;사이에 사용하며 대,소문자를 구별하지 않음</li>
+              <li>기본적으로 미디어 유형이 지정되어야 하고 필요할 경우 , and 연산자로 조건을 적용</li>
+            </ul>
+            <figure>
+              <figcaption>
+                예를 들어 미디어 유형이 'screen'이면서 최소 너비가 '200px'이며 최대 너비가 '360px'일 경우에 적용할 CSS를 정의하는 구문
+              </figcaption>
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">@media&nbsp;screen&nbsp;and&nbsp;(min-width:&nbsp;200px)&nbsp;and&nbsp;(max-width:&nbsp;360px)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;...</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+            </figure>
+
+            <p><strong><em>미디어 유형의 종류</em></strong></p>
+            <table>
+              <thead>
+                <tr>
+                  <th>미디어 유형</th>
+                  <th>사용 가능한 미디어</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>all</td>
+                  <td>모든 미디어 유형</td>
+                </tr>
+                <tr>
+                  <td>print</td>
+                  <td>인쇄 장치</td>
+                </tr>
+                <tr>
+                  <td>screen</td>
+                  <td>컴퓨터 스크린(스마트폰 스크린 포함)</td>
+                </tr>
+                <tr>
+                  <td>tv</td>
+                  <td>음성과 영상이 동시 출력되는 TV</td>
+                </tr>
+                <tr>
+                  <td>aural</td>
+                  <td>음성 합성 장치(주로 화면을 읽어 소리로 출력해 주는 장치)</td>
+                </tr>
+                <tr>
+                  <td>braille</td>
+                  <td>점자 표시 장치</td>
+                </tr>
+                <tr>
+                  <td>handheld</td>
+                  <td>패드(pad)처럼 손에 들고 다니는 장치</td>
+                </tr>
+                <tr>
+                  <td>projection</td>
+                  <td>프로젝터</td>
+                </tr>
+                <tr>
+                  <td>tty</td>
+                  <td>디스플레이 기능이 제한된 장치(픽셀(px) 단위를 사용할 수 없음)</td>
+                </tr>
+                <tr>
+                  <td>embossed</td>
+                  <td>점자 프린터</td>
+                </tr>
+              </tbody>
+            </table>
+            <hr>
+
+            <p><mark><b>미디어 쿼리의 조건</b></mark></p>
+            <ul>
+              <li>미디어 쿼리는 특정 조건에 따라 적용할 CSS를 다르게 정의하므로 조건을 어떻게 체크할 것인지가 중요</li>
+              <li>미디어 쿼리에서 사용하는 조건에는 주로 화면 크기와 관련된 것들이 많음</li>
+            </ul>
+
+            <p><strong><em>웹 문서의 가로 너비와 세로 높이</em></strong></p>
+            <ul>
+              <li>실제 웹 문서의 내용이 화면에 보이는 영역을 '뷰포트'라 하는데,<br>
+                  뷰포트의 너비와 높이를 미디어 쿼리의 조건으로 사용할 수 있음</li>
+              <li>이때 height 값은 미디어에 따라 달라지기 때문에 주의해야함</li>
+            </ul>
+            <figure>
+              <figcaption>가로 너비와 세로 높이를 지정하기 위해 사용하는 속성</figcaption>
+              <table>
+                <thead>
+                  <tr>
+                    <th>가로, 세로 값 설정하는 속성</th>
+                    <th>설명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>width, height</td>
+                    <td>웹 페이지의 가로 너비, 세로 높이</td>
+                  </tr>
+                  <tr>
+                    <td>min-width, min-height</td>
+                    <td>최소 너비, 최소 높이</td>
+                  </tr>
+                  <tr>
+                    <td>max-width, max-height</td>
+                    <td>최대 너비, 최대 높이</td>
+                  </tr>
+                </tbody>
+              </table>
+              <br>
+              <figcaption>예를 들어 뷰포트의 너비가 600px 이상이고 959px 이하일 때 적용할 CSS는 다음과 같이 정의함</figcaption>
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">@media&nbsp;all&nbsp;(min-width:600px)&nbsp;and&nbsp;(max-width:959px)&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;...</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+            </figure>
+            <ul>
+              <li>미디어 쿼리를 이용하면 예제와 같이 max-width값(브라우저 창의 최대 너비 값)에 따라 문서의 배경 이미지가 달라지도록 미디어 쿼리 구문을 구성 할 수 있음</li>
+            </ul>
+            <div class="sourceCoding">
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div><div style="line-height:130%">18</div><div style="line-height:130%">19</div><div style="line-height:130%">20</div><div style="line-height:130%">21</div><div style="line-height:130%">22</div><div style="line-height:130%">23</div><div style="line-height:130%">24</div><div style="line-height:130%">25</div><div style="line-height:130%">26</div><div style="line-height:130%">27</div><div style="line-height:130%">28</div><div style="line-height:130%">29</div><div style="line-height:130%">30</div><div style="line-height:130%">31</div><div style="line-height:130%">32</div><div style="line-height:130%">33</div><div style="line-height:130%">34</div><div style="line-height:130%">35</div><div style="line-height:130%">36</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">!doctype</span>&nbsp;<span style="color:#a8ff58">html</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">html</span>&nbsp;<span style="color:#a8ff58">lang</span>=<span style="color:#ffd500">"ko"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">head</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">meta</span>&nbsp;<span style="color:#a8ff58">charset</span>=<span style="color:#ffd500">"utf-8"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">title</span><span style="color:#f0f0f0">&gt;</span>화면&nbsp;너비에&nbsp;따라&nbsp;배경&nbsp;이미지&nbsp;바꾸기<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">title</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">meta</span>&nbsp;<span style="color:#a8ff58">name</span>=<span style="color:#ffd500">"viewport"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">content</span>=<span style="color:#ffd500">"width=device-width,&nbsp;initial-scale=1"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">style</span><span style="color:#f0f0f0">&gt;</span><span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;body&nbsp;</span>{<span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;background</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;url(../images/bg0.jpg)&nbsp;no-repeat&nbsp;fixed</span><span style="color:#ff3399">;</span><span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;background-size</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;cover</span><span style="color:#ff3399">;</span><span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;</span>}<span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;@media&nbsp;screen&nbsp;and&nbsp;</span>(<span style="color:#a8ff58">max-width</span><span style="color:#ff3399">:</span><span style="color:#a8ff58">&nbsp;1024px</span>)<span style="color:#ff3399">&nbsp;</span>{<span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;body&nbsp;</span>{<span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;url(../images/bg1.jpg)&nbsp;no-repeat&nbsp;fixed</span><span style="color:#ff3399">;</span><span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-size</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;cover</span><span style="color:#ff3399">;</span><span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;</span>}<span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;</span>}<span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;@media&nbsp;screen&nbsp;and&nbsp;</span>(<span style="color:#a8ff58">max-width</span><span style="color:#ff3399">:</span><span style="color:#a8ff58">&nbsp;768px</span>)<span style="color:#ff3399">&nbsp;</span>{<span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;body&nbsp;</span>{<span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;url(../images/bg2.jpg)&nbsp;no-repeat&nbsp;fixed</span><span style="color:#ff3399">;</span><span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-size</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;cover</span><span style="color:#ff3399">;</span><span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;</span>}<span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;</span>}<span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;@media&nbsp;screen&nbsp;and&nbsp;</span>(<span style="color:#a8ff58">max-width</span><span style="color:#ff3399">:</span><span style="color:#a8ff58">&nbsp;320px</span>)<span style="color:#ff3399">&nbsp;</span>{<span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;body&nbsp;</span>{<span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;url(../images/bg3.jpg)&nbsp;no-repeat&nbsp;fixed</span><span style="color:#ff3399">;</span><span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-size</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;cover</span><span style="color:#ff3399">;</span><span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;</span>}<span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;</span>}</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">style</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">head</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">body</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">body</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">html</span><span style="color:#f0f0f0">&gt;</span></div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+              <button type="button" value="12_basic_1" id="12_basic_1" style="margin-top: 15px;">결과보기</button>
+            </div>
+
+            <p><strong><em>단말기의 가로 너비와 세로 높이</em></strong></p>
+            <ul>
+              <li>단말기에서도 기본적으로 제공하는 브라우저 창의 물리저 까로 너비와 세로 높이를 체크해 반응할 수 있는데<br>
+                  주의할 점은 대부분의 단말기들은 단말기 해상도와 실제 브라우저의 너비가 다르다는 것<br>
+                  예를 들어 아이폰4의 해상도는 640x960이지만 아이폰4의 사파리 브라우저의 너비는 320x480 임</li>
+              <li>단말기 크기와 뷰포트 크기를 하나로 통일해 사용하기 위해 뷰포트를 지정할 때 width="device-width"로 놓고 사용함</li>
+            </ul>
+            <figure>
+              <table>
+                <thead>
+                  <tr>
+                    <th>가로, 세로 값 설정하는 속성</th>
+                    <th>설명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>device-width, device-height</td>
+                    <td>웹 페이지의 가로 너비, 세로 높이</td>
+                  </tr>
+                  <tr>
+                    <td>min-device-width, min-device-height</td>
+                    <td>최소 너비, 최소 높이</td>
+                  </tr>
+                  <tr>
+                    <td>max-device-width, max-device-height</td>
+                    <td>최대 너비, 최대 높이</td>
+                  </tr>
+                </tbody>
+              </table>
+            </figure>
+
+            <p><strong><em>화면 회전</em></strong></p>
+            <ul>
+              <li>기기를 세로나 가로로 보는데 그때마다 웹 사이트의 화면 방향이 달라짐</li>
+              <li>미디어 쿼리를 작성할 경우, orientation속성을 사용하면 화면 방향을 체크할 수 있음</li>
+              <li>orientation속성은 portrait 값과 landscape 값을 사용할 수 있음<br>
+                  풍경화처럼 가로(width 값)가 넓으면 landscape이고,<br>
+                  초상화처럼 세로(height 값)가 길면 portrait</li>
+            </ul>
+            <div class="sourceCoding">
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div><div style="line-height:130%">18</div><div style="line-height:130%">19</div><div style="line-height:130%">20</div><div style="line-height:130%">21</div><div style="line-height:130%">22</div><div style="line-height:130%">23</div><div style="line-height:130%">24</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">!doctype</span>&nbsp;<span style="color:#a8ff58">html</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">html</span>&nbsp;<span style="color:#a8ff58">lang</span>=<span style="color:#ffd500">"ko"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">head</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">meta</span>&nbsp;<span style="color:#a8ff58">charset</span>=<span style="color:#ffd500">"utf-8"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">title</span><span style="color:#f0f0f0">&gt;</span>Media&nbsp;Queries<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">title</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">meta</span>&nbsp;<span style="color:#a8ff58">name</span>=<span style="color:#ffd500">"viewport"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">content</span>=<span style="color:#ffd500">"width=device-width,&nbsp;initial-scale=1"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">style</span><span style="color:#f0f0f0">&gt;</span><span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;body&nbsp;</span>{<span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color</span><span style="color:#ff3399">:</span><span style="color:#E083FF">#eee</span><span style="color:#ff3399">;</span><span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;</span>}<span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;@media&nbsp;screen&nbsp;and&nbsp;</span>(<span style="color:#a8ff58">orientation</span><span style="color:#ff3399">:</span><span style="color:#a8ff58">landscape</span>)<span style="color:#ff3399">&nbsp;</span>{<span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body&nbsp;</span>{<span style="color:#4be6fa">background-color</span><span style="color:#ff3399">:</span><span style="color:#E083FF">orange</span><span style="color:#ff3399">;</span><span style="color:#E083FF"></span>}<span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;</span>}<span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;@media&nbsp;screen&nbsp;and&nbsp;</span>(<span style="color:#a8ff58">orientation</span><span style="color:#ff3399">:</span><span style="color:#a8ff58">portrait</span>)<span style="color:#ff3399">&nbsp;</span>{<span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body&nbsp;</span>{<span style="color:#4be6fa">background-color</span><span style="color:#ff3399">:</span><span style="color:#E083FF">yellow</span><span style="color:#ff3399">;</span><span style="color:#E083FF"></span>}<span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;</span>}</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">style</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">head</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">body</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">h1</span><span style="color:#f0f0f0">&gt;</span>Meida&nbsp;Query<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">h1</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">body</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">html</span><span style="color:#f0f0f0">&gt;</span></div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+              <button type="button" value="12_basic_2" id="12_basic_2" style="margin-top: 15px;">결과보기</button>
+            </div>
+
+            <p><strong><em>화면 비율, 단말기의 물리적 화면 비율</em></strong></p>
+            <ul>
+              <li>화면 비율은 뷰포트, 즉 단말기 브라우저 화면의 너비 값(width)을 높이 값(height)으로 나눈 것으로 숫자 값이나 계산식을 사용할 수 있음</li>
+            </ul>
+            <figure>
+              <figcaption>
+                사용할 수 있는 속성 값
+              </figcaption>
+              <table>
+                <thead>
+                  <tr>
+                    <th>속성</th>
+                    <th>설명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>aspect-ratio</td>
+                    <td>화면 비율(width 값 / height 값)</td>
+                  </tr>
+                  <tr>
+                    <td>min-aspect-ratio</td>
+                    <td>최소 화면 비율</td>
+                  </tr>
+                  <tr>
+                    <td>max-aspect-radio</td>
+                    <td>최대 화면 비율</td>
+                  </tr>
+                </tbody>
+              </table>
+            </figure>
+            <h1>TODO TODO TODO</h1>
+
+            <p><strong><em>미디어 쿼리 중단점 만들기</em></strong></p>
+            <ul>
+              <li>미디어 쿼리를 작성할 때 서로 다른 CSS를 적용할 화면 크기를 중단점(break point)라고 함</li>
+              <li>이 중단점을 어떻게 지정하는가에 따라 CSS가 달라지고 화면 레이아웃이 바뀌는데 대부분 기기의 화면 크기를 기준으로 함</li>
+              <li>처리 속도나 화면 크기 등에서 다른 기기보다 모바일 기기의 제약 조건이 더 많기 때문에 모바일 기기의 레이아웃을 기본으로 해 CSS를 만듬</li>
+              <li>출시된 기기들이 많고 앞으로도 다양한 크기의 기기들이 추가될 것이기 떄문에 어떻게 중단점을 나눌 것인지에 대한 표준은 없음</li>
+              <li>참고로 CSS프레임워크인 부트스트랩(bootstrap)과 쇼핑몰 개발 플랫폼인 마젠토(Magento)에서는 다음과 같은 중단점을 사용</li>
+            </ul>
+            <figure>
+              <table>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>아주 작은 화면</th>
+                    <th>작은 화면</th>
+                    <th>중간 화면</th>
+                    <th>큰 화면</th>
+                    <th>아주 큰 화면</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>부트스트랩</td>
+                    <td>576px 미만</td>
+                    <td>576px 이상</td>
+                    <td>768px 이상</td>
+                    <td>992px 이상</td>
+                    <td>1200px 이상</td>
+                  </tr>
+                  <tr>
+                    <td>마젠토</td>
+                    <td>640px 미만</td>
+                    <td>640px 이상</td>
+                    <td>768px 이상</td>
+                    <td>1024px 이상</td>
+                    <td>1440px 이상</td>
+                  </tr>
+                </tbody>
+              </table>
+            </figure>
+        </div>
+
+        <div id="chap2">
+            <h1><strong><mark>미디어 쿼리 적용하기</mark></strong></h1>
+            <ul>
+              <li>미디어 쿼리는 웹 문서 안에서 @media 구문 다음에 조건에 맞는 CSS규칙을 직접 추가해 구현할 수 있고</li>
+              <li>각 미디어 조건에 맞는 별도의 CSS파일을 만들어 &lt;link&gt;태그로 연결해 사용할 수도 있음</li>
+            </ul>
+            <hr>
+
+            <p><mark><b>외부 CSS 파일 연결하기</b></mark></p>
+            <ul>
+              <li>웹 문서에 적용하는 방법은 크게 외부 파일로 연결하는 방법과 직접 정의하는 방법이 있음</li>
+            </ul>
+
+            <p><strong><em>[외부 파일 적용] &lt;link&gt; 태그 사용하기</em></strong></p>
+            <ul>
+              <li>외부 스타일 시트 파일 연결할 때 &lt;link&gt;태그를 이용하는 방법을 가장 많이 사용</li>
+              <li>&lt;link&gt; 태그는 &lt;head&gt;태그와 &lt;/head&gt; 태그 사이에 삽입</li>
+            </ul>
+            <figure>
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">link</span>&nbsp;<span style="color:#a8ff58">rel</span>=<span style="color:#ffd500">"stylesheet"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">media</span>=<span style="color:#ffd500">"미디어&nbsp;쿼리&nbsp;조건"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">href</span>=<span style="color:#ffd500">"css&nbsp;파일&nbsp;경로"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+              <figcaption>
+                위의 구문은 특정 조건에 맞을 경우, 지정한 css 파일을 가져와 적용하라는 뜻<br>
+                (순서는 상관 없음)
+              </figcaption>
+              <br>
+              <figcaption>
+                예를 들어 'css'폴더에 인쇄용 스타일 시트 print.css 를 만들어 놓았다면 다음과 같이 연결 할 수 있음
+              </figcaption>
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">link</span>&nbsp;<span style="color:#a8ff58">rel</span>=<span style="color:#ffd500">"stylesheet"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">media</span>=<span style="color:#ffd500">"print"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">href</span>=<span style="color:#ffd500">"css/print.css"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+              <br>
+              <figcaption>
+                예를 들어 화면 너비가 768px 이하일 때 적용할 테블릿용 스타일 시트 파일을 만들어 놓았다면 아래와 같음
+              </figcaption>
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">link</span>&nbsp;<span style="color:#a8ff58">rel</span>=<span style="color:#ffd500">"stylesheet"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">media</span>=<span style="color:#ffd500">"screen&nbsp;and&nbsp;(max-width:&nbsp;768px)"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">href</span>=<span style="color:#ffd500">"css/tablet.css"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+            </figure>
+
+            <p><strong><em>[외부 파일 적용] @import 구문 사용하기</em></strong></p>
+            <ul>
+              <li>외부 CSS파일 연결할 때 &lt;link&gt;태그 대신 @import 구문을 사용할 수 있는데<br>
+                  @import 구문은 CSS 정의하는 &lt;style&gt; 태그와 &lt;/style&gt; 태그 사이에서 사용</li>
+            </ul>
+            <figure>
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">@import&nbsp;url(css&nbsp;파일경로)&nbsp;미디어&nbsp;쿼리&nbsp;조건</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+              <br>
+              <figcaption>
+                예를 들어 테블릿 PC에 맞는 스타일 시트 tablet.css를 만들어 두었고 너비가 321px 이상이고 768px 이하일 때 적용하고 싶다면 아래와 같다
+              </figcaption>
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">@import&nbsp;url("css/tablet.css")&nbsp;only&nbsp;screen&nbsp;and&nbsp;(min-width:&nbsp;321px)&nbsp;and&nbsp;(max-width:&nbsp;768px);</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+            </figure>
+            
+            <p><strong><em>[외부 파일 적용] &lt;link&gt; vs @import 구문</em></strong></p>
+            <ul>
+              <li>두 개 모두 외부 CSS파일을 가져와 사용하는 것이기 떄문에 CSS 파일이 1~2개 밖에 없다면 속도나 처리 면에서 큰 차이가 없다</li>
+              <li>하지만 CSS 파일이 많다면, 이럴 경우 @import 구문보다 &lt;link&gt;태그가 안정적이고 빠르기 때문에 &lt;link&gt; 태그를 사용하길 권장함</li>
+              <li>특히 인터넷 익스플로러 경우, @import구문과 자바스크립트가 있을 경우<br>
+                  자바스크립트를 먼저 다운로드하고 @import구문에 있는 CSS를 다운로드 하기 때문에 <br>
+                  자바스크립트에서 스타일 관련 정보를 처리할 경우 오류를 낼 여지가 있음</li>
+              <li>따라서 CSS파일이 많고 대규모 사이트를 개발할 때는 @import 구문보다 &lt;link&gt; 태그를 주로 사용</li>
+            </ul>
+            <hr>
+
+            <p><mark><b>웹 문서에서 직접 정의하기</b></mark></p>
+            <ul>
+              <li>웹 문서에서 직접 정의하는 방법은 크게 두가지</li>
+              <li>첫 번째 방법은 &lt;style&gt; 태그 안에서 media속성을 사용해 조건을 지정하고 그 조건에 맞는 스타일을 정의하는 것</li>
+            </ul>
+            <figure>
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">style</span>&nbsp;<span style="color:#a8ff58">media</span>=<span style="color:#ffd500">"미디어&nbsp;쿼리&nbsp;조건"</span><span style="color:#ff3399"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;스타일&nbsp;규칙들</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">style</span><span style="color:#f0f0f0">&gt;</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+              <br>
+              <figcaption>
+                예를 들어 최대 너비가 320px이하인 경우에 적용할 미디어 쿼리
+              </figcaption>
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">style</span>&nbsp;<span style="color:#a8ff58">media</span>=<span style="color:#ffd500">"screen&nbsp;and&nbsp;(max-width:&nbsp;320px)"</span><span style="color:#ff3399"></span><span style="color:#f0f0f0">&gt;</span><span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;body&nbsp;</span>{<span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;orange</span><span style="color:#ff3399">;</span><span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;</span>}</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">style</span><span style="color:#f0f0f0">&gt;</span></div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+            </figure>
+            
+            <ul>
+              <li>두 번째 방법은 스타일을 선언할 때 @media 구문을 사용해 각 조건별로 스타일을 지정해 놓고 선택적으로 스타일을 적용하는 방법</li>
+              <li>첫 번째 방법은 하나의 &lt;style&gt;태그 안에서 하나의 조건을 지정하지만<br>
+                  두 번째 방법은 &lt;style&gt; 태그 안에 여러 조건에 따른 스타일을 모두 나열해 놓고 그 중 선택적으로 스타일을 사용</li>
+            </ul>
+            <figure>
+              <figcaption>
+                예를 들어 @media 구문을 사용해 화면 너비가 320px 이하일 때 배경 색을 주황색으로 바꾸는 미디어 쿼리는 아래와 같음
+              </figcaption>
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">style</span><span style="color:#f0f0f0">&gt;</span><span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;@media&nbsp;screen&nbsp;and&nbsp;</span>(<span style="color:#a8ff58">max-width</span><span style="color:#ff3399">:</span><span style="color:#a8ff58">&nbsp;320px</span>)<span style="color:#ff3399">&nbsp;</span>{<span style="color:#ff3399"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body&nbsp;</span>{<span style="color:#4be6fa"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color</span><span style="color:#ff3399">:</span><span style="color:#E083FF">&nbsp;orange</span><span style="color:#ff3399">;</span><span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>}<span style="color:#E083FF"></span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#E083FF">&nbsp;&nbsp;&nbsp;&nbsp;</span>}</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">style</span><span style="color:#f0f0f0">&gt;</span></div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+            </figure>
+        </div>
+
+        <div id="chap3">
+            <h1><strong><mark>미디어 쿼리를 사용해 웹 문서 만들기</mark></strong></h1>
+            <ul>
+              <li>브라우저 화면 너비에 따라서 레이아웃이 바뀌게 해볼 텐데 그렇게 하려면 CSS를 사용해 레이아웃 만드는 것에 익숙해져아함</li>
+            </ul>
+            <hr>
+
+            <p><mark><b>레이아웃 구상하기</b></mark></p>
+            <ul>
+              <li>반응형 웹 디자인은 화면 해상도에 따라 화면 요소들을 옮길 수 있어야 하므로 처음부터 레이아웃을 잘 구상하고 옮길 부분을 결정해야 함</li>
+              <li>주로 모바일 화면부터 시작해 태블릿과 PC 화면 순서대로 구상하면 편함<br>
+                  (모바일화면, 그림과 텍스트를 세로로 나열)<br>
+                  (테블릿화면, 그림과 텍스트를 가로로 나열)<br>
+                  (PC화면, 그림과 텍스트를 계속해 가로로 나열)</li>
+            </ul>
+            <hr>
+
+            <p><mark><b>미디어 쿼리 중단점 결정하기</b></mark></p>
+            <ul>
+              <li>미디어 쿼리를 사용하려면 중단점을 먼저 결정해야함</li>
+              <li>화면 너비에 따라 카드를 가로로 배치하거나 세로로 배치하기 때문에 카드 너비 값만 정하면 미디어 쿼리 중단점을 정할 수 있음</li>
+              <hr>
+              <li>모바일 화면일 경우, 이미지와 텍스트를 세로로 배치하기 때문에 이미지 너비 값을 기준으로 카드 너비 값을 결정하면 됨<br>
+                  사용할 이미지 너비가 300px이므로 카드의 너비도 300px로 지정하면 됨</li>
+              <li>태블릿 화면일 경우, 이미지와 텍스트를 나란히 배치한 카드의 너비를 정하면 됨, 여기서는 550px로 정의하겠음<br>
+                  이렇게 하면 왼쪽 이미지 너비는 300px가 되고 오른쪽 텍스트의 너비는 250px정도가 됨</li>
+              <li>데스크톱 화면일 경우, 카드 3개를 나란히 배치<br>
+                  카드 너비가 550px짜리 세 개와 카드마다 마진을 각각 10px로 지정할 생각이라면<br>
+                  최소한 화면 너비가 1710px 이상이어야 함</li>
+              <li>그렇다면 다음과 같이 미디어 쿼리 중단점을 지정<br>
+                  768px 미만이면, 모바일 화면<br>
+                  768px ~ 1719 사이이면, 태블릿 화면<br>
+                  1720px 이상이면, 데스크톱 화면
+              </li>
+            </ul>
+            <hr>
+
+            <p><mark><b>태그로 구성하기</b></mark></p>
+            <ul>
+              <li>지금까지 레이아웃 구상을 기본으로 HTML문서를 작성</li>
+              <li>웹 문서의 다른 요소들에 영향을 주지 않으면서 위치를 바꾸려면 미디어 쿼리의 영향을 받는 요소를 &lt;div&gt;태그로 묶어줘야함</li>
+              <li>여기서는 카드를 &lt;div&gt; 태그로 묶고 카드 안에 있는 텍스트 부분도 &lt;div&gt;태그로 묶음</li>
+            </ul>
+            <div class="sourceCoding">
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div><div style="line-height:130%">18</div><div style="line-height:130%">19</div><div style="line-height:130%">20</div><div style="line-height:130%">21</div><div style="line-height:130%">22</div><div style="line-height:130%">23</div><div style="line-height:130%">24</div><div style="line-height:130%">25</div><div style="line-height:130%">26</div><div style="line-height:130%">27</div><div style="line-height:130%">28</div><div style="line-height:130%">29</div><div style="line-height:130%">30</div><div style="line-height:130%">31</div><div style="line-height:130%">32</div><div style="line-height:130%">33</div><div style="line-height:130%">34</div><div style="line-height:130%">35</div><div style="line-height:130%">36</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">!DOCTYPE</span>&nbsp;<span style="color:#a8ff58">html</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">html</span>&nbsp;<span style="color:#a8ff58">lang</span>=<span style="color:#ffd500">"ko"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">head</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">meta</span>&nbsp;<span style="color:#a8ff58">charset</span>=<span style="color:#ffd500">"UTF-8"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">meta</span>&nbsp;<span style="color:#a8ff58">name</span>=<span style="color:#ffd500">"viewport"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">content</span>=<span style="color:#ffd500">"width=device-width,&nbsp;initial-scale=1.0"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">meta</span>&nbsp;<span style="color:#a8ff58">http-equiv</span>=<span style="color:#ffd500">"X-UA-Compatible"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">content</span>=<span style="color:#ffd500">"ie=edge"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">title</span><span style="color:#f0f0f0">&gt;</span>INSPIRATIONAL&nbsp;QUOTES<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">title</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">link</span>&nbsp;<span style="color:#a8ff58">rel</span>=<span style="color:#ffd500">"stylesheet"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">href</span>=<span style="color:#ffd500">"css/style.css"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">head</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">body</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">id</span>=<span style="color:#ffd500">"container"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"card"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">img</span>&nbsp;<span style="color:#a8ff58">src</span>=<span style="color:#ffd500">"images/1.jpg"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"words"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">h2</span><span style="color:#f0f0f0">&gt;</span>일&nbsp;분&nbsp;전만큼&nbsp;먼&nbsp;시간은&nbsp;없다.<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">h2</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">h3</span><span style="color:#f0f0f0">&gt;</span>-&nbsp;Jim&nbsp;Bishop<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">h3</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"card"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">img</span>&nbsp;<span style="color:#a8ff58">src</span>=<span style="color:#ffd500">"images/2.jpg"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"words"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">h2</span><span style="color:#f0f0f0">&gt;</span>웃음은&nbsp;마음의&nbsp;조깅이다.<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">h2</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">h3</span><span style="color:#f0f0f0">&gt;</span>-&nbsp;Norman&nbsp;Cousins<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">h3</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"card"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">img</span>&nbsp;<span style="color:#a8ff58">src</span>=<span style="color:#ffd500">"images/3.jpg"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"words"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">h2</span><span style="color:#f0f0f0">&gt;</span>낡은&nbsp;옷은&nbsp;그냥&nbsp;입고&nbsp;새&nbsp;책을&nbsp;사라.<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">h2</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">h3</span><span style="color:#f0f0f0">&gt;</span>-&nbsp;Austin&nbsp;Phelps<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">h3</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">body</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">html</span><span style="color:#f0f0f0">&gt;</span></div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+              <button type="button" value="12_basic_3" id="12_basic_3" style="margin-top: 15px;">결과보기</button>
+            </div>
+
+            <h1> TODO TODO TODO </h1>
+        </div>
+    </div>
+</body>
+</html>
