@@ -366,8 +366,55 @@
                   </tr>
                 </thead>
                 <tbody>
+                  <tr>
+                    <td>stretch</td>
+                    <td>플렉스 항목을 확장해 교차축을 꽉 채움 (기본값)<br>
+                        (교차축 기본값일 경우, 위아래 꽉 채움)</td>
+                  </tr>
+                  <tr>
+                    <td>flex-start</td>
+                    <td>교차축의 시작점을 기준으로 배치<br>
+                        (교차축 기본값일 경우, 왼쪽 위부터 시작)</td>
+                  </tr>
+                  <tr>
+                    <td>flex-end</td>
+                    <td>교차축의 끝점을 기준으로 배치<br>
+                        (교차축 기본값일 경우, 아래 부터 시작)</td>
+                  </tr>
+                  <tr>
+                    <td>center</td>
+                    <td>교차축의 중앙을 기준으로 배치</td>
+                  </tr>
+                  <tr>
+                    <td>baseline</td>
+                    <td>시작점과 글자 기준선이 가장 먼 플렉스 항목을 시작점에 배치<br>
+                        그리고 그 글자의 기준선과 다른 항목의 기준선을 맞추어 배치</td>
+                  </tr>
                 </tbody>
               </table>
+            </figure>
+
+            <p><strong><em>align-self 속성</em></strong></p>
+            <ul>
+              <li>align-self 속성을 이용하면 플렉스 항목을 개별적으로 배치할 수 있음</li>
+              <li>플렉스 컨테이너에서 항목 전체의 배치 방법을 결정하지만<br>
+                  align-self 속성으로 특정 플렉스 항목만 배치 방법을 바꿀 수 있음</li>
+              <li>따라서 이 속성은 플렉스 항목 자체의 스타일로 지정</li>
+              <li>align-self 속성 값은 플렉스 항목의 부모 속성 값을 상속받는 auto를 제외하면 align-items에서의 속성 값과 같음</li>
+            </ul>
+            <figure>
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">align-self&nbsp;:&nbsp;auto&nbsp;|&nbsp;stretch&nbsp;|&nbsp;flex-start&nbsp;|&nbsp;flex-end&nbsp;|&nbsp;center&nbsp;|&nbsp;baseline</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+            </figure>
+            <hr>
+
+            <p><mark><b>align-content 속성 - 여러 줄일 때의 배치 방법 지정하기</b></mark></p>
+            <ul>
+              <li>플렉스 항목이 여러 줄에 걸쳐 표시될 때,<br>
+                  align-content 속성을 사용하면 교차축 방향의 배치 방법을 지정할 수 있음<br>
+                  (justify-content의 속성 값과 같으므로 참조)</li>
+            </ul>
+            <figure>
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">align-content&nbsp;:&nbsp;flex-start&nbsp;|&nbsp;flex-end&nbsp;|&nbsp;center&nbsp;|&nbsp;space-between&nbsp;|&nbsp;space-around</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
             </figure>
         </div>
     </div>
