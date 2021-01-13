@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">   <!-- 검색 엔진 고려 -->
+    <meta name="basic html" content="html 기본 구조">   <!-- 해당 문서의 키워드 -->
+    <meta name="description" content="html5를 통해 웹 표준 공부하기"> <!-- 해당 문서의 설명 -->
+    <meta name="author" content="byfuls"> <!-- 해당 문서의 소유자 또는 제작자 -->
+
+    <title>basic css</title>
+
+    <style>
+    </style>
+    <link rel="stylesheet" href="../../css/basic/css/style.css">
+
+    <script>
+      function basic_1() {
+        document.getElementById("1_basic_1").onclick = () => {
+          let w = open("1_basic_src/1_basic_1.html", "1_basic_1.html", "width=700, height=500");
+        }
+      }
+      window.onload = () => {
+        basic_1()
+      }
+    </script>
+</head>
+<body>
+    <div>
+        <div id="subject">
+          웹 브라우저 입출력
+        </div>
+        <div id="chap1">
+            <h1><strong><mark>이벤트 처리기 등록하기와 타이머</mark></strong></h1>
+            <ul>
+              <li></li>
+            </ul>
+            <hr>
+
+            <p><mark><b>이벤트 처리기</b></mark></p>
+            <ul>
+              <li>웹 브라우저에서 동작하는 프로그램은 기본적으로 이벤트 주도형 프로그램(event driven program)</li>
+              <li>이벤트 란?<br>
+                  버튼을 클릭하는 행위처럼 단말기와 애플리케이션이 처리할 수 있는 동작이나 사건</li>
+              <li>이벤트 주도형 프로그램 이란?<br>
+                  이벤트가 발생할 때까지 기다렸다가 이벤트가 발생했을 때 미리 등록해 둔 작업을 수행</li>
+              <li>이벤트 처리기 란?<br>
+                  이벤트가 발생 했을 때 실행되는 함수<br>
+                  함수를 이벤트 처리기로 등록하는 방법
+                  <ul>
+                    <li>1. HTML 요소의 속성으로 등록하는 방법</li>
+                    <li>2. DOM 요소의 프로퍼티로 등록하는 방법</li>
+                    <li>3. addEventListener 메서드를 사용하는 방법</li>
+                  </ul>
+              </li>
+            </ul>
+            <hr>
+
+            <p><mark><b>[이벤트 처리기 등록] 1. HTML 요소의 속성에 등록하는 방법</b></mark></p>
+            <div class="sourceCoding">
+              <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div><div style="line-height:130%">18</div><div style="line-height:130%">19</div><div style="line-height:130%">20</div><div style="line-height:130%">21</div><div style="line-height:130%">22</div><div style="line-height:130%">23</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">!doctype</span>&nbsp;<span style="color:#a8ff58">html</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">html</span>&nbsp;<span style="color:#a8ff58">lang</span>=<span style="color:#ffd500">"ko"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">head</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">meta</span>&nbsp;<span style="color:#a8ff58">charset</span>=<span style="color:#ffd500">"utf-8"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">meta</span>&nbsp;<span style="color:#a8ff58">name</span>=<span style="color:#ffd500">"viewport"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">content</span>=<span style="color:#ffd500">"width=device-width,&nbsp;initial-scale=1"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">title</span><span style="color:#f0f0f0">&gt;</span>콘솔에&nbsp;시각&nbsp;표시<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">title</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">style</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">style</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">script</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff3399">function</span>&nbsp;displayTime()&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff3399">var</span>&nbsp;d&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#ff3399">new</span>&nbsp;<span style="color:#4be6fa">Date</span>();</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">"Time&nbsp;:&nbsp;"</span>&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">+</span>&nbsp;d.toLocaleDateString())</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">script</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">head</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">body</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">input</span>&nbsp;<span style="color:#a8ff58">type</span>=<span style="color:#ffd500">"button"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">value</span>=<span style="color:#ffd500">"click"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">onclick</span>=<span style="color:#ffd500">"displayTime()"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">body</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">html</span><span style="color:#f0f0f0">&gt;</span></div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+              <button type="button" value="1_basic_1" id="1_basic_1" style="margin-top: 15px;">결과보기</button>
+              <p>여기에서 onclick 부분을 <strong>이벤트 처리기 이름</strong>이고, onclick은 이벤트 유형</p>
+            </div>
+            <figure>
+              <figcaption>주요 이벤트 처리기 이름</figcaption>
+              <table>
+                <thead>
+                  <tr>
+                    <th>이벤트 처리기 이름</th>
+                    <th>이벤트 종류</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>onclick</td>
+                    <td>마우스로 클릭 했을 때</td>
+                  </tr>
+                  <tr>
+                    <td>ondblclick</td>
+                    <td>마우스로 더블클릭 했을 때</td>
+                  </tr>
+                  <tr>
+                    <td>onmousedown</td>
+                    <td>마우스 버튼을 눌렀을 때</td>
+                  </tr>
+                  <tr>
+                    <td>onmouseup</td>
+                    <td>마우스 버튼에서 손가락을 떼었을 때</td>
+                  </tr>
+                  <tr>
+                    <td>onmousemove</td>
+                    <td>마우스 포인터가 HTML 요소 위에서 움직일 때</td>
+                  </tr>
+                  <tr>
+                    <td>onmouseout</td>
+                    <td>마우스 포인터가 HTML 요소를 벗어났을 때</td>
+                  </tr>
+                  <tr>
+                    <td>onmouseover</td>
+                    <td>마우스 포인터가 HTML 요소 위에 놓여 있을 때</td>
+                  </tr>
+                  <tr>
+                    <td>onkeydown</td>
+                    <td>키보드의 키를 눌렀을 때</td>
+                  </tr>
+                  <tr>
+                    <td>onkeypress</td>
+                    <td>키보드의 키를 누르고 손가락을 떼었을 때</td>
+                  </tr>
+                  <tr>
+                    <td>onkeyup</td>
+                    <td>키보드의 키에서 손가락을 떼었을 때</td>
+                  </tr>
+                  <tr>
+                    <td>onchange</td>
+                    <td>input 요소의 값이 바뀌었을 때</td>
+                  </tr>
+                  <tr>
+                    <td>onblur</td>
+                    <td>input 요소가 포커스를 잃었을 때</td>
+                  </tr>
+                  <tr>
+                    <td>onfocus</td>
+                    <td>input 요소에 포커스를 맞추었을 때</td>
+                  </tr>
+                  <tr>
+                    <td>onselect</td>
+                    <td>텍스트 필드 등의 텍스트를 선택했을 때</td>
+                  </tr>
+                  <tr>
+                    <td>onsubmit</td>
+                    <td>폼 제출 버튼을 눌렀을 때</td>
+                  </tr>
+                  <tr>
+                    <td>onload</td>
+                    <td>HTML을 모두 읽어 들였을 때</td>
+                  </tr>
+                  <tr>
+                    <td>onunloadweb</td>
+                    <td>웹 페이지가 메모리에서 내려갈 때 (예: 다른 페이지로 전환할 때)</td>
+                  </tr>
+                  <tr>
+                    <td>onabort</td>
+                    <td>페이지나 이미지 읽어 들이기가 중단되었을 때</td>
+                  </tr>
+                  <tr>
+                    <td>onerror</td>
+                    <td>페이지나 이미지를 읽어 들이는 동안 오류가 발생했을 때</td>
+                  </tr>
+                  <tr>
+                    <td>onresize</td>
+                    <td>HTML 요소의 크기가 바뀌었을 때</td>
+                  </tr>
+                </tbody>
+              </table>
+              <ul>
+                <li>이벤트 처리기 속성에는 이벤트가 발생했을 때 실행할 자바스크립트 문장을 문자열로 만들어 대입</li>
+                <li>속성에 여러 문장을 작성할 때는 문장과 문장을 세미콜론으로 구분한 문자열을 대입</li>
+                <li>이벤트 처리기 속성을 사용해서 등록하면 HTML 코드와 자바스크립트 코드가 뒤섞이는 단점이 있음</li>
+              </ul>
+            </figure>
+            <hr>
+
+            <p><mark><b>[이벤트 처리기 등록] 2. DOM 요소의 프로퍼티로 등록</b></mark></p>
+            <ul>
+              <li>DOM(Document Object Model)은 자바스크립트 등의 프로그램이 HTML 요소를 조작할 수 있게 하는 인터페이스</li>
+            </ul>
+
+            <p><strong><em>DOM 객체</em></strong></p>
+            <ul>
+              <li>DOM에서는 HTML 문서나 HTML 요소를 가리키는 객체로 자바스크립트를 사용하여 HTML 문서를 조작<br>
+                  <ul>
+                    <li>window : Window 객체, 웹 브라우저 윈도우 하나 or 탭 하나 를 가르킴</li>
+                    <li>document : Document 객체, HTML 문서 전체를 가르킴<br>
+                        HTML 문서에서 HTML 요소 객체를 가져오거나 HTML 요소를 새로 만드는 등 HTML 문서 전반에 걸친 기능 제공</li>
+                    <li>요소 객체 : HTML 문서의 요소를 가리키는 객체</li>
+                  </ul>
+              </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>콘솔에 시각 표시</title>
+
+  <style>
+  </style>
+
+  <script>
+    function displayTime() {
+      var d = new Date();
+      console.log("Time : " + d.toLocaleDateString())
+    }
+  </script>
+</head>
+
+<body>
+  <input type="button" value="click" onclick="displayTime()">
+</body>
+</html>
