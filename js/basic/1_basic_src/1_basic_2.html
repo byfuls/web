@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>콘솔에 시각 표시하기 (DOM 버전)</title>
+
+  <style>
+  </style>
+
+  <script>
+    function displayTime() {
+      var d = new Date();
+      console.log("Time : " + d.toLocaleString());
+    }
+
+    /* 1. window 객체의 onload 프로퍼티에 함수를 지정 */
+    /*    이 함수는 웹 브라우저가 문서를 모두 읽어 들인 후 실행 됨 */
+    window.onload = function() {
+      /* 2. input 요소의 객체를 id를 통해 가져오기 */ 
+      var button = document.getElementById("button");
+      /* 3. input 요소를 클릭했을 때 동작하는 이벤트 처리기를 등록 */
+      button.onclick = displayTime;
+    }
+  </script>
+</head>
+
+<body>
+  <input type="button" value="click" id="button">
+</body>
+</html>
