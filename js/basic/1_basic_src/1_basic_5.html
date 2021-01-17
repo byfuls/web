@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Canvas의 기본</title>
+
+  <style>
+  </style>
+
+  <script>
+    window.onload = function() {
+      // canvas 요소 가져오기
+      var canvas = document.getElementById("mycanvas");
+      // canvas 렌더링 컨텍스트 가져오기
+      var ctx = canvas.getContext("2d");
+      // 그리기
+      // 좌표(50, 60)에 너비가 200이고 높이가 100인 사각형 테두리를 그린다
+      ctx.strokeRect(50, 60, 200, 100);
+    }
+  </script>
+</head>
+
+<body>
+  <canvas id="mycanvas" width="640" height="400"></canvas>
+</body>
+</html>

@@ -15,44 +15,22 @@
     <link rel="stylesheet" href="../../css/basic/css/style.css">
 
     <script>
-      function basic_1() {
-        document.getElementById("1_basic_1").onclick = () => {
-          let w = open("1_basic_src/1_basic_1.html", "1_basic_1.html", "width=700, height=500");
-        }
-      }
-      function basic_2() {
-        document.getElementById("1_basic_2").onclick = () => {
-          let w = open("1_basic_src/1_basic_2.html", "1_basic_2.html", "width=700, height=500");
-        }
-      }
-      function basic_3() {
-        document.getElementById("1_basic_3").onclick = () => {
-          let w = open("1_basic_src/1_basic_3.html", "1_basic_3.html", "width=700, height=500");
-        }
-      }
-      function basic_4() {
-        document.getElementById("1_basic_4").onclick = () => {
-          let w = open("1_basic_src/1_basic_4.html", "1_basic_4.html", "width=700, height=500");
-        }
-      }
-      function basic_5() {
-        document.getElementById("1_basic_5").onclick = () => {
-          let w = open("1_basic_src/1_basic_5.html", "1_basic_5.html", "width=700, height=500");
-        }
-      }
       window.onload = () => {
-        basic_1()
-        basic_2()
-        basic_3()
-        basic_4()
-        basic_5()
       }
     </script>
 </head>
 <body>
     <div>
         <div id="subject">
-          웹 브라우저 입출력
+          웹 브라우저의 객체
+          <ul>
+            <li>웹 브라우저에서 사용할 수 있는 호스트 객체를 배움</li>
+            <li>호스트 객체란?<br>
+                ECMAScript로 규정된 기본 객체 외에 자바스크립트 실행 환경에 정의된 객체를 말함</li>
+            <li>자바스크립트 프로그램은 웹 브라우저에 구현된 다양한 호스트 객체를 이용해 CSS로 스타일을 제어하거나 HTML 문서를 제어할 수 있으며<br>
+                웹 브라우저의 Window 객체를 제어할 수 있음</li>
+            <li>또한, 대화형(Interactive) 웹 페이지를 동적(Dynamic)으로 만들 수 있음</li>
+          </ul>
         </div>
         <div id="chap1">
             <h1><strong><mark>이벤트 처리기 등록하기와 타이머</mark></strong></h1>
