@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">   <!-- 검색 엔진 고려 -->
+    <meta name="basic html" content="html 기본 구조">   <!-- 해당 문서의 키워드 -->
+    <meta name="description" content="html5를 통해 웹 표준 공부하기"> <!-- 해당 문서의 설명 -->
+    <meta name="author" content="byfuls"> <!-- 해당 문서의 소유자 또는 제작자 -->
+
+    <title>[app] dropdown-basic</title>
+
+	<style>
+		.dropdown {
+			position: relative;
+			display: inline-block;
+		}
+		.dropbutton {
+			background-color: white;	/* 배경 색 */
+			color: black;				/* 글자 색 */
+			padding: 16px;				/* 패딩 */
+			font-size: 16px;			/* 글자 크기 */
+			border: 1px solid black;	/* 보더 */
+			cursor: pointer;			/* 마우스 오버 시, 보여줄 모양 (pointer) */
+		}
+		.dropdown-content {
+			visibility: hidden;
+			position: absolute;			/* 절대 위치, 상위 요소중에 relative 기준 */
+			background-color: #f9f9f9;
+			min-width: 160px;			/* 최소 넓이, 이보다 더 작아지는 것을 방지 */
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			z-index: 1;					/* 덮어쓰기 기준, 요소들중 1보다 작은값들 위에 덮어서 보여짐 */
+
+			opacity: 0;
+			transform: translateY(-1em);
+			transition: all 0.5s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+		}
+		.dropdown-content a {
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		}
+		.dropdown-content a:hover {		/* dropdown-content 클래스의 a 태그 위에 마우스를 올려두면 */
+			background-color: #f1f1f1;	/* 배경색을 바꾼다 */
+		}
+		.dropdown:hover .dropbutton {
+			background-color: #3e8e41;
+		}
+		.dropdown:hover .dropdown-content {
+			display: block;
+
+			visibility: visible;
+			opacity: 1;
+			transform: translateY(0%);
+			transition-delay: 0s, 0s, 0.3s;
+		}
+	</style>
+</head>
+<body>
+	<div class="dropdown">
+		<input type="button" class="dropbutton" value="Dropdown">
+		<div class="dropdown-content">
+			<a href="#">link 1</a>
+			<a href="#">link 2</a>
+			<a href="#">link 3</a>
+			<a href="#">link 4</a>
+		</div>
+	</div>
+	<div class="dropdown">
+		<input type="button" class="dropbutton" value="Dropdown">
+		<div class="dropdown-content">
+			<a href="#">link 1</a>
+			<a href="#">link 2</a>
+			<a href="#">link 3</a>
+			<a href="#">link 4</a>
+		</div>
+	</div>
+</body>
+</html>
