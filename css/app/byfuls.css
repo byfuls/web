@@ -1,0 +1,65 @@
+
+@font-face {
+	font-family: 'BMEULJIRO';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/BMEULJIRO.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+* {
+	font-family: 'BMEULJIRO', serif;
+	color: #2b2b2b;
+}
+
+/*________________________ NAVIGATION STICKY________________________*/
+
+/*________________________ DROPDOWN ________________________*/
+.dropdown {
+	display: inline-block;
+}
+.dropbutton {
+	background-color: #f9f9f9;	/* 배경 색 */
+	color: #2b2b2b;				/* 글자 색 */
+	padding: 16px;				/* 패딩 */
+	font-size: 16px;			/* 글자 크기 */
+	border: none;				/* 보더 */
+	cursor: pointer;			/* 마우스 오버 시, 보여줄 모양 (pointer) */
+	/* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+}
+.dropdown-content {
+	visibility: hidden;
+	position: absolute;			/* 절대 위치, 상위 요소중에 relative 기준 */
+	background-color: #f9f9f9;
+	min-width: 160px;			/* 최소 넓이, 이보다 더 작아지는 것을 방지 */
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	text-align: center;
+	z-index: 1;					/* 덮어쓰기 기준, 요소들중 1보다 작은값들 위에 덮어서 보여짐 */
+
+	opacity: 0;
+	transform: translateY(-1em);
+	transition: transform 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+}
+.dropdown-content a {
+	color: #2b2b2b;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+.dropdown-content a:hover {		/* dropdown-content 클래스의 a 태그 위에 마우스를 올려두면 */
+	/* background-color: #f1f1f1; */	/* 배경색을 바꾼다 */
+	color: #666cdc;
+}
+.dropdown:hover .dropbutton {
+	color: #666cdc;
+}
+.dropdown:hover .arrow-color {
+	color: #666cdc;
+}
+.dropdown:hover .dropdown-content {
+	display: block;
+
+	visibility: visible;
+	opacity: 1;
+	transform: translateY(0%);
+	transition-delay: 0s, 0s, 0.3s;
+	transition: all 0.3s ease-in-out 0s;
+}
