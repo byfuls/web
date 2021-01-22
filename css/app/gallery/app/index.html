@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">   <!-- 검색 엔진 고려 -->
+    <meta name="basic html" content="html 기본 구조">   <!-- 해당 문서의 키워드 -->
+    <meta name="description" content="html5를 통해 웹 표준 공부하기"> <!-- 해당 문서의 설명 -->
+    <meta name="author" content="byfuls"> <!-- 해당 문서의 소유자 또는 제작자 -->
+
+    <title>[app] gallery-basic</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+	<link rel="stylesheet" href="../../byfuls.css">
+	<link href="lightbox/css/lightbox.css" rel="styleshteet" />
+	<style>
+        @media screen and (min-width: 768px) {
+            .gallery-picture {
+                flex: 0 0 32.5%;
+                max-width: 32.5%;
+            }
+        }
+		.gallery-container {
+			display: flex;
+			flex-wrap: wrap;
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+		.gallery-picture-container {
+			margin: 0;
+			float: left;
+		}
+        .gallery-picture {
+            margin: .2rem;
+            float: left;
+            padding: .25rem;
+			background-color: #f9f9f9;
+
+			border-radius: .25rem;
+			box-shadow: 0 2px 5px 0 #2b2b2b, 0 2px 10px 0 #2b2b2b;
+        }
+		.gallery-picture:hover {
+			box-shadow: 0 2px 5px 0 #666cdc, 0 2px 10px 0 #666cdc;
+		}
+        .gallery-picture-inline {
+            position: relative;
+            vertical-align: middle;
+            cursor: pointer;
+
+			display: inline-block;
+			width: 100%;
+			overflow: hidden;
+        }
+        .gallery-picture-fluid {
+            cursor: zoom-in;
+            max-width: 100%;
+            height: auto;
+            display: inline-block;
+
+			transform: scale(1);
+			transition: transform 1.5s;
+        }
+		.gallery-picture-fluid:hover {
+			transform: scale(1.2);
+		}
+		.gallery-picture-title {
+			font-family: "ELAND_Nice_M";
+			text-align: center;
+		}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="gallery-container">
+            <div class="gallery-picture-container">
+                <figure class="gallery-picture">
+                    <a class="gallery-picture-inline" data-caption="Caption 1" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(10).jpg" data-size="1600x1067" data-lightbox="gallery">
+                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(10).jpg" class="gallery-picture-fluid" alt="sample image">
+                    </a>
+					<p class="gallery-picture-title">
+						사진 제목이라네
+					</p>
+                </figure>
+                <figure class="gallery-picture">
+                    <a class="gallery-picture-inline" data-caption="Caption 1" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(10).jpg" data-size="1600x1067">
+                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(10).jpg" class="gallery-picture-fluid" alt="sample image">
+                    </a>
+					<p class="gallery-picture-title">
+						사진 제목이라네
+					</p>
+                </figure>
+                <figure class="gallery-picture">
+                    <a class="gallery-picture-inline" data-caption="Caption 1" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(10).jpg" data-size="1600x1067">
+                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(10).jpg" class="gallery-picture-fluid" alt="sample image">
+                    </a>
+					<p class="gallery-picture-title">
+						사진 제목이라네
+					</p>
+                </figure>
+                <figure class="gallery-picture">
+                    <a class="gallery-picture-inline" data-caption="Caption 1" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(10).jpg" data-size="1600x1067">
+                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(10).jpg" class="gallery-picture-fluid" alt="sample image">
+                    </a>
+					<p class="gallery-picture-title">
+						사진 제목이라네
+					</p>
+                </figure>
+                <figure class="gallery-picture">
+                    <a class="gallery-picture-inline" data-caption="Caption 1" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(10).jpg" data-size="1600x1067">
+                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(10).jpg" class="gallery-picture-fluid" alt="sample image">
+                    </a>
+					<p class="gallery-picture-title">
+						사진 제목이라네
+					</p>
+                </figure>
+                <figure class="gallery-picture">
+                    <a class="gallery-picture-inline" data-caption="Caption 1" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(10).jpg" data-size="1600x1067">
+                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(10).jpg" class="gallery-picture-fluid" alt="sample image">
+                    </a>
+					<p class="gallery-picture-title">
+						사진 제목이라네
+					</p>
+                </figure>
+                <figure class="gallery-picture">
+                    <a class="gallery-picture-inline" data-caption="Caption 1" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(10).jpg" data-size="1600x1067">
+                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(10).jpg" class="gallery-picture-fluid" alt="sample image">
+                    </a>
+					<p class="gallery-picture-title">
+						사진 제목이라네
+					</p>
+                </figure>
+                <figure class="gallery-picture">
+                    <a class="gallery-picture-inline" data-caption="Caption 1" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(10).jpg" data-size="1600x1067">
+                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(10).jpg" class="gallery-picture-fluid" alt="sample image">
+                    </a>
+					<p class="gallery-picture-title">
+						사진 제목이라네
+					</p>
+                </figure>
+                <figure class="gallery-picture">
+                    <a class="gallery-picture-inline" data-caption="Caption 1" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(10).jpg" data-size="1600x1067">
+                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(10).jpg" class="gallery-picture-fluid" alt="sample image">
+                    </a>
+					<p class="gallery-picture-title">
+						사진 제목이라네
+					</p>
+                </figure>
+            </div>
+        </div>
+    </div>
+
+	<script src="lightbox/js/lightbox.js"></script>
+</body>
+</html>
