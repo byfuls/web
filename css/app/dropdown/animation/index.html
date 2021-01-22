@@ -10,70 +10,92 @@
 
     <title>[app] dropdown-basic</title>
 
-	<style>
-		.dropdown {
-			position: relative;
-			display: inline-block;
-		}
-		.dropbutton {
-			background-color: white;	/* 배경 색 */
-			color: black;				/* 글자 색 */
-			padding: 16px;				/* 패딩 */
-			font-size: 16px;			/* 글자 크기 */
-			border: 1px solid black;	/* 보더 */
-			cursor: pointer;			/* 마우스 오버 시, 보여줄 모양 (pointer) */
-		}
-		.dropdown-content {
-			visibility: hidden;
-			position: absolute;			/* 절대 위치, 상위 요소중에 relative 기준 */
-			background-color: #f9f9f9;
-			min-width: 160px;			/* 최소 넓이, 이보다 더 작아지는 것을 방지 */
-			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-			z-index: 1;					/* 덮어쓰기 기준, 요소들중 1보다 작은값들 위에 덮어서 보여짐 */
-
-			opacity: 0;
-			transform: translateY(-1em);
-			transition: all 0.5s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
-		}
-		.dropdown-content a {
-			color: black;
-			padding: 12px 16px;
-			text-decoration: none;
-			display: block;
-		}
-		.dropdown-content a:hover {		/* dropdown-content 클래스의 a 태그 위에 마우스를 올려두면 */
-			background-color: #f1f1f1;	/* 배경색을 바꾼다 */
-		}
-		.dropdown:hover .dropbutton {
-			background-color: #3e8e41;
-		}
-		.dropdown:hover .dropdown-content {
-			display: block;
-
-			visibility: visible;
-			opacity: 1;
-			transform: translateY(0%);
-			transition-delay: 0s, 0s, 0.3s;
-		}
-	</style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <style>
+        @font-face {
+        	font-family: 'BMEULJIRO';
+        	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/BMEULJIRO.woff') format('woff');
+        	font-weight: normal;
+        	font-style: normal;
+        }
+        * {
+        	font-family: 'BMEULJIRO', serif;
+        	color: #2b2b2b;
+        }
+        .dropdown {
+        	position: relative;
+        	display: inline-block;
+        }
+        .dropbutton {
+        	background-color: #f9f9f9;	/* 배경 색 */
+        	color: #2b2b2b;				/* 글자 색 */
+        	padding: 16px;				/* 패딩 */
+        	font-size: 16px;			/* 글자 크기 */
+        	border: none;				/* 보더 */
+        	cursor: pointer;			/* 마우스 오버 시, 보여줄 모양 (pointer) */
+        	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+        .dropdown-content {
+        	visibility: hidden;
+        	position: absolute;			/* 절대 위치, 상위 요소중에 relative 기준 */
+        	background-color: #f9f9f9;
+        	min-width: 160px;			/* 최소 넓이, 이보다 더 작아지는 것을 방지 */
+        	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        	z-index: 1;					/* 덮어쓰기 기준, 요소들중 1보다 작은값들 위에 덮어서 보여짐 */
+        	text-align: center;
+        
+        	opacity: 0;
+        	transform: translateY(-1em);
+        	transition: transform 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+        }
+        .dropdown-content a {
+        	color: #2b2b2b;
+        	padding: 12px 16px;
+        	text-decoration: none;
+        	display: block;
+        }
+        .dropdown-content a:hover {		/* dropdown-content 클래스의 a 태그 위에 마우스를 올려두면 */
+        	/* background-color: #f1f1f1; */	/* 배경색을 바꾼다 */
+        	color: #666cdc;
+        }
+        .dropdown:hover .dropbutton {
+        	color: #666cdc;
+        }
+        .dropdown:hover .arrow-color {
+        	color: #666cdc;
+        }
+        .dropdown:hover .dropdown-content {
+        	display: block;
+        
+        	visibility: visible;
+        	opacity: 1;
+        	transform: translateY(0%);
+        	transition-delay: 0s, 0s, 0.3s;
+        	transition: all 0.3s ease-in-out 0s;
+        }
+    </style>
 </head>
 <body>
 	<div class="dropdown">
-		<input type="button" class="dropbutton" value="Dropdown">
+		<button type="button" class="dropbutton">
+			안녕하세요
+			<i class="fas fa-arrow-down arrow-color" style="font-size: 2px;"></i>
+		</button>
 		<div class="dropdown-content">
-			<a href="#">link 1</a>
-			<a href="#">link 2</a>
-			<a href="#">link 3</a>
-			<a href="#">link 4</a>
+			<a href="#">에헤라디야</a>
+			<a href="#">바람분다</a>
+			<a href="#">연을 날려보자</a>
 		</div>
 	</div>
 	<div class="dropdown">
-		<input type="button" class="dropbutton" value="Dropdown">
+		<button type="button" class="dropbutton">
+			안녕하세요
+			<i class="fas fa-arrow-down arrow-color" style="font-size: 2px;"></i>
+		</button>
 		<div class="dropdown-content">
-			<a href="#">link 1</a>
-			<a href="#">link 2</a>
-			<a href="#">link 3</a>
-			<a href="#">link 4</a>
+			<a href="#">에헤라디야</a>
+			<a href="#">바람분다</a>
+			<a href="#">연을 날려보자</a>
 		</div>
 	</div>
 </body>
