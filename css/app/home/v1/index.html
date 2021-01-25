@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">   <!-- 검색 엔진 고려 -->
+    <meta name="basic html" content="html 기본 구조">   <!-- 해당 문서의 키워드 -->
+    <meta name="description" content="html5를 통해 웹 표준 공부하기"> <!-- 해당 문서의 설명 -->
+    <meta name="author" content="byfuls"> <!-- 해당 문서의 소유자 또는 제작자 -->
+
+    <title>[app] home</title>
+
+	<!-- Bootstrap CSS -->
+	<link re="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../byfuls.css">
+	<link rel="stylesheet" href="lightbox/css/lightbox.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+	<style>
+	</style>
+</head>
+<body>
+    <!-- nav start -->
+    <nav class="nav-wrapper">
+        <div class="nav-sticky nav-logo">
+            바이풀스
+        </div>
+	    <ul class="nav-sticky">
+            <li class="nav-sticky dropdown">
+	    		<button type="button" class="dropbutton">
+                    집으로
+	    		</button>
+            </li>
+	    	<li class="nav-sticky dropdown">
+	    		<button type="button" class="dropbutton">
+	    			사진첩
+	    			<i class="fas fa-arrow-down arrow-color" style="font-size: 2px;"></i>
+	    		</button>
+	    		<div class="dropdown-content">
+	    			<a href="#">에헤라디야</a>
+	    			<a href="#">바람분다</a>
+	    			<a href="#">연을 날려보자</a>
+	    		</div>
+	    	</li>
+	    	<li class="nav-sticky dropdown">
+	    		<button type="button" class="dropbutton">
+	    			프로그래밍
+	    			<i class="fas fa-arrow-down arrow-color" style="font-size: 2px;"></i>
+	    		</button>
+	    		<div class="dropdown-content">
+	    			<a href="#">에헤라디야</a>
+	    			<a href="#">바람분다</a>
+	    			<a href="#">연을 날려보자</a>
+	    		</div>
+	    	</li>
+	    	<li class="nav-sticky dropdown">
+	    		<button type="button" class="dropbutton">
+	    			블로그
+	    			<i class="fas fa-arrow-down arrow-color" style="font-size: 2px;"></i>
+	    		</button>
+	    		<div class="dropdown-content">
+	    			<a href="#">에헤라디야</a>
+	    			<a href="#">바람분다</a>
+	    			<a href="#">연을 날려보자</a>
+	    		</div>
+	    	</li>
+	    	<li class="nav-sticky dropdown">
+	    		<button type="button" class="dropbutton">
+					이야기방
+	    			<i class="fas fa-arrow-down arrow-color" style="font-size: 2px;"></i>
+	    		</button>
+	    		<div class="dropdown-content">
+	    			<a href="#">에헤라디야</a>
+	    			<a href="#">바람분다</a>
+	    			<a href="#">연을 날려보자</a>
+	    		</div>
+	    	</li>
+	    </ul>
+    </nav>
+    <!-- nav end -->
+
+    <!-- carousel start -->
+    <div id="carouselExampleCaptions" class="carousel slide default-margin-bottom" data-bs-ride="carousel">
+    	<ol class="carousel-indicators">
+    		<li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+    		<li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+    		<li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+    	</ol>
+    	<div class="carousel-inner">
+    		<div class="carousel-item active">
+    			<img src="images/home/background-1_resize.jpg" class="d-block w-100" alt="...">
+    			<div class="carousel-caption d-none d-md-block">
+    				<h5 id="test">First slide label</h5>
+    				<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    			</div>
+    		</div>
+    		<div class="carousel-item">
+    			<img src="images/home/background_resize.jpg" class="d-block w-100" alt="...">
+    			<div class="carousel-caption d-none d-md-block">
+    				<h5>Second slide label</h5>
+    				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    			</div>
+    		</div>
+    		<div class="carousel-item">
+    			<img src="images/home/ny.jpg" class="d-block w-100" alt="...">
+    			<div class="carousel-caption d-none d-md-block">
+    				<h5>Third slide label</h5>
+    				<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    			</div>
+    		</div>
+    	</div>
+    	<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+    		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    		<span class="visually-hidden">Previous</span>
+    	</a>
+    	<a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+    		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+    		<span class="visually-hidden">Next</span>
+    	</a>
+    </div>
+    <!-- carousel end -->
+
+    <!-- body contents start -->
+    <section class="container">
+        <!-- gallery contents start -->
+        <h4 class="home-category">
+            사진첩
+        </h4>
+        <hr class="default-hr">
+        <div class="gallery-container">
+            <div class="gallery-picture-container">
+                <figure class="gallery-picture">
+                    <a class="gallery-picture-inline" data-caption="Caption 1" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(10).jpg" data-size="1600x1067" data-lightbox="gallery">
+                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(10).jpg" class="gallery-picture-fluid" alt="sample image">
+                    </a>
+					<p class="gallery-picture-title">
+						사진 제목이라네
+					</p>
+                </figure>
+                <figure class="gallery-picture">
+                    <a class="gallery-picture-inline" data-caption="Caption 1" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(10).jpg" data-size="1600x1067" data-lightbox="gallery">
+                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(10).jpg" class="gallery-picture-fluid" alt="sample image">
+                    </a>
+					<p class="gallery-picture-title">
+						사진 제목이라네
+					</p>
+                </figure>
+                <figure class="gallery-picture">
+                    <a class="gallery-picture-inline" data-caption="Caption 1" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(10).jpg" data-size="1600x1067" data-lightbox="gallery">
+                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(10).jpg" class="gallery-picture-fluid" alt="sample image">
+                    </a>
+					<p class="gallery-picture-title">
+						사진 제목이라네
+					</p>
+                </figure>
+                <figure class="gallery-picture">
+                    <a class="gallery-picture-inline" data-caption="Caption 1" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(10).jpg" data-size="1600x1067" data-lightbox="gallery">
+                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(10).jpg" class="gallery-picture-fluid" alt="sample image">
+                    </a>
+					<p class="gallery-picture-title">
+						사진 제목이라네
+					</p>
+                </figure>
+                <figure class="gallery-picture">
+                    <a class="gallery-picture-inline" data-caption="Caption 1" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(10).jpg" data-size="1600x1067" data-lightbox="gallery">
+                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(10).jpg" class="gallery-picture-fluid" alt="sample image">
+                    </a>
+					<p class="gallery-picture-title">
+						사진 제목이라네
+					</p>
+                </figure>
+                <figure class="gallery-picture">
+                    <a class="gallery-picture-inline" data-caption="Caption 1" href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(10).jpg" data-size="1600x1067" data-lightbox="gallery">
+                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(10).jpg" class="gallery-picture-fluid" alt="sample image">
+                    </a>
+					<p class="gallery-picture-title">
+						사진 제목이라네
+					</p>
+                </figure>
+            </div>
+        </div>
+        <!-- gallery contents end -->
+
+		<!-- programming contents start -->
+		<h4 class="home-category">
+			프로그래밍
+		</h4>
+		<hr class="default-hr">
+		<div class="post-container">
+			<div class="post-body">
+				<!-- post head position -->
+				<div class="post-row">
+					<div class="post-thumbnail">
+						<img src="https://mdbootstrap.com/img/Photos/Others/img%20(43).jpg" class="post-thumbnail-image" alt="Sample image">
+					</div>
+					<div class="post-content">
+						<div class="post-content-head">
+							This is title of the news
+						</div>
+						<p class="post-content-body">
+							Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis...
+						</p>
+						<p>
+							11/01/2021
+						</p>
+						<a class="" href="#"> Read More </a>
+					</div>
+				</div>
+				<!-- post body position -->
+				<div class="post-row byf-mt-4">
+					<!-- small content start -->
+					<div class="post-thumbnail">
+						<!-- small new start -->
+						<div class="single-new">
+							<div class="post-row">
+								<div class="byf-col-md-3">
+									<img src="https://mdbootstrap.com/img/Photos/Horizontal/People/4-col/img%20(95).jpg" class="post-thumbnail-image" alt="Minor sample post image">
+								</div>
+								<div class="byf-col-md-6">
+									<p class="post-content-body">
+										<strong>11/01/2021</strong>
+									</p>
+									<p class="post-small-head">
+										포스트 제목
+										<i class="fas fa-angle-double-right"></i>
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- small new end -->
+					</div>
+					<!-- small content end -->
+					<!-- small content start -->
+					<div class="post-thumbnail">
+						<!-- small new start -->
+						<div class="single-new">
+							<div class="post-row">
+								<div class="byf-col-md-3">
+									<img src="https://mdbootstrap.com/img/Photos/Horizontal/People/4-col/img%20(95).jpg" class="post-thumbnail-image" alt="Minor sample post image">
+								</div>
+								<div class="byf-col-md-6">
+									<p class="post-content-body">
+										<strong>11/01/2021</strong>
+									</p>
+									<p class="post-small-head">
+										포스트 제목
+										<i class="fas fa-angle-double-right"></i>
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- small new end -->
+					</div>
+					<!-- small content end -->
+					<!-- small content start -->
+					<div class="post-thumbnail">
+						<!-- small new start -->
+						<div class="single-new">
+							<div class="post-row">
+								<div class="byf-col-md-3">
+									<img src="https://mdbootstrap.com/img/Photos/Horizontal/People/4-col/img%20(95).jpg" class="post-thumbnail-image" alt="Minor sample post image">
+								</div>
+								<div class="byf-col-md-6">
+									<p class="post-content-body">
+										<strong>11/01/2021</strong>
+									</p>
+									<p class="post-small-head">
+										포스트 제목
+										<i class="fas fa-angle-double-right"></i>
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- small new end -->
+					</div>
+					<!-- small content end -->
+					<!-- small content start -->
+					<div class="post-thumbnail">
+						<!-- small new start -->
+						<div class="single-new">
+							<div class="post-row">
+								<div class="byf-col-md-3">
+									<img src="https://mdbootstrap.com/img/Photos/Horizontal/People/4-col/img%20(95).jpg" class="post-thumbnail-image" alt="Minor sample post image">
+								</div>
+								<div class="byf-col-md-6">
+									<p class="post-content-body">
+										<strong>11/01/2021</strong>
+									</p>
+									<p class="post-small-head">
+										포스트 제목
+										<i class="fas fa-angle-double-right"></i>
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- small new end -->
+					</div>
+					<!-- small content end -->
+					<!-- small content start -->
+					<div class="post-thumbnail">
+						<!-- small new start -->
+						<div class="single-new">
+							<div class="post-row">
+								<div class="byf-col-md-3">
+									<img src="https://mdbootstrap.com/img/Photos/Horizontal/People/4-col/img%20(95).jpg" class="post-thumbnail-image" alt="Minor sample post image">
+								</div>
+								<div class="byf-col-md-6">
+									<p class="post-content-body">
+										<strong>11/01/2021</strong>
+									</p>
+									<p class="post-small-head">
+										포스트 제목
+										<i class="fas fa-angle-double-right"></i>
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- small new end -->
+					</div>
+					<!-- small content end -->
+					<!-- small content start -->
+					<div class="post-thumbnail">
+						<!-- small new start -->
+						<div class="single-new">
+							<div class="post-row">
+								<div class="byf-col-md-3">
+									<img src="https://mdbootstrap.com/img/Photos/Horizontal/People/4-col/img%20(95).jpg" class="post-thumbnail-image" alt="Minor sample post image">
+								</div>
+								<div class="byf-col-md-6">
+									<p class="post-content-body">
+										<strong>11/01/2021</strong>
+									</p>
+									<p class="post-small-head">
+										포스트 제목
+										<i class="fas fa-angle-double-right"></i>
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- small new end -->
+					</div>
+					<!-- small content end -->
+				</div>
+			</div>
+		</div>
+
+        <!-- card contents start -->
+        <h4 class="home-category">
+            블로그
+        </h4>
+        <hr class="default-hr">
+        <div class="card-container">
+			<div class="card">
+				<!-- card image -->
+				<div class="card-image">
+					<a href="#">
+						<img src="https://mdbootstrap.com/img/Photos/Horizontal/Technology/4-col/img%20(1).jpg" class="card-image-top" alt="Sample image">
+					</a>
+				</div>
+				<!-- card content -->
+				<div class="card-body">
+					<h4 class="card-title">제목을넣으셈</h4>
+					<hr class="default-hr">
+					<p class="card-text">
+						Some quick example text to build on the card title and make up the bulk
+					</p>
+					<p class="card-date">
+						11/01/2021
+					</p>
+					<p class="card-read-more">
+						<a href="#" class="default-switch-font">
+							read more
+						</a>
+					</p>
+				</div>
+			</div>
+			<div class="card">
+				<!-- card image -->
+				<div class="card-image">
+					<a href="#">
+						<img src="https://mdbootstrap.com/img/Photos/Horizontal/Technology/4-col/img%20(4).jpg" class="card-image-top" alt="Sample image">
+					</a>
+				</div>
+				<!-- card content -->
+				<div class="card-body">
+					<h4 class="card-title">제목을!</h4>
+					<hr class="default-hr">
+					<p class="card-text">
+						Some quick example text to build on the card title and make up the bulk
+					</p>
+					<p class="card-date">
+						11/01/2021
+					</p>
+					<p class="card-read-more">
+						<a href="#" class="default-switch-font">
+							read more
+						</a>
+					</p>
+				</div>
+			</div>
+			<div class="card">
+				<!-- card image -->
+				<div class="card-image">
+					<a href="#">
+						<img src="https://mdbootstrap.com/img/Photos/Horizontal/Technology/4-col/img%20(4).jpg" class="card-image-top" alt="Sample image">
+					</a>
+				</div>
+				<!-- card content -->
+				<div class="card-body">
+					<h4 class="card-title">넣어줘!</h4>
+					<hr class="default-hr">
+					<p class="card-text">
+						Some quick example text to build on the card title and make up the bulk
+					</p>
+					<p class="card-date">
+						11/01/2021
+					</p>
+					<p class="card-read-more">
+						<a href="#" class="default-switch-font">
+							read more
+						</a>
+					</p>
+				</div>
+			</div>
+        </div>
+        <!-- card contents end -->
+
+		<!-- community contents start -->
+		<h4 class="home-category">
+			이야기방
+		</h4>
+		<hr class="default-hr">
+    </section>
+    <!-- body contents end -->
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+	<script src="lightbox/js/lightbox.js"></script>
+</body>
+</html>
