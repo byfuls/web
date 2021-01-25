@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">   <!-- 검색 엔진 고려 -->
+		<meta name="basic html" content="html 기본 구조">   <!-- 해당 문서의 키워드 -->
+		<meta name="description" content="html5를 통해 웹 표준 공부하기"> <!-- 해당 문서의 설명 -->
+		<meta name="author" content="byfuls"> <!-- 해당 문서의 소유자 또는 제작자 -->
+
+		<title>[app] post-basic</title>
+
+		<link rel="stylesheet" href="../../byfuls.css">
+		<style>
+			.post-container {
+				box-shadow: 0 2px 5px 0 #2b2b2b, 0 2px 10px 0 #2b2b2b;
+			    border: 0;
+				font-weight: 400;
+
+				margin-top: 1rem !important;
+				
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				background-color: #fff;
+				background-clip: border-box;
+				border-radius: .25rem;
+			}
+			.post-body {
+				flex: 1 1 auto;
+				padding: 1.25rem;
+				min-height: 1px;
+			}
+			.post-row {
+				display: flex;
+				flex-wrap: wrap;
+				margin-right: -15px;
+				margin-left: -15px;
+			}
+			.post-thumbnail {
+				position: relative;
+				width: 100%;
+				padding-right: 15px;
+				padding-left: 15px;
+
+				margin: 1rem !important;
+			}
+			@media screen and (min-width: 768px) {
+				.post-thumbnail {
+					flex: 0 0 41.666667%;
+					max-width: 41.666667%;
+				}
+			}
+			.post-thumbnail-image {
+				max-width: 100%;
+				height: auto;
+				border-radius: 0 !important;
+			}
+			@media screen and (min-width: 768px) {
+				.post-content {
+					flex: 0 0 50%;
+					max-width: 50%;
+				}
+			}
+			.post-content {
+				position: relative;
+				width: 100%;
+				padding-right: 15px;
+				padding-left: 15px;
+
+				margin-left: 1rem !important;
+				margin-top: 1rem !important;
+			}
+			.post-content-head {
+				margin-bottom: 1.5rem !important;
+				font-family: "ELAND_Nice_M";
+				font-size: 1.5rem !important;
+				line-height: 1.4;
+			}
+			.post-content-body {
+			}
+			.byf-mt-4 {
+				margin-top: 1.5rem !important;
+			}
+			@media screen and (min-width: 768px) {
+				.byf-col-md-3 {
+					flex: 0 0 33.333333%;
+					max-width: 33.333333%;
+				}
+				.byf-col-md-6 {
+					flex: 0 0 66.666667%;
+					max-width: 66.666667%;
+				}
+			}
+			.byf-col-md-3, .byf-col-md-6{
+				position: relative;
+				width: 100%;
+				padding-right: 15px;
+				padding-left: 15px;
+			}
+			.post-small-head {
+				margin-bottom: 1.5rem !important;
+				font-family: "ELAND_Nice_M";
+				font-size: 1.25rem !important;
+				line-height: 1.4;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="post-container">
+				<div class="post-body">
+					<!-- post head position -->
+					<div class="post-row">
+						<div class="post-thumbnail">
+							<img src="https://mdbootstrap.com/img/Photos/Others/img%20(43).jpg" class="post-thumbnail-image" alt="Sample image">
+						</div>
+						<div class="post-content">
+							<div class="post-content-head">
+								This is title of the news
+							</div>
+							<p class="post-content-body">
+								Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis...
+							</p>
+							<p>
+								11/01/2021
+							</p>
+							<a class="" href="#"> Read More </a>
+						</div>
+					</div>
+					<!-- post body position -->
+					<div class="post-row byf-mt-4">
+						<!-- small content start -->
+						<div class="post-thumbnail">
+							<!-- small new start -->
+							<div class="single-new">
+								<div class="post-row">
+									<div class="byf-col-md-3">
+										<img src="https://mdbootstrap.com/img/Photos/Horizontal/People/4-col/img%20(95).jpg" class="post-thumbnail-image" alt="Minor sample post image">
+									</div>
+									<div class="byf-col-md-6">
+										<p class="post-content-body">
+											<strong>11/01/2021</strong>
+										</p>
+										<p class="post-small-head">
+											포스트 제목
+										</p>
+									</div>
+								</div>
+							</div>
+							<!-- small new end -->
+						</div>
+						<!-- small content end -->
+						<!-- small content start -->
+						<div class="post-thumbnail">
+							<!-- small new start -->
+							<div class="single-new">
+								<div class="post-row">
+									<div class="byf-col-md-3">
+										<img src="https://mdbootstrap.com/img/Photos/Horizontal/People/4-col/img%20(95).jpg" class="post-thumbnail-image" alt="Minor sample post image">
+									</div>
+									<div class="byf-col-md-6">
+										<p class="post-content-body">
+											<strong>11/01/2021</strong>
+										</p>
+										<p class="post-small-head">
+											포스트 제목
+										</p>
+									</div>
+								</div>
+							</div>
+							<!-- small new end -->
+						</div>
+						<!-- small content end -->
+						<!-- small content start -->
+						<div class="post-thumbnail">
+							<!-- small new start -->
+							<div class="single-new">
+								<div class="post-row">
+									<div class="byf-col-md-3">
+										<img src="https://mdbootstrap.com/img/Photos/Horizontal/People/4-col/img%20(95).jpg" class="post-thumbnail-image" alt="Minor sample post image">
+									</div>
+									<div class="byf-col-md-6">
+										<p class="post-content-body">
+											<strong>11/01/2021</strong>
+										</p>
+										<p class="post-small-head">
+											포스트 제목
+										</p>
+									</div>
+								</div>
+							</div>
+							<!-- small new end -->
+						</div>
+						<!-- small content end -->
+						<!-- small content start -->
+						<div class="post-thumbnail">
+							<!-- small new start -->
+							<div class="single-new">
+								<div class="post-row">
+									<div class="byf-col-md-3">
+										<img src="https://mdbootstrap.com/img/Photos/Horizontal/People/4-col/img%20(95).jpg" class="post-thumbnail-image" alt="Minor sample post image">
+									</div>
+									<div class="byf-col-md-6">
+										<p class="post-content-body">
+											<strong>11/01/2021</strong>
+										</p>
+										<p class="post-small-head">
+											포스트 제목
+										</p>
+									</div>
+								</div>
+							</div>
+							<!-- small new end -->
+						</div>
+						<!-- small content end -->
+						<!-- small content start -->
+						<div class="post-thumbnail">
+							<!-- small new start -->
+							<div class="single-new">
+								<div class="post-row">
+									<div class="byf-col-md-3">
+										<img src="https://mdbootstrap.com/img/Photos/Horizontal/People/4-col/img%20(95).jpg" class="post-thumbnail-image" alt="Minor sample post image">
+									</div>
+									<div class="byf-col-md-6">
+										<p class="post-content-body">
+											<strong>11/01/2021</strong>
+										</p>
+										<p class="post-small-head">
+											포스트 제목
+										</p>
+									</div>
+								</div>
+							</div>
+							<!-- small new end -->
+						</div>
+						<!-- small content end -->
+						<!-- small content start -->
+						<div class="post-thumbnail">
+							<!-- small new start -->
+							<div class="single-new">
+								<div class="post-row">
+									<div class="byf-col-md-3">
+										<img src="https://mdbootstrap.com/img/Photos/Horizontal/People/4-col/img%20(95).jpg" class="post-thumbnail-image" alt="Minor sample post image">
+									</div>
+									<div class="byf-col-md-6">
+										<p class="post-content-body">
+											<strong>11/01/2021</strong>
+										</p>
+										<p class="post-small-head">
+											포스트 제목
+										</p>
+									</div>
+								</div>
+							</div>
+							<!-- small new end -->
+						</div>
+						<!-- small content end -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
