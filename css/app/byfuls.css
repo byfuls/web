@@ -184,7 +184,100 @@ img.w-100 {
 	font-family: "ELAND_Nice_M";
 	text-align: center;
 }
+
 /*________________________ Post ________________________*/
+.post-container {
+	box-shadow: 0 2px 5px 0 #2b2b2b, 0 2px 10px 0 #2b2b2b;
+    border: 0;
+	font-weight: 400;
+
+	margin-top: 1rem !important;
+	
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	background-clip: border-box;
+	border-radius: .25rem;
+}
+.post-body {
+	flex: 1 1 auto;
+	padding: 1.25rem;
+	min-height: 1px;
+}
+.post-row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: -15px;
+}
+.post-thumbnail {
+	position: relative;
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+
+	margin: 1rem !important;
+}
+@media screen and (min-width: 768px) {
+	.post-thumbnail {
+		flex: 0 0 41.666667%;
+		max-width: 41.666667%;
+	}
+}
+.post-thumbnail-image {
+	max-width: 100%;
+	height: auto;
+	border-radius: 0 !important;
+}
+@media screen and (min-width: 768px) {
+	.post-content {
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+}
+.post-content {
+	position: relative;
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+
+	margin-left: 1rem !important;
+	margin-top: 1rem !important;
+}
+.post-content-head {
+	margin-bottom: 1.5rem !important;
+	font-family: "ELAND_Nice_M";
+	font-size: 1.5rem !important;
+	line-height: 1.4;
+}
+.post-content-body {
+}
+.byf-mt-4 {
+	margin-top: 1.5rem !important;
+}
+@media screen and (min-width: 768px) {
+	.byf-col-md-3 {
+		flex: 0 0 33.333333%;
+		max-width: 33.333333%;
+	}
+	.byf-col-md-6 {
+		flex: 0 0 66.666667%;
+		max-width: 66.666667%;
+	}
+}
+.byf-col-md-3, .byf-col-md-6{
+	position: relative;
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+.post-small-head {
+	margin-bottom: 1.5rem !important;
+	font-family: "ELAND_Nice_M";
+	font-size: 1.25rem !important;
+	line-height: 1.4;
+}
 
 /*________________________ Card ________________________*/
 .card-container {
