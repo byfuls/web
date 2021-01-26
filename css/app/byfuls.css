@@ -14,6 +14,7 @@
 body {
 	font-family: 'BMEULJIRO', serif;
 	color: #2b2b2b;
+	background-color: #EAFDEB;
 }
 a {
     text-decoration: none;
@@ -79,7 +80,8 @@ a {
 
 /*________________________ Navigation sticky ________________________*/
 .nav-wrapper {
-	background-color: #f9f9f9;
+	/* background-color: #f9f9f9; */
+	background-color: #EDF697;
 
     position: -webkit-sticky; /* Safari */
     position: sticky;       /* overflow hidden 과 같이 사용하면 안됨 */
@@ -196,9 +198,12 @@ img.w-100 {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	background-color: #fff;
+	/* background-color: #fff; */
+	background-color: #faf4f4;
+	/* background-color: #dfffe0; */
+	/* background-color: #EAFDEB; */
 	background-clip: border-box;
-	border-radius: .25rem;
+	border-radius: .75rem;
 }
 .post-body {
 	flex: 1 1 auto;
@@ -300,7 +305,7 @@ img.w-100 {
 	width: 100%;
 	background-color: #f9f9f9;
 	background-clip: border-box;
-	border-radius: .25rem;
+	border-radius: .75rem;
 	margin: .5rem;
 }
 .card-image {
@@ -311,13 +316,17 @@ img.w-100 {
 	max-width: 100%;
 	height: auto;
 	box-sizing: border-box;
-	border-top-left-radius: calc(.25rem - 1px);
-	border-top-right-radius: calc(.25rem - 1px);
+	border-top-left-radius: calc(.75rem - 1px);
+	border-top-right-radius: calc(.75rem - 1px);
 	flex-shrink: 0;
 }
 .card:hover {
 	box-shadow: 0 2px 5px 0 #666cdc, 0 2px 10px 0 #666cdc;
-	animation: jelly 0.6s ease;
+	/* animation: jelly 0.6s ease; */
+}
+.card:active {
+	background: #ffe9e9;
+	transform: translate(0em, 0.75em);
 }
 .card-body {
 	flex: 1 1 auto;
@@ -354,7 +363,8 @@ img.w-100 {
 	display: inline-block;
 }
 .dropbutton {
-	background-color: #f9f9f9;	/* 배경 색 */
+	/* background-color: #f9f9f9; */	/* 배경 색 */
+	background-color: #EDF697;
 	color: #2b2b2b;				/* 글자 색 */
 	padding: 16px;				/* 패딩 */
 	font-family: ELAND_Nice_M;
@@ -366,11 +376,13 @@ img.w-100 {
 .dropdown-content {
 	visibility: hidden;
 	position: absolute;			/* 절대 위치, 상위 요소중에 relative 기준 */
-	background-color: #f9f9f9;
+	/* background-color: #f9f9f9; */
+	background-color: #EDF697;
 	min-width: 160px;			/* 최소 넓이, 이보다 더 작아지는 것을 방지 */
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	text-align: center;
 	z-index: 1;					/* 덮어쓰기 기준, 요소들중 1보다 작은값들 위에 덮어서 보여짐 */
+	border-radius: 0.75em;
 
 	opacity: 0;
 	transform: translateY(-1em);
@@ -399,4 +411,58 @@ img.w-100 {
 	transform: translateY(0%);
 	transition-delay: 0s, 0s, 0.3s;
 	transition: all 0.3s ease-in-out 0s;
+}
+
+/*________________________ Button (app) ________________________*/
+button.byf-button {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	outline: none;
+	vertical-align: middle;
+	text-decoration: none;
+
+	font-family: "ELAND_Nice_M";
+	font-size: inherit;
+	font-weight: 600;
+	color: #382b22;
+	text-transform: uppercase;
+	/* padding: 1.25em 2em; */
+	padding: 0.5em 2em;
+	background: #fff0f0;
+	border: 2px solid #b18597;
+	border-radius: 0.75em;
+	transform-style: preserve-3d;
+	transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+button.byf-button::before {
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #f9c4d2;
+	border-radius: inherit;
+	box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
+	transform: translate3d(0, 0.75em, -1em);
+	transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+button.byf-button:hover {
+	background: #ffe9e9;
+	transform: translate(0, 0.25em);
+}
+button.byf-button:hover::before {
+	box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
+	transform: translate3d(0, 0.5em, -1em);
+}
+button.byf-button:active {
+	background: #ffe9e9;
+	transform: translate(0em, 0.75em);
+}
+button.byf-button:active::before {
+	box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+	transform: translate3d(0, 0, -1em);
 }
