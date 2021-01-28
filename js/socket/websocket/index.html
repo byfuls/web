@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">   <!-- 검색 엔진 고려 -->
+    <meta name="basic html" content="html 기본 구조">   <!-- 해당 문서의 키워드 -->
+    <meta name="description" content="html5를 통해 웹 표준 공부하기"> <!-- 해당 문서의 설명 -->
+    <meta name="author" content="byfuls"> <!-- 해당 문서의 소유자 또는 제작자 -->
+
+    <title>[app] home</title>
+
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/Users/byfuls/Lab/web/css/app/byfuls.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+	<style>
+		table {
+			border: 1px solid black;
+			margin: 2% 0;
+		}
+		th, td {
+			padding: 2%;
+		}
+	</style>
+	<script src="js/comm.js"></script>
+</head>
+<body>
+	<div class="container">
+		<button type="button" id="refresh">
+			refresh
+		</button>
+		<table>
+			<thead>
+				<tr>
+					<th>
+						No.
+					</th>
+					<th>
+						Serial No
+					</th>
+					<th>
+						IMSI
+					</th>
+					<th>
+						Status
+					</th>
+					<th>
+						Used Time
+					</th>
+					<th>
+						Last Received Time
+					</th>
+					<th>
+						WatchDog On/Off
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						1
+					</td>
+					<td id="serialNo">
+					</td>
+					<td id="userImsi">
+					</td>
+					<td id="status">
+					</td>
+					<td id="usedTime">
+					</td>
+					<td id="lastReceivedTime">
+					</td>
+					<td id="watchDogOn">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
