@@ -1,5 +1,5 @@
 $(document).ready( function() {
-    var testUri = "ws://127.0.0.1:2219/monitor"
+    var testUri = "ws://127.0.0.1:2219/"
     var webSocket = new WebSocket(testUri);
     console.dir(webSocket);
     webSocket.onopen = function() {
@@ -16,6 +16,12 @@ $(document).ready( function() {
         console.log("serialNo: ", monitData.serialNo);
         console.log("userImsi: ", monitData.userImsi);
         console.log("status: ", monitData.status);
+
+        var b = atob(monitData.status);
+        console.log("status: ", b);
+        console.log("status: ", b[0]);
+        console.log("status: ", b[1]);
+
         console.log("usedTime: ", monitData.usedTime);
         console.log("lastReceivedTime: ", monitData.lastReceivedTime);
         console.log("watchDogOn: ", monitData.watchDogOn);
