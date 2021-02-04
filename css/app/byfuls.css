@@ -16,9 +16,6 @@ body {
 	color: #2b2b2b;
 	background-color: #EAFDEB;
 }
-a {
-    text-decoration: none;
-}
 
 /*________________________ Common ________________________*/
 .container {
@@ -68,8 +65,8 @@ a {
 		max-width: 720px;
 	}
 	.card {
-		flex: 0 0 31.5%;
-		max-width: 31.5%;
+		flex: 0 0 31%;
+		max-width: 31%;
 	}
 }
 @media screen and (min-width: 992px) {
@@ -77,6 +74,12 @@ a {
 		max-width: 960px;
 	}
 }
+
+/*________________________ Notification ________________________*/
+.notification:hover {
+	animation: jelly 0.6s ease;
+}
+
 
 /*________________________ Navigation sticky ________________________*/
 .nav-wrapper {
@@ -117,8 +120,9 @@ li.nav-sticky {
 	text-align: center;
 	padding: 14px 6px;
 }
-a {
+a, a:hover {
 	text-decoration: none;
+	color: #2b2b2b;
 }
 p {
     clear: both;
@@ -186,10 +190,13 @@ p {
 .foot-li:hover {
 	cursor: pointer;
 	color: #666cdc;
+    transform: scale(1.2);
 }
 .foot-li {
 	margin: .35rem 0;
 	color: #2b2b2b;
+    transform: scale(1);
+	transition: transform 1.5s;
 }
 div.foot-m {
 	margin-bottom: 2rem;
@@ -206,8 +213,8 @@ img.w-100 {
 /*________________________ Gallery ________________________*/
 @media screen and (min-width: 768px) {
     .gallery-picture {
-        flex: 0 0 32.5%;
-        max-width: 32.5%;
+        flex: 0 0 32%;
+        max-width: 32%;
     }
 }
 .gallery-container {
@@ -380,7 +387,6 @@ img.w-100 {
 	/* border-radius: .25rem; */
 }
 .card {
-	box-shadow: 0 2px 5px 0 #2b2b2b, 0 2px 10px 0 #2b2b2b;
 	border: 0;
 	font-weight: 400;
 
@@ -389,8 +395,10 @@ img.w-100 {
 	flex-direction: column;
 	min-width: 0;
 	width: 100%;
-	background-color: #f9f9f9;
+
+	box-shadow: 0 2px 5px 0 #2b2b2b, 0 2px 10px 0 #2b2b2b;
 	background-clip: border-box;
+	background-color: #f9f9f9;
 	border-radius: .75rem;
 	margin: .5rem;
 }
@@ -402,12 +410,13 @@ img.w-100 {
 	max-width: 100%;
 	height: auto;
 	box-sizing: border-box;
-	border-top-left-radius: calc(.75rem - 1px);
-	border-top-right-radius: calc(.75rem - 1px);
+	border-top-left-radius: calc(.65rem - 1px);
+	border-top-right-radius: calc(.65rem - 1px);
 	flex-shrink: 0;
 }
 .card:hover {
 	box-shadow: 0 2px 5px 0 #666cdc, 0 2px 10px 0 #666cdc;
+    cursor: pointer;
 	/* animation: jelly 0.6s ease; */
 }
 .card:active {
@@ -515,6 +524,7 @@ button.byf-button {
 	text-transform: uppercase;
 	/* padding: 1.25em 2em; */
 	padding: 0.5em 2em;
+
 	background: #fff0f0;
 	border: 2px solid #b18597;
 	border-radius: 0.75em;
