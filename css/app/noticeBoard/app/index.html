@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">   <!-- 검색 엔진 고려 -->
+    <meta name="basic html" content="html 기본 구조">   <!-- 해당 문서의 키워드 -->
+    <meta name="description" content="html5를 통해 웹 표준 공부하기"> <!-- 해당 문서의 설명 -->
+    <meta name="author" content="byfuls"> <!-- 해당 문서의 소유자 또는 제작자 -->
+
+    <title>[app] home</title>
+
+	<style>
+        ul.pinboards li,
+        ul.tag-list li {
+            list-style: none;
+        }
+        ul.pinboards li h4 {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        ul.pinboards li div p { font-size: 16px; }
+        ul.pinboards li div {
+            text-decoration: none;
+            color: #000;
+            background: #ffc;
+            display: block;
+            height: 140px;
+            width: 140px;
+            padding: 1em;
+            position: relative;
+        }
+        ul.pinboards li div small {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            font-size: 10px;
+        }
+        ul.pinboards li div a {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            color: inherit;
+        }
+        ul.pinboards li {
+            margin: 10px 40px 50px 0;
+            float: left;
+        }
+        ul.pinboards li div p {
+            font-size: 12px;
+        }
+        ul.pinboards li div {
+            text-decoration: none;
+            color: #000;
+            background: #ffc;
+            display: block;
+            height: 140px;
+            width: 140px;
+            padding: 1em;
+            /* Firefox */
+            -moz-box-shadow: 5px 5px 2px #212121;
+            /* Safari+Chrome */
+            -webkit-box-shadow: 5px 5px 2px rgba(33, 33, 33, 0.7);
+            /* Opera */
+            box-shadow: 5px 5px 2px rgba(33, 33, 33, 0.7);
+        }
+        ul.pinboards li div {
+            -webkit-transform: rotate(-6deg);
+            -o-transform: rotate(-6deg);
+            -moz-transform: rotate(-6deg);
+            -ms-transform: rotate(-6deg);
+        }
+        ul.pinboards li:nth-child(even) div {
+            -o-transform: rotate(4deg);
+            -webkit-transform: rotate(4deg);
+            -moz-transform: rotate(4deg);
+            -ms-transform: rotate(4deg);
+            position: relative;
+            top: 5px;
+        }
+        ul.pinboards li:nth-child(3n) div {
+            -o-transform: rotate(-3deg);
+            -webkit-transform: rotate(-3deg);
+            -moz-transform: rotate(-3deg);
+            -ms-transform: rotate(-3deg);
+            position: relative;
+            top: -5px;
+        }
+        ul.pinboards li:nth-child(5n) div {
+            -o-transform: rotate(5deg);
+            -webkit-transform: rotate(5deg);
+            -moz-transform: rotate(5deg);
+            -ms-transform: rotate(5deg);
+            position: relative;
+            top: -10px;
+        }
+        ul.pinboards li div:hover,
+        ul.pinboards li div:focus {
+            -webkit-transform: scale(1.1);
+            -moz-transform: scale(1.1);
+            -o-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            position: relative;
+            z-index: 5;
+        }
+        ul.pinboards li div {
+            text-decoration: none;
+            color: #000;
+            background: #ffc;
+            display: block;
+            height: 210px;
+            width: 210px;
+            padding: 1em;
+            -moz-box-shadow: 5px 5px 7px #212121;
+            -webkit-box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+            box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+            -moz-transition: -moz-transform 0.15s linear;
+            -o-transition: -o-transform 0.15s linear;
+            -webkit-transition: -webkit-transform 0.15s linear;
+        }
+	</style>
+</head>
+<body>
+    <ul class="pinboards">
+        <li>
+            <div>
+                <small>March 26, 2017</small>
+                <h4>How to detect Browser, OS, Screen Resolution, Speakers, Microphone & Webcam using Javascript</h4>
+                Now a days all web based application requires video and audio chat capabilities for real time communications.
+                <a href="http://w3lessons.info" target="_blank"><i class="fa fa-external-link "></i></a>
+            </div>
+        </li>
+        <li>
+            <div>
+                <small>February 3, 2017</small>
+                <h4>Top 10 Trending Javascript & jQuery Plugins in 2017</h4>
+                I would like to share all the trending javascript and jQuery plugins of the year 2017. I personally used all the below plugins in my web development projects.
+                <a href="http://w3lessons.info" target="_blank"><i class="fa fa-external-link "></i></a>
+            </div>
+        </li>
+    </ul>
+</body>
+</html>
