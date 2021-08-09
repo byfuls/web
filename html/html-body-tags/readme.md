@@ -343,3 +343,165 @@ clogroup, col
         span / 연속되는 열 수 / 숫자 / 기본값 1
     - colgroup { display: table-column-group; }
     - col { display: table-column; }
+
+thead, tbody, tfoot
+    - 표의 머리글(<thead>), 본문(<tbody>), 바닥글(<tfoot>)을 지정
+    - 테이블의 레이아웃에 영향을 주지 않음
+    - thead { display: table-header-group; }
+      tbody { display: table-row-group; }
+      tfoot { display: table-footer-group; }
+
+form
+    - 웹 서버에 정보를 제출하기 위한 양식 범위
+    - form 태그는 다른 form 태그를 자식 요소로 포함할 수 없다
+    - 속성
+        action / 전송한 정보를 처리할 웹페이지의 URL / URL
+        autocomplete / 사용자가 이전에 입력한 값으로 자동 완성 기능을 사용할 것인지 여부 / on, off / 기본값 on
+        method / 서버로 전송할 HTTP 방식 / GET, POST / 기본값 GET
+        name / 고유한 양식의 이름
+        novalidate / 서버로 전송시 양식 데이터의 유효성을 검사하지 않도록 지정
+        target / 서버로 전송 후 응답받을 방식을 지정 / _self, _blank / 기본값 _self
+    - display: block;
+
+input
+    - 사용자에게 입력 받을 데이터 양식
+    - 속성
+        autocomplete / 사용자가 이전에 입력한 값으로 자동 완성 기능을 사용할 것인지 여부 / on, off / 기본값 on
+        autofocus / 페이지가 로드 될 때 자동으로 포커스 / boolean / 문서 내 고유해야 함
+        checked / 양식이 선택되었음을 표시 / boolean / type 값이 radio, checkbox일 경우에만
+        form / <form>의 id 속성 값 / / 해당 <form>의 후손이 아닐 경우만 (form 안에 정의하지 않고 밖에 있어도 form id와 form속성을 연결시켜주면 된다)
+        name / 양식의 이름 / / 서버로 보낼때 이 양식이 어떤 데이터인지 같이 알려줌 (name=id로 설정해놓으면 입력된 값이 서버로 보내질때 id=블라블라 로 전송됨)
+        type / 입력 받을 데이터의 종류 / 아래 별도 정리 / text
+        value / 양식의 초기 값
+        readonly / 읽을수만 있고 수정할 수 없다 (포커스는 된다)
+        disabled / 아예 포커스 조차 되지 않는다
+        placeholder / 사용자에게 전달하는 힌트 내용
+        max / type이 숫자이고 max가 8이라면 최대 값 설정 범위
+        min / 같은 이치
+        step / 4라고 설정하면 4단위로 증가 및 감소 (step="4")
+        checked / type="checkbox" 에서 기본값이 체크 되어있을 때
+        multiple / type="file" 에서 여러개의 파일을 선택할때
+        src / type="image"에서 src에 이미지를 지정할 수 있다 (즉 이미지를 submit이나 button으로 사용할 수 있다)
+        ...
+    - type 종류의 값
+        button / 일반 버튼 / <button> 처럼 사용 (일반 버튼은 기능이 없기에 js로 해줘야함)
+        checkbox / 체크 박스
+        radio / checkbox와 비슷하지만 radio는 선택 후 취소가 안된다. 즉 여러개중에 선택하는 개념이기에 name 속성에 같은 이름을 설정해줘야한다 (그래야 서버에 제출할때 어떤게 선택됫는지 그 값을 전송할 수 있기에)
+        email / 이메일
+        file / 파일
+        password / 비밀번호 / 가려지는 양식
+        submit / 제출 버튼 / 해당 <form> 범위 내 고유한 양식
+        text / 일반 텍스트
+        number / 숫자 값
+        reset / form태그 범위안에서만 데이터를 초기화 할 때 사용
+        ...
+
+label
+    - 라벨 가능 요소의 제목
+    - button, input, progress, select, textarea에 사용 가능
+    - display: inline;
+
+button
+    - 선택 가능한 버튼을 지정
+    - 속성
+        autofocus / 페이지가 로드될 때 자동으로 퍼커스 / boolean / 문서 내 고유해야 함
+        disabled / 버튼 비활성화 / boolean
+        form / <form>의 id 속성 값으로 연결
+        name / 폼 데이터와 함께 전송되는 버튼의 이름
+        type / 버튼 타입 / button, reset, submit
+        ...
+        onclick / js 함수명 설정, 그럼 버튼이 클릭됫을때 자바스크립트 함수를 실행한다
+    - display: inline-block;
+
+textarea
+    - 여러 줄의 일반 텍스트 양식
+    - 속성
+        ... input과 비슷
+        rows / 양식의 줄 수 / 숫자 / 기본값 (2)
+
+fieldset, legend
+    - 같은 목적의 양식을 그룹화(<fieldset>)하여 제목(<legend>)을 지정
+    - fieldset 속성
+        disabled / 그룹 내 모든 양식 요소를 비활성화 / boolean
+        form / <form>의 id 속성값으로 연결해서 밖에서도 사용 가능
+        name / 그룹의 이름
+
+select, datalist, optgroup, option
+    - 옵션(<option>, <optgroup>)의 선택 메뉴(<select>)나 자동완성(<datalist>)을 제공
+    - select 속성
+        autocomplete / 사용자가 이전에 입력한 값으로 자동 완성 기능을 사용할 것인지 여부 / on, off / 기본값 on
+        disabled / 선택 메뉴를 비활성화 / boolean
+        form / <form>의 id 속성값으로 연결해서 밖에서도 사용 가능
+        multiple / 다중 선택 여부 / boolean
+        name / 선택 메뉴의 이름
+        size / 한 번에 볼 수 있는 행의 개수 / 숫자 / 0(1과 같음)
+    - optgroup 그룹화 속성
+        label / (필수)옵션 그룹의 이름
+        disabled / 옵션 그룹의 비활성화 / boolean
+    - option 속성
+        선택 메뉴(<select>)나 자동완성(<datalist>)에서 사용될 옵션
+        선택적 빈(empty) 태그로 사용 가능
+        disabled / 옵션을 비활성화 / boolean
+        label / 표시될 옵션의 제목
+        selected / 옵션이 선택되었음을 표시 / boolean
+        value / 양식으로 제출될 값 / 생략되면 포함된 텍스트를 값으로 사용
+    - datalist
+        <input>에 미리 정의된 옵션을 지정하여 자동완성(autocomplete) 기능을 제공하는 데 사용
+        <input>의 list 속성 바인딩
+        <option>을 포함하여 정의된 옵션을 지정
+
+progress
+    - 작업의 완료 진행률을 표시 (로딩바) 
+    - 속성 (자바스크립트에서 많이 쓰임)
+        max / 작업의 총량 / 숫자
+        value / 작업의 진행량 / 숫자 / max 속성을 생략할 경우 0~1사이의 숫아여야 함
+
+* HTML - 전역 속성, 기타
+모든 HTML 요소에서 공동적으로 사용 가능한 속성
+
+[전역속성] class (별명)
+    - 공백으로 구분된 요소의 별칭을 지정
+    - CSS or JS에서 요소를 선택하는 방법으로 사용
+    - 중복 가능
+
+[전역속성] id (이름(고유))
+    - 문서에서 고유한 식별자를 정의
+    - CSS or JS에서 요소를 선택하는 방법으로 사용
+    - 중복 불가
+
+[전역속성] style
+    - 요소에 적용할 css를 선언
+
+[전역속성] title
+    - 요소의 정보(설명)을 지정
+    - 요소들의 속성으로 사용 가능 (div title="블라블라", a title="블라블라", ...)
+    - 마우스 오버했을때 팁으로 나옴
+
+[전역속성] lang
+    - 요소의 언어(ISO 639-1)을 지정
+    - title과 같이 요소들의 속성으로 사용 가능
+
+[전역속성] data-*
+    - 사용자 정의 데이터 속성을 지정
+    - HTML에 JS에서 이용할 수 있는 데이터(정보)를 저장하는 용도로 사용
+    - example
+        <!-- HTML -->
+        <div id="me" data-my-name="byfuls" data-my-age="851">Byfuls</div>
+        // JS
+        const $me = document.getElementById("me");
+        console.log($me.dataset.myName);    // "Byfuls"
+        console.log($me.dataset.myAge);     // "851"
+
+[전역속성] draggable
+    - 요소가 drag and drop api를 사용 가능한지 여부를 지정
+    - 기본값은 auto (브라우저가 판단해서 설정)
+
+[전역속성] hidden
+    - 요소를 숨김
+    - input 태그에 기본값을 넣어넣고 hidden 속성으로 화면에만 가려지게끔 하고, 서버에는 기본값을 전송하게끔 하는 방법이 있음
+     (숨겨지지만 동작은 가능)
+[전역속성] tabindex
+    - 탭 키를 이용해 요소를 순차적으로 포커스 탐색할 순서를 지정 (html에서 작성된 대로 순서를 따름)
+    - 대화형 콘텐츠는 기본적으로 코드 순서대로 탭 순서가 지정됨
+        (MDN 대화형 컨텐츠 확인)
+    ...
