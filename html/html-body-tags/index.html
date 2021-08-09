@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!--
+        header
+            - 소개나 탐색을 돕는 도구
+            - header와 footer는 후손이 될 수 없다
+            - 전역 속성만을 포함
+
+        footer
+            - 가장 가까운 구획화 콘텐츠나 구획화 루트의 푸터
+            - 작성자 구휙, 저작권 데이터, 관련된 문서의 링크
+            - 가장 밑에있는 내용
+            - 기타 내용은 header와 비슷
+        
+        h1-h6
+            - 6단계의 문서 제목을 구현
+            - 제목 폰트 크기 줄이기 위해 낮은 단계 사용하지 말고 css의 font-size속성을 사용
+              즉, 태그로 구조를 잡을 뿐 css에서 디테일하게 설정
+            - 제목 단계를 건너뛰지 말라, h1 -> h2 -> h4, h3를 건너 뛰지말라
+            - h1은 여러개 쓰지 않는걸 추천, 즉 대제목은 하나만
+        
+        main
+            - 문서나 앱 body의 주요 컨텐츠를 나타냄
+            - 그 페이지에 대한 핵심적인 내용이 main 태그에 기입된다
+            - main태그도 그 페이지에서 하나만 존재
+            - IE에서는 지원하지 않는다
+
+        article
+            - 독립적으로 구분되거나 재사용 가능한 영역을 설정
+            - 제목 포함 가능 (h1..h6)
+            - 특정 기사의 묶음
+            - display: block;
+            - 대체할 태그로는 section, div, ...
+            - article 내부에 section을 넣을 수 있다
+        
+        section
+            - 문서의 일반적인 영역을 설정
+            - 제목 포함 가능 (h1..h6)
+            - display: block;
+            - section 내부에 article 넣을 수 있다
+            - section과 div 모두 영역을 구분하는것은 같지만,
+              section은 의미가 있기에 제목이 포함가능하지만,
+              div는 의미가 없기때문에 더 너프한 느낌 (오히려 article이 section보다 더 강한 느낌)
+        
+        aside
+            - 문서의 별도 콘텐츠를 설정
+              (광고, 배너, 기타 링크 등 사이드바(side bar))
+            - display: block;
+
+        nav
+            - 다른 페이지 링크를 제공하는 영역
+             (보통 메뉴 home about ... 목차, 색인 등 설정)
+            - display: block;
+            - ol, ul 태그와 보통 많이 쓰임
+        
+        address
+            - body, article, footer 등에서 연락처 정보를 제공하기 위해 포함하여 사용
+            - display: block;
+        
+        div
+            - 본질적으로 아무것도 나타내지 않는 콘텐츠 영역
+            - 꾸미는 목적으로 사용
+            - 의미가 따로 없고 막 사용할 수 있다
+            - display: block;
+   --> 
+</body>
+</html>
